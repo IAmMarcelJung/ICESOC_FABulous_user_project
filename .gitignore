@@ -1,0 +1,7 @@
+*.bin
+*.fasm
+user_design/*.txt
+user_design/*.json
+user_design/*.csv
+user_design/*.vh
+user_design/*.vhd
