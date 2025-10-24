@@ -10,7 +10,7 @@
 #Tile_X13Y0
 #Tile_X14Y0
 #Tile_X3Y1
-BelBegin,X3Y1,A,InPass4_frame_config_mux,OPA_
+BelBegin,X3Y1,A,InPass4_frame_config,OPA_
 O,O0,X3Y1.OPA_O0
 O,O1,X3Y1.OPA_O1
 O,O2,X3Y1.OPA_O2
@@ -21,7 +21,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X3Y1,B,InPass4_frame_config_mux,OPB_
+BelBegin,X3Y1,B,InPass4_frame_config,OPB_
 O,O0,X3Y1.OPB_O0
 O,O1,X3Y1.OPB_O1
 O,O2,X3Y1.OPB_O2
@@ -32,7 +32,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X3Y1,C,OutPass4_frame_config_mux,RES0_
+BelBegin,X3Y1,C,OutPass4_frame_config,RES0_
 I,I0,X3Y1.RES0_I0
 I,I1,X3Y1.RES0_I1
 I,I2,X3Y1.RES0_I2
@@ -43,7 +43,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X3Y1,D,OutPass4_frame_config_mux,RES1_
+BelBegin,X3Y1,D,OutPass4_frame_config,RES1_
 I,I0,X3Y1.RES1_I0
 I,I1,X3Y1.RES1_I1
 I,I2,X3Y1.RES1_I2
@@ -54,7 +54,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X3Y1,E,OutPass4_frame_config_mux,RES2_
+BelBegin,X3Y1,E,OutPass4_frame_config,RES2_
 I,I0,X3Y1.RES2_I0
 I,I1,X3Y1.RES2_I1
 I,I2,X3Y1.RES2_I2
@@ -1413,7 +1413,7 @@ CFG,c0
 CFG,c1
 BelEnd
 #Tile_X11Y1
-BelBegin,X11Y1,A,InPass4_frame_config_mux,OPA_
+BelBegin,X11Y1,A,InPass4_frame_config,OPA_
 O,O0,X11Y1.OPA_O0
 O,O1,X11Y1.OPA_O1
 O,O2,X11Y1.OPA_O2
@@ -1424,7 +1424,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X11Y1,B,InPass4_frame_config_mux,OPB_
+BelBegin,X11Y1,B,InPass4_frame_config,OPB_
 O,O0,X11Y1.OPB_O0
 O,O1,X11Y1.OPB_O1
 O,O2,X11Y1.OPB_O2
@@ -1435,7 +1435,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X11Y1,C,OutPass4_frame_config_mux,RES0_
+BelBegin,X11Y1,C,OutPass4_frame_config,RES0_
 I,I0,X11Y1.RES0_I0
 I,I1,X11Y1.RES0_I1
 I,I2,X11Y1.RES0_I2
@@ -1446,7 +1446,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X11Y1,D,OutPass4_frame_config_mux,RES1_
+BelBegin,X11Y1,D,OutPass4_frame_config,RES1_
 I,I0,X11Y1.RES1_I0
 I,I1,X11Y1.RES1_I1
 I,I2,X11Y1.RES1_I2
@@ -1457,7 +1457,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X11Y1,E,OutPass4_frame_config_mux,RES2_
+BelBegin,X11Y1,E,OutPass4_frame_config,RES2_
 I,I0,X11Y1.RES2_I0
 I,I1,X11Y1.RES2_I1
 I,I2,X11Y1.RES2_I2
@@ -1469,7 +1469,7 @@ CFG,I3_reg
 GlobalClk
 BelEnd
 #Tile_X3Y2
-BelBegin,X3Y2,A,InPass4_frame_config_mux,OPA_
+BelBegin,X3Y2,A,InPass4_frame_config,OPA_
 O,O0,X3Y2.OPA_O0
 O,O1,X3Y2.OPA_O1
 O,O2,X3Y2.OPA_O2
@@ -1480,7 +1480,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X3Y2,B,InPass4_frame_config_mux,OPB_
+BelBegin,X3Y2,B,InPass4_frame_config,OPB_
 O,O0,X3Y2.OPB_O0
 O,O1,X3Y2.OPB_O1
 O,O2,X3Y2.OPB_O2
@@ -1491,7 +1491,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X3Y2,C,OutPass4_frame_config_mux,RES0_
+BelBegin,X3Y2,C,OutPass4_frame_config,RES0_
 I,I0,X3Y2.RES0_I0
 I,I1,X3Y2.RES0_I1
 I,I2,X3Y2.RES0_I2
@@ -1502,7 +1502,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X3Y2,D,OutPass4_frame_config_mux,RES1_
+BelBegin,X3Y2,D,OutPass4_frame_config,RES1_
 I,I0,X3Y2.RES1_I0
 I,I1,X3Y2.RES1_I1
 I,I2,X3Y2.RES1_I2
@@ -1513,7 +1513,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X3Y2,E,OutPass4_frame_config_mux,RES2_
+BelBegin,X3Y2,E,OutPass4_frame_config,RES2_
 I,I0,X3Y2.RES2_I0
 I,I1,X3Y2.RES2_I1
 I,I2,X3Y2.RES2_I2
@@ -3004,7 +3004,7 @@ CFG,c0
 CFG,c1
 BelEnd
 #Tile_X11Y2
-BelBegin,X11Y2,A,InPass4_frame_config_mux,OPA_
+BelBegin,X11Y2,A,InPass4_frame_config,OPA_
 O,O0,X11Y2.OPA_O0
 O,O1,X11Y2.OPA_O1
 O,O2,X11Y2.OPA_O2
@@ -3015,7 +3015,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X11Y2,B,InPass4_frame_config_mux,OPB_
+BelBegin,X11Y2,B,InPass4_frame_config,OPB_
 O,O0,X11Y2.OPB_O0
 O,O1,X11Y2.OPB_O1
 O,O2,X11Y2.OPB_O2
@@ -3026,7 +3026,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X11Y2,C,OutPass4_frame_config_mux,RES0_
+BelBegin,X11Y2,C,OutPass4_frame_config,RES0_
 I,I0,X11Y2.RES0_I0
 I,I1,X11Y2.RES0_I1
 I,I2,X11Y2.RES0_I2
@@ -3037,7 +3037,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X11Y2,D,OutPass4_frame_config_mux,RES1_
+BelBegin,X11Y2,D,OutPass4_frame_config,RES1_
 I,I0,X11Y2.RES1_I0
 I,I1,X11Y2.RES1_I1
 I,I2,X11Y2.RES1_I2
@@ -3048,7 +3048,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X11Y2,E,OutPass4_frame_config_mux,RES2_
+BelBegin,X11Y2,E,OutPass4_frame_config,RES2_
 I,I0,X11Y2.RES2_I0
 I,I1,X11Y2.RES2_I1
 I,I2,X11Y2.RES2_I2
@@ -3060,7 +3060,7 @@ CFG,I3_reg
 GlobalClk
 BelEnd
 #Tile_X3Y3
-BelBegin,X3Y3,A,InPass4_frame_config_mux,OPA_
+BelBegin,X3Y3,A,InPass4_frame_config,OPA_
 O,O0,X3Y3.OPA_O0
 O,O1,X3Y3.OPA_O1
 O,O2,X3Y3.OPA_O2
@@ -3071,7 +3071,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X3Y3,B,InPass4_frame_config_mux,OPB_
+BelBegin,X3Y3,B,InPass4_frame_config,OPB_
 O,O0,X3Y3.OPB_O0
 O,O1,X3Y3.OPB_O1
 O,O2,X3Y3.OPB_O2
@@ -3082,7 +3082,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X3Y3,C,OutPass4_frame_config_mux,RES0_
+BelBegin,X3Y3,C,OutPass4_frame_config,RES0_
 I,I0,X3Y3.RES0_I0
 I,I1,X3Y3.RES0_I1
 I,I2,X3Y3.RES0_I2
@@ -3093,7 +3093,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X3Y3,D,OutPass4_frame_config_mux,RES1_
+BelBegin,X3Y3,D,OutPass4_frame_config,RES1_
 I,I0,X3Y3.RES1_I0
 I,I1,X3Y3.RES1_I1
 I,I2,X3Y3.RES1_I2
@@ -3104,7 +3104,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X3Y3,E,OutPass4_frame_config_mux,RES2_
+BelBegin,X3Y3,E,OutPass4_frame_config,RES2_
 I,I0,X3Y3.RES2_I0
 I,I1,X3Y3.RES2_I1
 I,I2,X3Y3.RES2_I2
@@ -4463,7 +4463,7 @@ CFG,c0
 CFG,c1
 BelEnd
 #Tile_X11Y3
-BelBegin,X11Y3,A,InPass4_frame_config_mux,OPA_
+BelBegin,X11Y3,A,InPass4_frame_config,OPA_
 O,O0,X11Y3.OPA_O0
 O,O1,X11Y3.OPA_O1
 O,O2,X11Y3.OPA_O2
@@ -4474,7 +4474,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X11Y3,B,InPass4_frame_config_mux,OPB_
+BelBegin,X11Y3,B,InPass4_frame_config,OPB_
 O,O0,X11Y3.OPB_O0
 O,O1,X11Y3.OPB_O1
 O,O2,X11Y3.OPB_O2
@@ -4485,7 +4485,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X11Y3,C,OutPass4_frame_config_mux,RES0_
+BelBegin,X11Y3,C,OutPass4_frame_config,RES0_
 I,I0,X11Y3.RES0_I0
 I,I1,X11Y3.RES0_I1
 I,I2,X11Y3.RES0_I2
@@ -4496,7 +4496,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X11Y3,D,OutPass4_frame_config_mux,RES1_
+BelBegin,X11Y3,D,OutPass4_frame_config,RES1_
 I,I0,X11Y3.RES1_I0
 I,I1,X11Y3.RES1_I1
 I,I2,X11Y3.RES1_I2
@@ -4507,7 +4507,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X11Y3,E,OutPass4_frame_config_mux,RES2_
+BelBegin,X11Y3,E,OutPass4_frame_config,RES2_
 I,I0,X11Y3.RES2_I0
 I,I1,X11Y3.RES2_I1
 I,I2,X11Y3.RES2_I2
@@ -4519,7 +4519,7 @@ CFG,I3_reg
 GlobalClk
 BelEnd
 #Tile_X3Y4
-BelBegin,X3Y4,A,InPass4_frame_config_mux,OPA_
+BelBegin,X3Y4,A,InPass4_frame_config,OPA_
 O,O0,X3Y4.OPA_O0
 O,O1,X3Y4.OPA_O1
 O,O2,X3Y4.OPA_O2
@@ -4530,7 +4530,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X3Y4,B,InPass4_frame_config_mux,OPB_
+BelBegin,X3Y4,B,InPass4_frame_config,OPB_
 O,O0,X3Y4.OPB_O0
 O,O1,X3Y4.OPB_O1
 O,O2,X3Y4.OPB_O2
@@ -4541,7 +4541,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X3Y4,C,OutPass4_frame_config_mux,RES0_
+BelBegin,X3Y4,C,OutPass4_frame_config,RES0_
 I,I0,X3Y4.RES0_I0
 I,I1,X3Y4.RES0_I1
 I,I2,X3Y4.RES0_I2
@@ -4552,7 +4552,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X3Y4,D,OutPass4_frame_config_mux,RES1_
+BelBegin,X3Y4,D,OutPass4_frame_config,RES1_
 I,I0,X3Y4.RES1_I0
 I,I1,X3Y4.RES1_I1
 I,I2,X3Y4.RES1_I2
@@ -4563,7 +4563,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X3Y4,E,OutPass4_frame_config_mux,RES2_
+BelBegin,X3Y4,E,OutPass4_frame_config,RES2_
 I,I0,X3Y4.RES2_I0
 I,I1,X3Y4.RES2_I1
 I,I2,X3Y4.RES2_I2
@@ -6054,7 +6054,7 @@ CFG,c0
 CFG,c1
 BelEnd
 #Tile_X11Y4
-BelBegin,X11Y4,A,InPass4_frame_config_mux,OPA_
+BelBegin,X11Y4,A,InPass4_frame_config,OPA_
 O,O0,X11Y4.OPA_O0
 O,O1,X11Y4.OPA_O1
 O,O2,X11Y4.OPA_O2
@@ -6065,7 +6065,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X11Y4,B,InPass4_frame_config_mux,OPB_
+BelBegin,X11Y4,B,InPass4_frame_config,OPB_
 O,O0,X11Y4.OPB_O0
 O,O1,X11Y4.OPB_O1
 O,O2,X11Y4.OPB_O2
@@ -6076,7 +6076,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X11Y4,C,OutPass4_frame_config_mux,RES0_
+BelBegin,X11Y4,C,OutPass4_frame_config,RES0_
 I,I0,X11Y4.RES0_I0
 I,I1,X11Y4.RES0_I1
 I,I2,X11Y4.RES0_I2
@@ -6087,7 +6087,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X11Y4,D,OutPass4_frame_config_mux,RES1_
+BelBegin,X11Y4,D,OutPass4_frame_config,RES1_
 I,I0,X11Y4.RES1_I0
 I,I1,X11Y4.RES1_I1
 I,I2,X11Y4.RES1_I2
@@ -6098,7 +6098,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X11Y4,E,OutPass4_frame_config_mux,RES2_
+BelBegin,X11Y4,E,OutPass4_frame_config,RES2_
 I,I0,X11Y4.RES2_I0
 I,I1,X11Y4.RES2_I1
 I,I2,X11Y4.RES2_I2
@@ -6110,7 +6110,7 @@ CFG,I3_reg
 GlobalClk
 BelEnd
 #Tile_X3Y5
-BelBegin,X3Y5,A,InPass4_frame_config_mux,OPA_
+BelBegin,X3Y5,A,InPass4_frame_config,OPA_
 O,O0,X3Y5.OPA_O0
 O,O1,X3Y5.OPA_O1
 O,O2,X3Y5.OPA_O2
@@ -6121,7 +6121,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X3Y5,B,InPass4_frame_config_mux,OPB_
+BelBegin,X3Y5,B,InPass4_frame_config,OPB_
 O,O0,X3Y5.OPB_O0
 O,O1,X3Y5.OPB_O1
 O,O2,X3Y5.OPB_O2
@@ -6132,7 +6132,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X3Y5,C,OutPass4_frame_config_mux,RES0_
+BelBegin,X3Y5,C,OutPass4_frame_config,RES0_
 I,I0,X3Y5.RES0_I0
 I,I1,X3Y5.RES0_I1
 I,I2,X3Y5.RES0_I2
@@ -6143,7 +6143,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X3Y5,D,OutPass4_frame_config_mux,RES1_
+BelBegin,X3Y5,D,OutPass4_frame_config,RES1_
 I,I0,X3Y5.RES1_I0
 I,I1,X3Y5.RES1_I1
 I,I2,X3Y5.RES1_I2
@@ -6154,7 +6154,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X3Y5,E,OutPass4_frame_config_mux,RES2_
+BelBegin,X3Y5,E,OutPass4_frame_config,RES2_
 I,I0,X3Y5.RES2_I0
 I,I1,X3Y5.RES2_I1
 I,I2,X3Y5.RES2_I2
@@ -7513,7 +7513,7 @@ CFG,c0
 CFG,c1
 BelEnd
 #Tile_X11Y5
-BelBegin,X11Y5,A,InPass4_frame_config_mux,OPA_
+BelBegin,X11Y5,A,InPass4_frame_config,OPA_
 O,O0,X11Y5.OPA_O0
 O,O1,X11Y5.OPA_O1
 O,O2,X11Y5.OPA_O2
@@ -7524,7 +7524,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X11Y5,B,InPass4_frame_config_mux,OPB_
+BelBegin,X11Y5,B,InPass4_frame_config,OPB_
 O,O0,X11Y5.OPB_O0
 O,O1,X11Y5.OPB_O1
 O,O2,X11Y5.OPB_O2
@@ -7535,7 +7535,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X11Y5,C,OutPass4_frame_config_mux,RES0_
+BelBegin,X11Y5,C,OutPass4_frame_config,RES0_
 I,I0,X11Y5.RES0_I0
 I,I1,X11Y5.RES0_I1
 I,I2,X11Y5.RES0_I2
@@ -7546,7 +7546,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X11Y5,D,OutPass4_frame_config_mux,RES1_
+BelBegin,X11Y5,D,OutPass4_frame_config,RES1_
 I,I0,X11Y5.RES1_I0
 I,I1,X11Y5.RES1_I1
 I,I2,X11Y5.RES1_I2
@@ -7557,7 +7557,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X11Y5,E,OutPass4_frame_config_mux,RES2_
+BelBegin,X11Y5,E,OutPass4_frame_config,RES2_
 I,I0,X11Y5.RES2_I0
 I,I1,X11Y5.RES2_I1
 I,I2,X11Y5.RES2_I2
@@ -7569,7 +7569,7 @@ CFG,I3_reg
 GlobalClk
 BelEnd
 #Tile_X3Y6
-BelBegin,X3Y6,A,InPass4_frame_config_mux,OPA_
+BelBegin,X3Y6,A,InPass4_frame_config,OPA_
 O,O0,X3Y6.OPA_O0
 O,O1,X3Y6.OPA_O1
 O,O2,X3Y6.OPA_O2
@@ -7580,7 +7580,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X3Y6,B,InPass4_frame_config_mux,OPB_
+BelBegin,X3Y6,B,InPass4_frame_config,OPB_
 O,O0,X3Y6.OPB_O0
 O,O1,X3Y6.OPB_O1
 O,O2,X3Y6.OPB_O2
@@ -7591,7 +7591,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X3Y6,C,OutPass4_frame_config_mux,RES0_
+BelBegin,X3Y6,C,OutPass4_frame_config,RES0_
 I,I0,X3Y6.RES0_I0
 I,I1,X3Y6.RES0_I1
 I,I2,X3Y6.RES0_I2
@@ -7602,7 +7602,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X3Y6,D,OutPass4_frame_config_mux,RES1_
+BelBegin,X3Y6,D,OutPass4_frame_config,RES1_
 I,I0,X3Y6.RES1_I0
 I,I1,X3Y6.RES1_I1
 I,I2,X3Y6.RES1_I2
@@ -7613,7 +7613,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X3Y6,E,OutPass4_frame_config_mux,RES2_
+BelBegin,X3Y6,E,OutPass4_frame_config,RES2_
 I,I0,X3Y6.RES2_I0
 I,I1,X3Y6.RES2_I1
 I,I2,X3Y6.RES2_I2
@@ -9104,7 +9104,7 @@ CFG,c0
 CFG,c1
 BelEnd
 #Tile_X11Y6
-BelBegin,X11Y6,A,InPass4_frame_config_mux,OPA_
+BelBegin,X11Y6,A,InPass4_frame_config,OPA_
 O,O0,X11Y6.OPA_O0
 O,O1,X11Y6.OPA_O1
 O,O2,X11Y6.OPA_O2
@@ -9115,7 +9115,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X11Y6,B,InPass4_frame_config_mux,OPB_
+BelBegin,X11Y6,B,InPass4_frame_config,OPB_
 O,O0,X11Y6.OPB_O0
 O,O1,X11Y6.OPB_O1
 O,O2,X11Y6.OPB_O2
@@ -9126,7 +9126,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X11Y6,C,OutPass4_frame_config_mux,RES0_
+BelBegin,X11Y6,C,OutPass4_frame_config,RES0_
 I,I0,X11Y6.RES0_I0
 I,I1,X11Y6.RES0_I1
 I,I2,X11Y6.RES0_I2
@@ -9137,7 +9137,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X11Y6,D,OutPass4_frame_config_mux,RES1_
+BelBegin,X11Y6,D,OutPass4_frame_config,RES1_
 I,I0,X11Y6.RES1_I0
 I,I1,X11Y6.RES1_I1
 I,I2,X11Y6.RES1_I2
@@ -9148,7 +9148,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X11Y6,E,OutPass4_frame_config_mux,RES2_
+BelBegin,X11Y6,E,OutPass4_frame_config,RES2_
 I,I0,X11Y6.RES2_I0
 I,I1,X11Y6.RES2_I1
 I,I2,X11Y6.RES2_I2
@@ -9160,7 +9160,7 @@ CFG,I3_reg
 GlobalClk
 BelEnd
 #Tile_X3Y7
-BelBegin,X3Y7,A,InPass4_frame_config_mux,OPA_
+BelBegin,X3Y7,A,InPass4_frame_config,OPA_
 O,O0,X3Y7.OPA_O0
 O,O1,X3Y7.OPA_O1
 O,O2,X3Y7.OPA_O2
@@ -9171,7 +9171,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X3Y7,B,InPass4_frame_config_mux,OPB_
+BelBegin,X3Y7,B,InPass4_frame_config,OPB_
 O,O0,X3Y7.OPB_O0
 O,O1,X3Y7.OPB_O1
 O,O2,X3Y7.OPB_O2
@@ -9182,7 +9182,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X3Y7,C,OutPass4_frame_config_mux,RES0_
+BelBegin,X3Y7,C,OutPass4_frame_config,RES0_
 I,I0,X3Y7.RES0_I0
 I,I1,X3Y7.RES0_I1
 I,I2,X3Y7.RES0_I2
@@ -9193,7 +9193,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X3Y7,D,OutPass4_frame_config_mux,RES1_
+BelBegin,X3Y7,D,OutPass4_frame_config,RES1_
 I,I0,X3Y7.RES1_I0
 I,I1,X3Y7.RES1_I1
 I,I2,X3Y7.RES1_I2
@@ -9204,7 +9204,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X3Y7,E,OutPass4_frame_config_mux,RES2_
+BelBegin,X3Y7,E,OutPass4_frame_config,RES2_
 I,I0,X3Y7.RES2_I0
 I,I1,X3Y7.RES2_I1
 I,I2,X3Y7.RES2_I2
@@ -10563,7 +10563,7 @@ CFG,c0
 CFG,c1
 BelEnd
 #Tile_X11Y7
-BelBegin,X11Y7,A,InPass4_frame_config_mux,OPA_
+BelBegin,X11Y7,A,InPass4_frame_config,OPA_
 O,O0,X11Y7.OPA_O0
 O,O1,X11Y7.OPA_O1
 O,O2,X11Y7.OPA_O2
@@ -10574,7 +10574,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X11Y7,B,InPass4_frame_config_mux,OPB_
+BelBegin,X11Y7,B,InPass4_frame_config,OPB_
 O,O0,X11Y7.OPB_O0
 O,O1,X11Y7.OPB_O1
 O,O2,X11Y7.OPB_O2
@@ -10585,7 +10585,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X11Y7,C,OutPass4_frame_config_mux,RES0_
+BelBegin,X11Y7,C,OutPass4_frame_config,RES0_
 I,I0,X11Y7.RES0_I0
 I,I1,X11Y7.RES0_I1
 I,I2,X11Y7.RES0_I2
@@ -10596,7 +10596,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X11Y7,D,OutPass4_frame_config_mux,RES1_
+BelBegin,X11Y7,D,OutPass4_frame_config,RES1_
 I,I0,X11Y7.RES1_I0
 I,I1,X11Y7.RES1_I1
 I,I2,X11Y7.RES1_I2
@@ -10607,7 +10607,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X11Y7,E,OutPass4_frame_config_mux,RES2_
+BelBegin,X11Y7,E,OutPass4_frame_config,RES2_
 I,I0,X11Y7.RES2_I0
 I,I1,X11Y7.RES2_I1
 I,I2,X11Y7.RES2_I2
@@ -10619,7 +10619,7 @@ CFG,I3_reg
 GlobalClk
 BelEnd
 #Tile_X3Y8
-BelBegin,X3Y8,A,InPass4_frame_config_mux,OPA_
+BelBegin,X3Y8,A,InPass4_frame_config,OPA_
 O,O0,X3Y8.OPA_O0
 O,O1,X3Y8.OPA_O1
 O,O2,X3Y8.OPA_O2
@@ -10630,7 +10630,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X3Y8,B,InPass4_frame_config_mux,OPB_
+BelBegin,X3Y8,B,InPass4_frame_config,OPB_
 O,O0,X3Y8.OPB_O0
 O,O1,X3Y8.OPB_O1
 O,O2,X3Y8.OPB_O2
@@ -10641,7 +10641,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X3Y8,C,OutPass4_frame_config_mux,RES0_
+BelBegin,X3Y8,C,OutPass4_frame_config,RES0_
 I,I0,X3Y8.RES0_I0
 I,I1,X3Y8.RES0_I1
 I,I2,X3Y8.RES0_I2
@@ -10652,7 +10652,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X3Y8,D,OutPass4_frame_config_mux,RES1_
+BelBegin,X3Y8,D,OutPass4_frame_config,RES1_
 I,I0,X3Y8.RES1_I0
 I,I1,X3Y8.RES1_I1
 I,I2,X3Y8.RES1_I2
@@ -10663,7 +10663,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X3Y8,E,OutPass4_frame_config_mux,RES2_
+BelBegin,X3Y8,E,OutPass4_frame_config,RES2_
 I,I0,X3Y8.RES2_I0
 I,I1,X3Y8.RES2_I1
 I,I2,X3Y8.RES2_I2
@@ -12154,7 +12154,7 @@ CFG,c0
 CFG,c1
 BelEnd
 #Tile_X11Y8
-BelBegin,X11Y8,A,InPass4_frame_config_mux,OPA_
+BelBegin,X11Y8,A,InPass4_frame_config,OPA_
 O,O0,X11Y8.OPA_O0
 O,O1,X11Y8.OPA_O1
 O,O2,X11Y8.OPA_O2
@@ -12165,7 +12165,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X11Y8,B,InPass4_frame_config_mux,OPB_
+BelBegin,X11Y8,B,InPass4_frame_config,OPB_
 O,O0,X11Y8.OPB_O0
 O,O1,X11Y8.OPB_O1
 O,O2,X11Y8.OPB_O2
@@ -12176,7 +12176,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X11Y8,C,OutPass4_frame_config_mux,RES0_
+BelBegin,X11Y8,C,OutPass4_frame_config,RES0_
 I,I0,X11Y8.RES0_I0
 I,I1,X11Y8.RES0_I1
 I,I2,X11Y8.RES0_I2
@@ -12187,7 +12187,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X11Y8,D,OutPass4_frame_config_mux,RES1_
+BelBegin,X11Y8,D,OutPass4_frame_config,RES1_
 I,I0,X11Y8.RES1_I0
 I,I1,X11Y8.RES1_I1
 I,I2,X11Y8.RES1_I2
@@ -12198,7 +12198,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X11Y8,E,OutPass4_frame_config_mux,RES2_
+BelBegin,X11Y8,E,OutPass4_frame_config,RES2_
 I,I0,X11Y8.RES2_I0
 I,I1,X11Y8.RES2_I1
 I,I2,X11Y8.RES2_I2
@@ -12212,7 +12212,7 @@ BelEnd
 #Tile_X1Y9
 #Tile_X2Y9
 #Tile_X3Y9
-BelBegin,X3Y9,A,InPass4_frame_config_mux,OPA_
+BelBegin,X3Y9,A,InPass4_frame_config,OPA_
 O,O0,X3Y9.OPA_O0
 O,O1,X3Y9.OPA_O1
 O,O2,X3Y9.OPA_O2
@@ -12223,7 +12223,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X3Y9,B,InPass4_frame_config_mux,OPB_
+BelBegin,X3Y9,B,InPass4_frame_config,OPB_
 O,O0,X3Y9.OPB_O0
 O,O1,X3Y9.OPB_O1
 O,O2,X3Y9.OPB_O2
@@ -12234,7 +12234,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X3Y9,C,OutPass4_frame_config_mux,RES0_
+BelBegin,X3Y9,C,OutPass4_frame_config,RES0_
 I,I0,X3Y9.RES0_I0
 I,I1,X3Y9.RES0_I1
 I,I2,X3Y9.RES0_I2
@@ -12245,7 +12245,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X3Y9,D,OutPass4_frame_config_mux,RES1_
+BelBegin,X3Y9,D,OutPass4_frame_config,RES1_
 I,I0,X3Y9.RES1_I0
 I,I1,X3Y9.RES1_I1
 I,I2,X3Y9.RES1_I2
@@ -12256,7 +12256,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X3Y9,E,OutPass4_frame_config_mux,RES2_
+BelBegin,X3Y9,E,OutPass4_frame_config,RES2_
 I,I0,X3Y9.RES2_I0
 I,I1,X3Y9.RES2_I1
 I,I2,X3Y9.RES2_I2
@@ -13615,7 +13615,7 @@ CFG,c0
 CFG,c1
 BelEnd
 #Tile_X11Y9
-BelBegin,X11Y9,A,InPass4_frame_config_mux,OPA_
+BelBegin,X11Y9,A,InPass4_frame_config,OPA_
 O,O0,X11Y9.OPA_O0
 O,O1,X11Y9.OPA_O1
 O,O2,X11Y9.OPA_O2
@@ -13626,7 +13626,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X11Y9,B,InPass4_frame_config_mux,OPB_
+BelBegin,X11Y9,B,InPass4_frame_config,OPB_
 O,O0,X11Y9.OPB_O0
 O,O1,X11Y9.OPB_O1
 O,O2,X11Y9.OPB_O2
@@ -13637,7 +13637,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X11Y9,C,OutPass4_frame_config_mux,RES0_
+BelBegin,X11Y9,C,OutPass4_frame_config,RES0_
 I,I0,X11Y9.RES0_I0
 I,I1,X11Y9.RES0_I1
 I,I2,X11Y9.RES0_I2
@@ -13648,7 +13648,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X11Y9,D,OutPass4_frame_config_mux,RES1_
+BelBegin,X11Y9,D,OutPass4_frame_config,RES1_
 I,I0,X11Y9.RES1_I0
 I,I1,X11Y9.RES1_I1
 I,I2,X11Y9.RES1_I2
@@ -13659,7 +13659,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X11Y9,E,OutPass4_frame_config_mux,RES2_
+BelBegin,X11Y9,E,OutPass4_frame_config,RES2_
 I,I0,X11Y9.RES2_I0
 I,I1,X11Y9.RES2_I1
 I,I2,X11Y9.RES2_I2
@@ -16324,7 +16324,7 @@ CFG,c0
 CFG,c1
 BelEnd
 #Tile_X14Y10
-BelBegin,X14Y10,A,InPass4_frame_config_mux,RAM2FAB_D0_
+BelBegin,X14Y10,A,InPass4_frame_config,RAM2FAB_D0_
 O,O0,X14Y10.RAM2FAB_D0_O0
 O,O1,X14Y10.RAM2FAB_D0_O1
 O,O2,X14Y10.RAM2FAB_D0_O2
@@ -16335,7 +16335,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X14Y10,B,InPass4_frame_config_mux,RAM2FAB_D1_
+BelBegin,X14Y10,B,InPass4_frame_config,RAM2FAB_D1_
 O,O0,X14Y10.RAM2FAB_D1_O0
 O,O1,X14Y10.RAM2FAB_D1_O1
 O,O2,X14Y10.RAM2FAB_D1_O2
@@ -16346,7 +16346,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X14Y10,C,InPass4_frame_config_mux,RAM2FAB_D2_
+BelBegin,X14Y10,C,InPass4_frame_config,RAM2FAB_D2_
 O,O0,X14Y10.RAM2FAB_D2_O0
 O,O1,X14Y10.RAM2FAB_D2_O1
 O,O2,X14Y10.RAM2FAB_D2_O2
@@ -16357,7 +16357,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X14Y10,D,InPass4_frame_config_mux,RAM2FAB_D3_
+BelBegin,X14Y10,D,InPass4_frame_config,RAM2FAB_D3_
 O,O0,X14Y10.RAM2FAB_D3_O0
 O,O1,X14Y10.RAM2FAB_D3_O1
 O,O2,X14Y10.RAM2FAB_D3_O2
@@ -16368,7 +16368,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X14Y10,E,OutPass4_frame_config_mux,FAB2RAM_D0_
+BelBegin,X14Y10,E,OutPass4_frame_config,FAB2RAM_D0_
 I,I0,X14Y10.FAB2RAM_D0_I0
 I,I1,X14Y10.FAB2RAM_D0_I1
 I,I2,X14Y10.FAB2RAM_D0_I2
@@ -16379,7 +16379,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X14Y10,F,OutPass4_frame_config_mux,FAB2RAM_D1_
+BelBegin,X14Y10,F,OutPass4_frame_config,FAB2RAM_D1_
 I,I0,X14Y10.FAB2RAM_D1_I0
 I,I1,X14Y10.FAB2RAM_D1_I1
 I,I2,X14Y10.FAB2RAM_D1_I2
@@ -16390,7 +16390,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X14Y10,G,OutPass4_frame_config_mux,FAB2RAM_D2_
+BelBegin,X14Y10,G,OutPass4_frame_config,FAB2RAM_D2_
 I,I0,X14Y10.FAB2RAM_D2_I0
 I,I1,X14Y10.FAB2RAM_D2_I1
 I,I2,X14Y10.FAB2RAM_D2_I2
@@ -16401,7 +16401,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X14Y10,H,OutPass4_frame_config_mux,FAB2RAM_D3_
+BelBegin,X14Y10,H,OutPass4_frame_config,FAB2RAM_D3_
 I,I0,X14Y10.FAB2RAM_D3_I0
 I,I1,X14Y10.FAB2RAM_D3_I1
 I,I2,X14Y10.FAB2RAM_D3_I2
@@ -16412,7 +16412,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X14Y10,I,OutPass4_frame_config_mux,FAB2RAM_A0_
+BelBegin,X14Y10,I,OutPass4_frame_config,FAB2RAM_A0_
 I,I0,X14Y10.FAB2RAM_A0_I0
 I,I1,X14Y10.FAB2RAM_A0_I1
 I,I2,X14Y10.FAB2RAM_A0_I2
@@ -16423,7 +16423,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X14Y10,J,OutPass4_frame_config_mux,FAB2RAM_A1_
+BelBegin,X14Y10,J,OutPass4_frame_config,FAB2RAM_A1_
 I,I0,X14Y10.FAB2RAM_A1_I0
 I,I1,X14Y10.FAB2RAM_A1_I1
 I,I2,X14Y10.FAB2RAM_A1_I2
@@ -16434,7 +16434,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X14Y10,K,OutPass4_frame_config_mux,FAB2RAM_C_
+BelBegin,X14Y10,K,OutPass4_frame_config,FAB2RAM_C_
 I,I0,X14Y10.FAB2RAM_C_I0
 I,I1,X14Y10.FAB2RAM_C_I1
 I,I2,X14Y10.FAB2RAM_C_I2
@@ -18970,7 +18970,7 @@ CFG,c0
 CFG,c1
 BelEnd
 #Tile_X14Y11
-BelBegin,X14Y11,A,InPass4_frame_config_mux,RAM2FAB_D0_
+BelBegin,X14Y11,A,InPass4_frame_config,RAM2FAB_D0_
 O,O0,X14Y11.RAM2FAB_D0_O0
 O,O1,X14Y11.RAM2FAB_D0_O1
 O,O2,X14Y11.RAM2FAB_D0_O2
@@ -18981,7 +18981,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X14Y11,B,InPass4_frame_config_mux,RAM2FAB_D1_
+BelBegin,X14Y11,B,InPass4_frame_config,RAM2FAB_D1_
 O,O0,X14Y11.RAM2FAB_D1_O0
 O,O1,X14Y11.RAM2FAB_D1_O1
 O,O2,X14Y11.RAM2FAB_D1_O2
@@ -18992,7 +18992,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X14Y11,C,InPass4_frame_config_mux,RAM2FAB_D2_
+BelBegin,X14Y11,C,InPass4_frame_config,RAM2FAB_D2_
 O,O0,X14Y11.RAM2FAB_D2_O0
 O,O1,X14Y11.RAM2FAB_D2_O1
 O,O2,X14Y11.RAM2FAB_D2_O2
@@ -19003,7 +19003,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X14Y11,D,InPass4_frame_config_mux,RAM2FAB_D3_
+BelBegin,X14Y11,D,InPass4_frame_config,RAM2FAB_D3_
 O,O0,X14Y11.RAM2FAB_D3_O0
 O,O1,X14Y11.RAM2FAB_D3_O1
 O,O2,X14Y11.RAM2FAB_D3_O2
@@ -19014,7 +19014,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X14Y11,E,OutPass4_frame_config_mux,FAB2RAM_D0_
+BelBegin,X14Y11,E,OutPass4_frame_config,FAB2RAM_D0_
 I,I0,X14Y11.FAB2RAM_D0_I0
 I,I1,X14Y11.FAB2RAM_D0_I1
 I,I2,X14Y11.FAB2RAM_D0_I2
@@ -19025,7 +19025,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X14Y11,F,OutPass4_frame_config_mux,FAB2RAM_D1_
+BelBegin,X14Y11,F,OutPass4_frame_config,FAB2RAM_D1_
 I,I0,X14Y11.FAB2RAM_D1_I0
 I,I1,X14Y11.FAB2RAM_D1_I1
 I,I2,X14Y11.FAB2RAM_D1_I2
@@ -19036,7 +19036,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X14Y11,G,OutPass4_frame_config_mux,FAB2RAM_D2_
+BelBegin,X14Y11,G,OutPass4_frame_config,FAB2RAM_D2_
 I,I0,X14Y11.FAB2RAM_D2_I0
 I,I1,X14Y11.FAB2RAM_D2_I1
 I,I2,X14Y11.FAB2RAM_D2_I2
@@ -19047,7 +19047,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X14Y11,H,OutPass4_frame_config_mux,FAB2RAM_D3_
+BelBegin,X14Y11,H,OutPass4_frame_config,FAB2RAM_D3_
 I,I0,X14Y11.FAB2RAM_D3_I0
 I,I1,X14Y11.FAB2RAM_D3_I1
 I,I2,X14Y11.FAB2RAM_D3_I2
@@ -19058,7 +19058,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X14Y11,I,OutPass4_frame_config_mux,FAB2RAM_A0_
+BelBegin,X14Y11,I,OutPass4_frame_config,FAB2RAM_A0_
 I,I0,X14Y11.FAB2RAM_A0_I0
 I,I1,X14Y11.FAB2RAM_A0_I1
 I,I2,X14Y11.FAB2RAM_A0_I2
@@ -19069,7 +19069,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X14Y11,J,OutPass4_frame_config_mux,FAB2RAM_A1_
+BelBegin,X14Y11,J,OutPass4_frame_config,FAB2RAM_A1_
 I,I0,X14Y11.FAB2RAM_A1_I0
 I,I1,X14Y11.FAB2RAM_A1_I1
 I,I2,X14Y11.FAB2RAM_A1_I2
@@ -19080,7 +19080,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X14Y11,K,OutPass4_frame_config_mux,FAB2RAM_C_
+BelBegin,X14Y11,K,OutPass4_frame_config,FAB2RAM_C_
 I,I0,X14Y11.FAB2RAM_C_I0
 I,I1,X14Y11.FAB2RAM_C_I1
 I,I2,X14Y11.FAB2RAM_C_I2
@@ -21748,7 +21748,7 @@ CFG,c0
 CFG,c1
 BelEnd
 #Tile_X14Y12
-BelBegin,X14Y12,A,InPass4_frame_config_mux,RAM2FAB_D0_
+BelBegin,X14Y12,A,InPass4_frame_config,RAM2FAB_D0_
 O,O0,X14Y12.RAM2FAB_D0_O0
 O,O1,X14Y12.RAM2FAB_D0_O1
 O,O2,X14Y12.RAM2FAB_D0_O2
@@ -21759,7 +21759,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X14Y12,B,InPass4_frame_config_mux,RAM2FAB_D1_
+BelBegin,X14Y12,B,InPass4_frame_config,RAM2FAB_D1_
 O,O0,X14Y12.RAM2FAB_D1_O0
 O,O1,X14Y12.RAM2FAB_D1_O1
 O,O2,X14Y12.RAM2FAB_D1_O2
@@ -21770,7 +21770,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X14Y12,C,InPass4_frame_config_mux,RAM2FAB_D2_
+BelBegin,X14Y12,C,InPass4_frame_config,RAM2FAB_D2_
 O,O0,X14Y12.RAM2FAB_D2_O0
 O,O1,X14Y12.RAM2FAB_D2_O1
 O,O2,X14Y12.RAM2FAB_D2_O2
@@ -21781,7 +21781,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X14Y12,D,InPass4_frame_config_mux,RAM2FAB_D3_
+BelBegin,X14Y12,D,InPass4_frame_config,RAM2FAB_D3_
 O,O0,X14Y12.RAM2FAB_D3_O0
 O,O1,X14Y12.RAM2FAB_D3_O1
 O,O2,X14Y12.RAM2FAB_D3_O2
@@ -21792,7 +21792,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X14Y12,E,OutPass4_frame_config_mux,FAB2RAM_D0_
+BelBegin,X14Y12,E,OutPass4_frame_config,FAB2RAM_D0_
 I,I0,X14Y12.FAB2RAM_D0_I0
 I,I1,X14Y12.FAB2RAM_D0_I1
 I,I2,X14Y12.FAB2RAM_D0_I2
@@ -21803,7 +21803,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X14Y12,F,OutPass4_frame_config_mux,FAB2RAM_D1_
+BelBegin,X14Y12,F,OutPass4_frame_config,FAB2RAM_D1_
 I,I0,X14Y12.FAB2RAM_D1_I0
 I,I1,X14Y12.FAB2RAM_D1_I1
 I,I2,X14Y12.FAB2RAM_D1_I2
@@ -21814,7 +21814,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X14Y12,G,OutPass4_frame_config_mux,FAB2RAM_D2_
+BelBegin,X14Y12,G,OutPass4_frame_config,FAB2RAM_D2_
 I,I0,X14Y12.FAB2RAM_D2_I0
 I,I1,X14Y12.FAB2RAM_D2_I1
 I,I2,X14Y12.FAB2RAM_D2_I2
@@ -21825,7 +21825,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X14Y12,H,OutPass4_frame_config_mux,FAB2RAM_D3_
+BelBegin,X14Y12,H,OutPass4_frame_config,FAB2RAM_D3_
 I,I0,X14Y12.FAB2RAM_D3_I0
 I,I1,X14Y12.FAB2RAM_D3_I1
 I,I2,X14Y12.FAB2RAM_D3_I2
@@ -21836,7 +21836,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X14Y12,I,OutPass4_frame_config_mux,FAB2RAM_A0_
+BelBegin,X14Y12,I,OutPass4_frame_config,FAB2RAM_A0_
 I,I0,X14Y12.FAB2RAM_A0_I0
 I,I1,X14Y12.FAB2RAM_A0_I1
 I,I2,X14Y12.FAB2RAM_A0_I2
@@ -21847,7 +21847,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X14Y12,J,OutPass4_frame_config_mux,FAB2RAM_A1_
+BelBegin,X14Y12,J,OutPass4_frame_config,FAB2RAM_A1_
 I,I0,X14Y12.FAB2RAM_A1_I0
 I,I1,X14Y12.FAB2RAM_A1_I1
 I,I2,X14Y12.FAB2RAM_A1_I2
@@ -21858,7 +21858,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X14Y12,K,OutPass4_frame_config_mux,FAB2RAM_C_
+BelBegin,X14Y12,K,OutPass4_frame_config,FAB2RAM_C_
 I,I0,X14Y12.FAB2RAM_C_I0
 I,I1,X14Y12.FAB2RAM_C_I1
 I,I2,X14Y12.FAB2RAM_C_I2
@@ -24394,7 +24394,7 @@ CFG,c0
 CFG,c1
 BelEnd
 #Tile_X14Y13
-BelBegin,X14Y13,A,InPass4_frame_config_mux,RAM2FAB_D0_
+BelBegin,X14Y13,A,InPass4_frame_config,RAM2FAB_D0_
 O,O0,X14Y13.RAM2FAB_D0_O0
 O,O1,X14Y13.RAM2FAB_D0_O1
 O,O2,X14Y13.RAM2FAB_D0_O2
@@ -24405,7 +24405,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X14Y13,B,InPass4_frame_config_mux,RAM2FAB_D1_
+BelBegin,X14Y13,B,InPass4_frame_config,RAM2FAB_D1_
 O,O0,X14Y13.RAM2FAB_D1_O0
 O,O1,X14Y13.RAM2FAB_D1_O1
 O,O2,X14Y13.RAM2FAB_D1_O2
@@ -24416,7 +24416,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X14Y13,C,InPass4_frame_config_mux,RAM2FAB_D2_
+BelBegin,X14Y13,C,InPass4_frame_config,RAM2FAB_D2_
 O,O0,X14Y13.RAM2FAB_D2_O0
 O,O1,X14Y13.RAM2FAB_D2_O1
 O,O2,X14Y13.RAM2FAB_D2_O2
@@ -24427,7 +24427,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X14Y13,D,InPass4_frame_config_mux,RAM2FAB_D3_
+BelBegin,X14Y13,D,InPass4_frame_config,RAM2FAB_D3_
 O,O0,X14Y13.RAM2FAB_D3_O0
 O,O1,X14Y13.RAM2FAB_D3_O1
 O,O2,X14Y13.RAM2FAB_D3_O2
@@ -24438,7 +24438,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X14Y13,E,OutPass4_frame_config_mux,FAB2RAM_D0_
+BelBegin,X14Y13,E,OutPass4_frame_config,FAB2RAM_D0_
 I,I0,X14Y13.FAB2RAM_D0_I0
 I,I1,X14Y13.FAB2RAM_D0_I1
 I,I2,X14Y13.FAB2RAM_D0_I2
@@ -24449,7 +24449,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X14Y13,F,OutPass4_frame_config_mux,FAB2RAM_D1_
+BelBegin,X14Y13,F,OutPass4_frame_config,FAB2RAM_D1_
 I,I0,X14Y13.FAB2RAM_D1_I0
 I,I1,X14Y13.FAB2RAM_D1_I1
 I,I2,X14Y13.FAB2RAM_D1_I2
@@ -24460,7 +24460,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X14Y13,G,OutPass4_frame_config_mux,FAB2RAM_D2_
+BelBegin,X14Y13,G,OutPass4_frame_config,FAB2RAM_D2_
 I,I0,X14Y13.FAB2RAM_D2_I0
 I,I1,X14Y13.FAB2RAM_D2_I1
 I,I2,X14Y13.FAB2RAM_D2_I2
@@ -24471,7 +24471,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X14Y13,H,OutPass4_frame_config_mux,FAB2RAM_D3_
+BelBegin,X14Y13,H,OutPass4_frame_config,FAB2RAM_D3_
 I,I0,X14Y13.FAB2RAM_D3_I0
 I,I1,X14Y13.FAB2RAM_D3_I1
 I,I2,X14Y13.FAB2RAM_D3_I2
@@ -24482,7 +24482,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X14Y13,I,OutPass4_frame_config_mux,FAB2RAM_A0_
+BelBegin,X14Y13,I,OutPass4_frame_config,FAB2RAM_A0_
 I,I0,X14Y13.FAB2RAM_A0_I0
 I,I1,X14Y13.FAB2RAM_A0_I1
 I,I2,X14Y13.FAB2RAM_A0_I2
@@ -24493,7 +24493,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X14Y13,J,OutPass4_frame_config_mux,FAB2RAM_A1_
+BelBegin,X14Y13,J,OutPass4_frame_config,FAB2RAM_A1_
 I,I0,X14Y13.FAB2RAM_A1_I0
 I,I1,X14Y13.FAB2RAM_A1_I1
 I,I2,X14Y13.FAB2RAM_A1_I2
@@ -24504,7 +24504,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X14Y13,K,OutPass4_frame_config_mux,FAB2RAM_C_
+BelBegin,X14Y13,K,OutPass4_frame_config,FAB2RAM_C_
 I,I0,X14Y13.FAB2RAM_C_I0
 I,I1,X14Y13.FAB2RAM_C_I1
 I,I2,X14Y13.FAB2RAM_C_I2
@@ -27172,7 +27172,7 @@ CFG,c0
 CFG,c1
 BelEnd
 #Tile_X14Y14
-BelBegin,X14Y14,A,InPass4_frame_config_mux,RAM2FAB_D0_
+BelBegin,X14Y14,A,InPass4_frame_config,RAM2FAB_D0_
 O,O0,X14Y14.RAM2FAB_D0_O0
 O,O1,X14Y14.RAM2FAB_D0_O1
 O,O2,X14Y14.RAM2FAB_D0_O2
@@ -27183,7 +27183,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X14Y14,B,InPass4_frame_config_mux,RAM2FAB_D1_
+BelBegin,X14Y14,B,InPass4_frame_config,RAM2FAB_D1_
 O,O0,X14Y14.RAM2FAB_D1_O0
 O,O1,X14Y14.RAM2FAB_D1_O1
 O,O2,X14Y14.RAM2FAB_D1_O2
@@ -27194,7 +27194,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X14Y14,C,InPass4_frame_config_mux,RAM2FAB_D2_
+BelBegin,X14Y14,C,InPass4_frame_config,RAM2FAB_D2_
 O,O0,X14Y14.RAM2FAB_D2_O0
 O,O1,X14Y14.RAM2FAB_D2_O1
 O,O2,X14Y14.RAM2FAB_D2_O2
@@ -27205,7 +27205,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X14Y14,D,InPass4_frame_config_mux,RAM2FAB_D3_
+BelBegin,X14Y14,D,InPass4_frame_config,RAM2FAB_D3_
 O,O0,X14Y14.RAM2FAB_D3_O0
 O,O1,X14Y14.RAM2FAB_D3_O1
 O,O2,X14Y14.RAM2FAB_D3_O2
@@ -27216,7 +27216,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X14Y14,E,OutPass4_frame_config_mux,FAB2RAM_D0_
+BelBegin,X14Y14,E,OutPass4_frame_config,FAB2RAM_D0_
 I,I0,X14Y14.FAB2RAM_D0_I0
 I,I1,X14Y14.FAB2RAM_D0_I1
 I,I2,X14Y14.FAB2RAM_D0_I2
@@ -27227,7 +27227,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X14Y14,F,OutPass4_frame_config_mux,FAB2RAM_D1_
+BelBegin,X14Y14,F,OutPass4_frame_config,FAB2RAM_D1_
 I,I0,X14Y14.FAB2RAM_D1_I0
 I,I1,X14Y14.FAB2RAM_D1_I1
 I,I2,X14Y14.FAB2RAM_D1_I2
@@ -27238,7 +27238,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X14Y14,G,OutPass4_frame_config_mux,FAB2RAM_D2_
+BelBegin,X14Y14,G,OutPass4_frame_config,FAB2RAM_D2_
 I,I0,X14Y14.FAB2RAM_D2_I0
 I,I1,X14Y14.FAB2RAM_D2_I1
 I,I2,X14Y14.FAB2RAM_D2_I2
@@ -27249,7 +27249,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X14Y14,H,OutPass4_frame_config_mux,FAB2RAM_D3_
+BelBegin,X14Y14,H,OutPass4_frame_config,FAB2RAM_D3_
 I,I0,X14Y14.FAB2RAM_D3_I0
 I,I1,X14Y14.FAB2RAM_D3_I1
 I,I2,X14Y14.FAB2RAM_D3_I2
@@ -27260,7 +27260,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X14Y14,I,OutPass4_frame_config_mux,FAB2RAM_A0_
+BelBegin,X14Y14,I,OutPass4_frame_config,FAB2RAM_A0_
 I,I0,X14Y14.FAB2RAM_A0_I0
 I,I1,X14Y14.FAB2RAM_A0_I1
 I,I2,X14Y14.FAB2RAM_A0_I2
@@ -27271,7 +27271,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X14Y14,J,OutPass4_frame_config_mux,FAB2RAM_A1_
+BelBegin,X14Y14,J,OutPass4_frame_config,FAB2RAM_A1_
 I,I0,X14Y14.FAB2RAM_A1_I0
 I,I1,X14Y14.FAB2RAM_A1_I1
 I,I2,X14Y14.FAB2RAM_A1_I2
@@ -27282,7 +27282,7 @@ CFG,I2_reg
 CFG,I3_reg
 GlobalClk
 BelEnd
-BelBegin,X14Y14,K,OutPass4_frame_config_mux,FAB2RAM_C_
+BelBegin,X14Y14,K,OutPass4_frame_config,FAB2RAM_C_
 I,I0,X14Y14.FAB2RAM_C_I0
 I,I1,X14Y14.FAB2RAM_C_I1
 I,I2,X14Y14.FAB2RAM_C_I2

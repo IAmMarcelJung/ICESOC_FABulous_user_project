@@ -639,7 +639,7 @@ W_CPU_IO_bot_ConfigMem
 );
 
  //BEL component instantiations
-InPass4_frame_config_mux Inst_OPA_InPass4_frame_config_mux (
+InPass4_frame_config Inst_OPA_InPass4_frame_config (
     .O0(OPA_O0),
     .O1(OPA_O1),
     .O2(OPA_O2),
@@ -652,7 +652,7 @@ InPass4_frame_config_mux Inst_OPA_InPass4_frame_config_mux (
     .ConfigBits(ConfigBits[4-1:0])
 );
 
-InPass4_frame_config_mux Inst_OPB_InPass4_frame_config_mux (
+InPass4_frame_config Inst_OPB_InPass4_frame_config (
     .O0(OPB_O0),
     .O1(OPB_O1),
     .O2(OPB_O2),
@@ -665,7 +665,7 @@ InPass4_frame_config_mux Inst_OPB_InPass4_frame_config_mux (
     .ConfigBits(ConfigBits[8-1:4])
 );
 
-OutPass4_frame_config_mux Inst_RES0_OutPass4_frame_config_mux (
+OutPass4_frame_config Inst_RES0_OutPass4_frame_config (
     .I0(RES0_I0),
     .I1(RES0_I1),
     .I2(RES0_I2),
@@ -678,7 +678,7 @@ OutPass4_frame_config_mux Inst_RES0_OutPass4_frame_config_mux (
     .ConfigBits(ConfigBits[12-1:8])
 );
 
-OutPass4_frame_config_mux Inst_RES1_OutPass4_frame_config_mux (
+OutPass4_frame_config Inst_RES1_OutPass4_frame_config (
     .I0(RES1_I0),
     .I1(RES1_I1),
     .I2(RES1_I2),
@@ -691,7 +691,7 @@ OutPass4_frame_config_mux Inst_RES1_OutPass4_frame_config_mux (
     .ConfigBits(ConfigBits[16-1:12])
 );
 
-OutPass4_frame_config_mux Inst_RES2_OutPass4_frame_config_mux (
+OutPass4_frame_config Inst_RES2_OutPass4_frame_config (
     .I0(RES2_I0),
     .I1(RES2_I1),
     .I2(RES2_I2),
