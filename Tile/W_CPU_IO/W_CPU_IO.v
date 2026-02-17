@@ -808,9 +808,7 @@ W_CPU_IO_switch_matrix Inst_W_CPU_IO_switch_matrix (
     .RES2_I0(RES2_I0),
     .RES2_I1(RES2_I1),
     .RES2_I2(RES2_I2),
-    .RES2_I3(RES2_I3),
-    .ConfigBits(ConfigBits[20-1:20]),
-    .ConfigBits_N(ConfigBits_N[20-1:20])
+    .RES2_I3(RES2_I3)
 );
 
 endmodule
