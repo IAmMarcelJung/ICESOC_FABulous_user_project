@@ -47,10 +47,12 @@ module top_tb;
     always #5000 CLK = (CLK === 1'b0);
 
     integer i;
+    integer fd;
     reg have_errors = 1'b0;
 
     reg [2047:0] bitstream_hex_arg; // 256 bytes for characters
     reg [2047:0] output_waveform_arg; // 256 bytes for characters
+
     initial begin
 
         if ($value$plusargs("output_waveform=%s", output_waveform_arg)) begin
@@ -62,8 +64,15 @@ module top_tb;
 `ifndef EMULATION
 
         if ($value$plusargs("bitstream_hex=%s", bitstream_hex_arg)) begin
-            $readmemh(bitstream_hex_arg, bitstream);
-            $display("Read bitstream hex from %s", bitstream_hex_arg);
+            fd = $fopen(bitstream_hex_arg, "r");
+            if (fd != 0) begin
+                $readmemh(bitstream_hex_arg, bitstream);
+                $display("Read bitstream hex from %s", bitstream_hex_arg);
+            end else begin
+                $display("\nFailed to open the bitstream file %s", bitstream_hex_arg);
+                $fatal;
+            end
+
         end else begin
             $display("Error: No bitstream provided as $plusargs bitstream_hex.");
             $fatal;
