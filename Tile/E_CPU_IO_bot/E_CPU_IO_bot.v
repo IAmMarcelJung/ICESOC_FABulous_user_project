@@ -8,56 +8,55 @@ module E_CPU_IO_bot
         parameter NoConfigBits=20
     )
     (
- //Side.WEST
-        input [3:0] E1END,        //Port(Name=E1END, IO=INPUT, XOffset=1, YOffset=0, WireCount=4, Side=WEST)
-        input [7:0] E2MID,        //Port(Name=E2MID, IO=INPUT, XOffset=1, YOffset=0, WireCount=8, Side=WEST)
-        input [7:0] E2END,        //Port(Name=E2END, IO=INPUT, XOffset=1, YOffset=0, WireCount=8, Side=WEST)
-        input [15:0] EE4END,        //Port(Name=EE4END, IO=INPUT, XOffset=4, YOffset=0, WireCount=4, Side=WEST)
-        input [11:0] E6END,        //Port(Name=E6END, IO=INPUT, XOffset=6, YOffset=0, WireCount=2, Side=WEST)
-        output [3:0] W1BEG,        //Port(Name=W1BEG, IO=OUTPUT, XOffset=-1, YOffset=0, WireCount=4, Side=WEST)
-        output [7:0] W2BEG,        //Port(Name=W2BEG, IO=OUTPUT, XOffset=-1, YOffset=0, WireCount=8, Side=WEST)
-        output [7:0] W2BEGb,        //Port(Name=W2BEGb, IO=OUTPUT, XOffset=-1, YOffset=0, WireCount=8, Side=WEST)
-        output [15:0] WW4BEG,        //Port(Name=WW4BEG, IO=OUTPUT, XOffset=-4, YOffset=0, WireCount=4, Side=WEST)
-        output [11:0] W6BEG,        //Port(Name=W6BEG, IO=OUTPUT, XOffset=-6, YOffset=0, WireCount=2, Side=WEST)
- //Side.SOUTH
-        input [3:0] N1END,        //Port(Name=N1END, IO=INPUT, XOffset=0, YOffset=-1, WireCount=4, Side=SOUTH)
-        input [7:0] N2MID,        //Port(Name=N2MID, IO=INPUT, XOffset=0, YOffset=-1, WireCount=8, Side=SOUTH)
-        input [7:0] N2END,        //Port(Name=N2END, IO=INPUT, XOffset=0, YOffset=-1, WireCount=8, Side=SOUTH)
-        input [15:0] N4END,        //Port(Name=N4END, IO=INPUT, XOffset=0, YOffset=-4, WireCount=4, Side=SOUTH)
-        input [15:0] NN4END,        //Port(Name=NN4END, IO=INPUT, XOffset=0, YOffset=-4, WireCount=4, Side=SOUTH)
-        input [0:0] Ci,        //Port(Name=Ci, IO=INPUT, XOffset=0, YOffset=-1, WireCount=1, Side=SOUTH)
-        output [3:0] S1BEG,        //Port(Name=S1BEG, IO=OUTPUT, XOffset=0, YOffset=1, WireCount=4, Side=SOUTH)
-        output [7:0] S2BEG,        //Port(Name=S2BEG, IO=OUTPUT, XOffset=0, YOffset=1, WireCount=8, Side=SOUTH)
-        output [7:0] S2BEGb,        //Port(Name=S2BEGb, IO=OUTPUT, XOffset=0, YOffset=1, WireCount=8, Side=SOUTH)
-        output [15:0] S4BEG,        //Port(Name=S4BEG, IO=OUTPUT, XOffset=0, YOffset=4, WireCount=4, Side=SOUTH)
-        output [15:0] SS4BEG,        //Port(Name=SS4BEG, IO=OUTPUT, XOffset=0, YOffset=4, WireCount=4, Side=SOUTH)
-        input OPA_I0,
-        input OPA_I1,
-        input OPA_I2,
-        input OPA_I3,
-        input OPB_I0,
-        input OPB_I1,
-        input OPB_I2,
-        input OPB_I3,
-        output RES0_O0,
-        output RES0_O1,
-        output RES0_O2,
-        output RES0_O3,
-        output RES1_O0,
-        output RES1_O1,
-        output RES1_O2,
-        output RES1_O3,
-        output RES2_O0,
-        output RES2_O1,
-        output RES2_O2,
-        output RES2_O3,
+ //W
+        input  [3:0] E1END,        //Port(Name=E1END,IO=INPUT,XOffset=1,YOffset=0,WireCount=4,Side=W)
+        input  [7:0] E2MID,        //Port(Name=E2MID,IO=INPUT,XOffset=1,YOffset=0,WireCount=8,Side=W)
+        input  [7:0] E2END,        //Port(Name=E2END,IO=INPUT,XOffset=1,YOffset=0,WireCount=8,Side=W)
+        input  [15:0] EE4END,        //Port(Name=EE4END,IO=INPUT,XOffset=4,YOffset=0,WireCount=4,Side=W)
+        input  [11:0] E6END,        //Port(Name=E6END,IO=INPUT,XOffset=6,YOffset=0,WireCount=2,Side=W)
+        output  [3:0] W1BEG,        //Port(Name=W1BEG,IO=OUTPUT,XOffset=-1,YOffset=0,WireCount=4,Side=W)
+        output  [7:0] W2BEG,        //Port(Name=W2BEG,IO=OUTPUT,XOffset=-1,YOffset=0,WireCount=8,Side=W)
+        output  [7:0] W2BEGb,        //Port(Name=W2BEGb,IO=OUTPUT,XOffset=-1,YOffset=0,WireCount=8,Side=W)
+        output  [11:0] W6BEG,        //Port(Name=W6BEG,IO=OUTPUT,XOffset=-6,YOffset=0,WireCount=2,Side=W)
+ //S
+        input  [3:0] N1END,        //Port(Name=N1END,IO=INPUT,XOffset=0,YOffset=-1,WireCount=4,Side=S)
+        input  [7:0] N2MID,        //Port(Name=N2MID,IO=INPUT,XOffset=0,YOffset=-1,WireCount=8,Side=S)
+        input  [7:0] N2END,        //Port(Name=N2END,IO=INPUT,XOffset=0,YOffset=-1,WireCount=8,Side=S)
+        input  [15:0] N4END,        //Port(Name=N4END,IO=INPUT,XOffset=0,YOffset=-4,WireCount=4,Side=S)
+        input  [15:0] NN4END,        //Port(Name=NN4END,IO=INPUT,XOffset=0,YOffset=-4,WireCount=4,Side=S)
+        input  [0:0] Ci,        //Port(Name=Ci,IO=INPUT,XOffset=0,YOffset=-1,WireCount=1,Side=S)
+        output  [3:0] S1BEG,        //Port(Name=S1BEG,IO=OUTPUT,XOffset=0,YOffset=1,WireCount=4,Side=S)
+        output  [7:0] S2BEG,        //Port(Name=S2BEG,IO=OUTPUT,XOffset=0,YOffset=1,WireCount=8,Side=S)
+        output  [7:0] S2BEGb,        //Port(Name=S2BEGb,IO=OUTPUT,XOffset=0,YOffset=1,WireCount=8,Side=S)
+        output  [15:0] S4BEG,        //Port(Name=S4BEG,IO=OUTPUT,XOffset=0,YOffset=4,WireCount=4,Side=S)
+        output  [15:0] SS4BEG,        //Port(Name=SS4BEG,IO=OUTPUT,XOffset=0,YOffset=4,WireCount=4,Side=S)
+        input  OPA_I0,
+        input  OPA_I1,
+        input  OPA_I2,
+        input  OPA_I3,
+        input  OPB_I0,
+        input  OPB_I1,
+        input  OPB_I2,
+        input  OPB_I3,
+        output  RES0_O0,
+        output  RES0_O1,
+        output  RES0_O2,
+        output  RES0_O3,
+        output  RES1_O0,
+        output  RES1_O1,
+        output  RES1_O2,
+        output  RES1_O3,
+        output  RES2_O0,
+        output  RES2_O1,
+        output  RES2_O2,
+        output  RES2_O3,
     //Tile IO ports from BELs
-        input UserCLK,
-        output UserCLKo,
-        input [FrameBitsPerRow -1:0] FrameData, //CONFIG_PORT
-        output [FrameBitsPerRow -1:0] FrameData_O,
-        input [MaxFramesPerCol -1:0] FrameStrobe, //CONFIG_PORT
-        output [MaxFramesPerCol -1:0] FrameStrobe_O
+        input  UserCLK,
+        output  UserCLKo,
+        input  [FrameBitsPerRow-1:0] FrameData, //CONFIG_PORT
+        output  [FrameBitsPerRow-1:0] FrameData_O,
+        input  [MaxFramesPerCol-1:0] FrameStrobe, //CONFIG_PORT
+        output  [MaxFramesPerCol-1:0] FrameStrobe_O
     //global
 );
  //signal declarations
@@ -638,6 +637,7 @@ E_CPU_IO_bot_ConfigMem
     .ConfigBits_N(ConfigBits_N)
 );
 
+
  //BEL component instantiations
 InPass4_frame_config Inst_OPA_InPass4_frame_config (
     .O0(OPA_O0),
@@ -834,22 +834,6 @@ E_CPU_IO_bot_switch_matrix Inst_E_CPU_IO_bot_switch_matrix (
     .W2BEGb5(W2BEGb[5]),
     .W2BEGb6(W2BEGb[6]),
     .W2BEGb7(W2BEGb[7]),
-    .WW4BEG0(WW4BEG[0]),
-    .WW4BEG1(WW4BEG[1]),
-    .WW4BEG2(WW4BEG[2]),
-    .WW4BEG3(WW4BEG[3]),
-    .WW4BEG4(WW4BEG[4]),
-    .WW4BEG5(WW4BEG[5]),
-    .WW4BEG6(WW4BEG[6]),
-    .WW4BEG7(WW4BEG[7]),
-    .WW4BEG8(WW4BEG[8]),
-    .WW4BEG9(WW4BEG[9]),
-    .WW4BEG10(WW4BEG[10]),
-    .WW4BEG11(WW4BEG[11]),
-    .WW4BEG12(WW4BEG[12]),
-    .WW4BEG13(WW4BEG[13]),
-    .WW4BEG14(WW4BEG[14]),
-    .WW4BEG15(WW4BEG[15]),
     .W6BEG0(W6BEG[0]),
     .W6BEG1(W6BEG[1]),
     .W6BEG2(W6BEG[2]),
@@ -925,7 +909,9 @@ E_CPU_IO_bot_switch_matrix Inst_E_CPU_IO_bot_switch_matrix (
     .RES2_I0(RES2_I0),
     .RES2_I1(RES2_I1),
     .RES2_I2(RES2_I2),
-    .RES2_I3(RES2_I3)
+    .RES2_I3(RES2_I3),
+    .ConfigBits(ConfigBits[20-1:20]),
+    .ConfigBits_N(ConfigBits_N[20-1:20])
 );
 
 endmodule

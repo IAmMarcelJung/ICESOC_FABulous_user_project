@@ -4,502 +4,502 @@ module DSP_bot_switch_matrix
         parameter NoConfigBits=410
     )
     (
-        input N1END0,
-        input N1END1,
-        input N1END2,
-        input N1END3,
-        input N2MID0,
-        input N2MID1,
-        input N2MID2,
-        input N2MID3,
-        input N2MID4,
-        input N2MID5,
-        input N2MID6,
-        input N2MID7,
-        input N2END0,
-        input N2END1,
-        input N2END2,
-        input N2END3,
-        input N2END4,
-        input N2END5,
-        input N2END6,
-        input N2END7,
-        input N4END0,
-        input N4END1,
-        input N4END2,
-        input N4END3,
-        input NN4END0,
-        input NN4END1,
-        input NN4END2,
-        input NN4END3,
-        input E1END0,
-        input E1END1,
-        input E1END2,
-        input E1END3,
-        input E2MID0,
-        input E2MID1,
-        input E2MID2,
-        input E2MID3,
-        input E2MID4,
-        input E2MID5,
-        input E2MID6,
-        input E2MID7,
-        input E2END0,
-        input E2END1,
-        input E2END2,
-        input E2END3,
-        input E2END4,
-        input E2END5,
-        input E2END6,
-        input E2END7,
-        input EE4END0,
-        input EE4END1,
-        input EE4END2,
-        input EE4END3,
-        input E6END0,
-        input E6END1,
-        input S1END0,
-        input S1END1,
-        input S1END2,
-        input S1END3,
-        input S2MID0,
-        input S2MID1,
-        input S2MID2,
-        input S2MID3,
-        input S2MID4,
-        input S2MID5,
-        input S2MID6,
-        input S2MID7,
-        input S2END0,
-        input S2END1,
-        input S2END2,
-        input S2END3,
-        input S2END4,
-        input S2END5,
-        input S2END6,
-        input S2END7,
-        input S4END0,
-        input S4END1,
-        input S4END2,
-        input S4END3,
-        input SS4END0,
-        input SS4END1,
-        input SS4END2,
-        input SS4END3,
-        input top2bot0,
-        input top2bot1,
-        input top2bot2,
-        input top2bot3,
-        input top2bot4,
-        input top2bot5,
-        input top2bot6,
-        input top2bot7,
-        input top2bot8,
-        input top2bot9,
-        input top2bot10,
-        input top2bot11,
-        input top2bot12,
-        input top2bot13,
-        input top2bot14,
-        input top2bot15,
-        input top2bot16,
-        input top2bot17,
-        input W1END0,
-        input W1END1,
-        input W1END2,
-        input W1END3,
-        input W2MID0,
-        input W2MID1,
-        input W2MID2,
-        input W2MID3,
-        input W2MID4,
-        input W2MID5,
-        input W2MID6,
-        input W2MID7,
-        input W2END0,
-        input W2END1,
-        input W2END2,
-        input W2END3,
-        input W2END4,
-        input W2END5,
-        input W2END6,
-        input W2END7,
-        input WW4END0,
-        input WW4END1,
-        input WW4END2,
-        input WW4END3,
-        input W6END0,
-        input W6END1,
-        input Q19,
-        input Q18,
-        input Q17,
-        input Q16,
-        input Q15,
-        input Q14,
-        input Q13,
-        input Q12,
-        input Q11,
-        input Q10,
-        input Q9,
-        input Q8,
-        input Q7,
-        input Q6,
-        input Q5,
-        input Q4,
-        input Q3,
-        input Q2,
-        input Q1,
-        input Q0,
-        input J2MID_ABa_END0,
-        input J2MID_ABa_END1,
-        input J2MID_ABa_END2,
-        input J2MID_ABa_END3,
-        input J2MID_CDa_END0,
-        input J2MID_CDa_END1,
-        input J2MID_CDa_END2,
-        input J2MID_CDa_END3,
-        input J2MID_EFa_END0,
-        input J2MID_EFa_END1,
-        input J2MID_EFa_END2,
-        input J2MID_EFa_END3,
-        input J2MID_GHa_END0,
-        input J2MID_GHa_END1,
-        input J2MID_GHa_END2,
-        input J2MID_GHa_END3,
-        input J2MID_ABb_END0,
-        input J2MID_ABb_END1,
-        input J2MID_ABb_END2,
-        input J2MID_ABb_END3,
-        input J2MID_CDb_END0,
-        input J2MID_CDb_END1,
-        input J2MID_CDb_END2,
-        input J2MID_CDb_END3,
-        input J2MID_EFb_END0,
-        input J2MID_EFb_END1,
-        input J2MID_EFb_END2,
-        input J2MID_EFb_END3,
-        input J2MID_GHb_END0,
-        input J2MID_GHb_END1,
-        input J2MID_GHb_END2,
-        input J2MID_GHb_END3,
-        input J2END_AB_END0,
-        input J2END_AB_END1,
-        input J2END_AB_END2,
-        input J2END_AB_END3,
-        input J2END_CD_END0,
-        input J2END_CD_END1,
-        input J2END_CD_END2,
-        input J2END_CD_END3,
-        input J2END_EF_END0,
-        input J2END_EF_END1,
-        input J2END_EF_END2,
-        input J2END_EF_END3,
-        input J2END_GH_END0,
-        input J2END_GH_END1,
-        input J2END_GH_END2,
-        input J2END_GH_END3,
-        input JN2END0,
-        input JN2END1,
-        input JN2END2,
-        input JN2END3,
-        input JN2END4,
-        input JN2END5,
-        input JN2END6,
-        input JN2END7,
-        input JE2END0,
-        input JE2END1,
-        input JE2END2,
-        input JE2END3,
-        input JE2END4,
-        input JE2END5,
-        input JE2END6,
-        input JE2END7,
-        input JS2END0,
-        input JS2END1,
-        input JS2END2,
-        input JS2END3,
-        input JS2END4,
-        input JS2END5,
-        input JS2END6,
-        input JS2END7,
-        input JW2END0,
-        input JW2END1,
-        input JW2END2,
-        input JW2END3,
-        input JW2END4,
-        input JW2END5,
-        input JW2END6,
-        input JW2END7,
-        input J_l_AB_END0,
-        input J_l_AB_END1,
-        input J_l_AB_END2,
-        input J_l_AB_END3,
-        input J_l_CD_END0,
-        input J_l_CD_END1,
-        input J_l_CD_END2,
-        input J_l_CD_END3,
-        input J_l_EF_END0,
-        input J_l_EF_END1,
-        input J_l_EF_END2,
-        input J_l_EF_END3,
-        input J_l_GH_END0,
-        input J_l_GH_END1,
-        input J_l_GH_END2,
-        input J_l_GH_END3,
-        output N1BEG0,
-        output N1BEG1,
-        output N1BEG2,
-        output N1BEG3,
-        output N2BEG0,
-        output N2BEG1,
-        output N2BEG2,
-        output N2BEG3,
-        output N2BEG4,
-        output N2BEG5,
-        output N2BEG6,
-        output N2BEG7,
-        output N2BEGb0,
-        output N2BEGb1,
-        output N2BEGb2,
-        output N2BEGb3,
-        output N2BEGb4,
-        output N2BEGb5,
-        output N2BEGb6,
-        output N2BEGb7,
-        output N4BEG0,
-        output N4BEG1,
-        output N4BEG2,
-        output N4BEG3,
-        output NN4BEG0,
-        output NN4BEG1,
-        output NN4BEG2,
-        output NN4BEG3,
-        output bot2top0,
-        output bot2top1,
-        output bot2top2,
-        output bot2top3,
-        output bot2top4,
-        output bot2top5,
-        output bot2top6,
-        output bot2top7,
-        output bot2top8,
-        output bot2top9,
-        output E1BEG0,
-        output E1BEG1,
-        output E1BEG2,
-        output E1BEG3,
-        output E2BEG0,
-        output E2BEG1,
-        output E2BEG2,
-        output E2BEG3,
-        output E2BEG4,
-        output E2BEG5,
-        output E2BEG6,
-        output E2BEG7,
-        output E2BEGb0,
-        output E2BEGb1,
-        output E2BEGb2,
-        output E2BEGb3,
-        output E2BEGb4,
-        output E2BEGb5,
-        output E2BEGb6,
-        output E2BEGb7,
-        output EE4BEG0,
-        output EE4BEG1,
-        output EE4BEG2,
-        output EE4BEG3,
-        output E6BEG0,
-        output E6BEG1,
-        output S1BEG0,
-        output S1BEG1,
-        output S1BEG2,
-        output S1BEG3,
-        output S2BEG0,
-        output S2BEG1,
-        output S2BEG2,
-        output S2BEG3,
-        output S2BEG4,
-        output S2BEG5,
-        output S2BEG6,
-        output S2BEG7,
-        output S2BEGb0,
-        output S2BEGb1,
-        output S2BEGb2,
-        output S2BEGb3,
-        output S2BEGb4,
-        output S2BEGb5,
-        output S2BEGb6,
-        output S2BEGb7,
-        output S4BEG0,
-        output S4BEG1,
-        output S4BEG2,
-        output S4BEG3,
-        output SS4BEG0,
-        output SS4BEG1,
-        output SS4BEG2,
-        output SS4BEG3,
-        output W1BEG0,
-        output W1BEG1,
-        output W1BEG2,
-        output W1BEG3,
-        output W2BEG0,
-        output W2BEG1,
-        output W2BEG2,
-        output W2BEG3,
-        output W2BEG4,
-        output W2BEG5,
-        output W2BEG6,
-        output W2BEG7,
-        output W2BEGb0,
-        output W2BEGb1,
-        output W2BEGb2,
-        output W2BEGb3,
-        output W2BEGb4,
-        output W2BEGb5,
-        output W2BEGb6,
-        output W2BEGb7,
-        output WW4BEG0,
-        output WW4BEG1,
-        output WW4BEG2,
-        output WW4BEG3,
-        output W6BEG0,
-        output W6BEG1,
-        output A7,
-        output A6,
-        output A5,
-        output A4,
-        output A3,
-        output A2,
-        output A1,
-        output A0,
-        output B7,
-        output B6,
-        output B5,
-        output B4,
-        output B3,
-        output B2,
-        output B1,
-        output B0,
-        output C19,
-        output C18,
-        output C17,
-        output C16,
-        output C15,
-        output C14,
-        output C13,
-        output C12,
-        output C11,
-        output C10,
-        output C9,
-        output C8,
-        output C7,
-        output C6,
-        output C5,
-        output C4,
-        output C3,
-        output C2,
-        output C1,
-        output C0,
-        output clr,
-        output J2MID_ABa_BEG0,
-        output J2MID_ABa_BEG1,
-        output J2MID_ABa_BEG2,
-        output J2MID_ABa_BEG3,
-        output J2MID_CDa_BEG0,
-        output J2MID_CDa_BEG1,
-        output J2MID_CDa_BEG2,
-        output J2MID_CDa_BEG3,
-        output J2MID_EFa_BEG0,
-        output J2MID_EFa_BEG1,
-        output J2MID_EFa_BEG2,
-        output J2MID_EFa_BEG3,
-        output J2MID_GHa_BEG0,
-        output J2MID_GHa_BEG1,
-        output J2MID_GHa_BEG2,
-        output J2MID_GHa_BEG3,
-        output J2MID_ABb_BEG0,
-        output J2MID_ABb_BEG1,
-        output J2MID_ABb_BEG2,
-        output J2MID_ABb_BEG3,
-        output J2MID_CDb_BEG0,
-        output J2MID_CDb_BEG1,
-        output J2MID_CDb_BEG2,
-        output J2MID_CDb_BEG3,
-        output J2MID_EFb_BEG0,
-        output J2MID_EFb_BEG1,
-        output J2MID_EFb_BEG2,
-        output J2MID_EFb_BEG3,
-        output J2MID_GHb_BEG0,
-        output J2MID_GHb_BEG1,
-        output J2MID_GHb_BEG2,
-        output J2MID_GHb_BEG3,
-        output J2END_AB_BEG0,
-        output J2END_AB_BEG1,
-        output J2END_AB_BEG2,
-        output J2END_AB_BEG3,
-        output J2END_CD_BEG0,
-        output J2END_CD_BEG1,
-        output J2END_CD_BEG2,
-        output J2END_CD_BEG3,
-        output J2END_EF_BEG0,
-        output J2END_EF_BEG1,
-        output J2END_EF_BEG2,
-        output J2END_EF_BEG3,
-        output J2END_GH_BEG0,
-        output J2END_GH_BEG1,
-        output J2END_GH_BEG2,
-        output J2END_GH_BEG3,
-        output JN2BEG0,
-        output JN2BEG1,
-        output JN2BEG2,
-        output JN2BEG3,
-        output JN2BEG4,
-        output JN2BEG5,
-        output JN2BEG6,
-        output JN2BEG7,
-        output JE2BEG0,
-        output JE2BEG1,
-        output JE2BEG2,
-        output JE2BEG3,
-        output JE2BEG4,
-        output JE2BEG5,
-        output JE2BEG6,
-        output JE2BEG7,
-        output JS2BEG0,
-        output JS2BEG1,
-        output JS2BEG2,
-        output JS2BEG3,
-        output JS2BEG4,
-        output JS2BEG5,
-        output JS2BEG6,
-        output JS2BEG7,
-        output JW2BEG0,
-        output JW2BEG1,
-        output JW2BEG2,
-        output JW2BEG3,
-        output JW2BEG4,
-        output JW2BEG5,
-        output JW2BEG6,
-        output JW2BEG7,
-        output J_l_AB_BEG0,
-        output J_l_AB_BEG1,
-        output J_l_AB_BEG2,
-        output J_l_AB_BEG3,
-        output J_l_CD_BEG0,
-        output J_l_CD_BEG1,
-        output J_l_CD_BEG2,
-        output J_l_CD_BEG3,
-        output J_l_EF_BEG0,
-        output J_l_EF_BEG1,
-        output J_l_EF_BEG2,
-        output J_l_EF_BEG3,
-        output J_l_GH_BEG0,
-        output J_l_GH_BEG1,
-        output J_l_GH_BEG2,
-        output J_l_GH_BEG3,
+        input  N1END0,
+        input  N1END1,
+        input  N1END2,
+        input  N1END3,
+        input  N2MID0,
+        input  N2MID1,
+        input  N2MID2,
+        input  N2MID3,
+        input  N2MID4,
+        input  N2MID5,
+        input  N2MID6,
+        input  N2MID7,
+        input  N2END0,
+        input  N2END1,
+        input  N2END2,
+        input  N2END3,
+        input  N2END4,
+        input  N2END5,
+        input  N2END6,
+        input  N2END7,
+        input  N4END0,
+        input  N4END1,
+        input  N4END2,
+        input  N4END3,
+        input  NN4END0,
+        input  NN4END1,
+        input  NN4END2,
+        input  NN4END3,
+        input  E1END0,
+        input  E1END1,
+        input  E1END2,
+        input  E1END3,
+        input  E2MID0,
+        input  E2MID1,
+        input  E2MID2,
+        input  E2MID3,
+        input  E2MID4,
+        input  E2MID5,
+        input  E2MID6,
+        input  E2MID7,
+        input  E2END0,
+        input  E2END1,
+        input  E2END2,
+        input  E2END3,
+        input  E2END4,
+        input  E2END5,
+        input  E2END6,
+        input  E2END7,
+        input  EE4END0,
+        input  EE4END1,
+        input  EE4END2,
+        input  EE4END3,
+        input  E6END0,
+        input  E6END1,
+        input  S1END0,
+        input  S1END1,
+        input  S1END2,
+        input  S1END3,
+        input  S2MID0,
+        input  S2MID1,
+        input  S2MID2,
+        input  S2MID3,
+        input  S2MID4,
+        input  S2MID5,
+        input  S2MID6,
+        input  S2MID7,
+        input  S2END0,
+        input  S2END1,
+        input  S2END2,
+        input  S2END3,
+        input  S2END4,
+        input  S2END5,
+        input  S2END6,
+        input  S2END7,
+        input  S4END0,
+        input  S4END1,
+        input  S4END2,
+        input  S4END3,
+        input  SS4END0,
+        input  SS4END1,
+        input  SS4END2,
+        input  SS4END3,
+        input  top2bot0,
+        input  top2bot1,
+        input  top2bot2,
+        input  top2bot3,
+        input  top2bot4,
+        input  top2bot5,
+        input  top2bot6,
+        input  top2bot7,
+        input  top2bot8,
+        input  top2bot9,
+        input  top2bot10,
+        input  top2bot11,
+        input  top2bot12,
+        input  top2bot13,
+        input  top2bot14,
+        input  top2bot15,
+        input  top2bot16,
+        input  top2bot17,
+        input  W1END0,
+        input  W1END1,
+        input  W1END2,
+        input  W1END3,
+        input  W2MID0,
+        input  W2MID1,
+        input  W2MID2,
+        input  W2MID3,
+        input  W2MID4,
+        input  W2MID5,
+        input  W2MID6,
+        input  W2MID7,
+        input  W2END0,
+        input  W2END1,
+        input  W2END2,
+        input  W2END3,
+        input  W2END4,
+        input  W2END5,
+        input  W2END6,
+        input  W2END7,
+        input  WW4END0,
+        input  WW4END1,
+        input  WW4END2,
+        input  WW4END3,
+        input  W6END0,
+        input  W6END1,
+        input  Q19,
+        input  Q18,
+        input  Q17,
+        input  Q16,
+        input  Q15,
+        input  Q14,
+        input  Q13,
+        input  Q12,
+        input  Q11,
+        input  Q10,
+        input  Q9,
+        input  Q8,
+        input  Q7,
+        input  Q6,
+        input  Q5,
+        input  Q4,
+        input  Q3,
+        input  Q2,
+        input  Q1,
+        input  Q0,
+        input  J2MID_ABa_END0,
+        input  J2MID_ABa_END1,
+        input  J2MID_ABa_END2,
+        input  J2MID_ABa_END3,
+        input  J2MID_CDa_END0,
+        input  J2MID_CDa_END1,
+        input  J2MID_CDa_END2,
+        input  J2MID_CDa_END3,
+        input  J2MID_EFa_END0,
+        input  J2MID_EFa_END1,
+        input  J2MID_EFa_END2,
+        input  J2MID_EFa_END3,
+        input  J2MID_GHa_END0,
+        input  J2MID_GHa_END1,
+        input  J2MID_GHa_END2,
+        input  J2MID_GHa_END3,
+        input  J2MID_ABb_END0,
+        input  J2MID_ABb_END1,
+        input  J2MID_ABb_END2,
+        input  J2MID_ABb_END3,
+        input  J2MID_CDb_END0,
+        input  J2MID_CDb_END1,
+        input  J2MID_CDb_END2,
+        input  J2MID_CDb_END3,
+        input  J2MID_EFb_END0,
+        input  J2MID_EFb_END1,
+        input  J2MID_EFb_END2,
+        input  J2MID_EFb_END3,
+        input  J2MID_GHb_END0,
+        input  J2MID_GHb_END1,
+        input  J2MID_GHb_END2,
+        input  J2MID_GHb_END3,
+        input  J2END_AB_END0,
+        input  J2END_AB_END1,
+        input  J2END_AB_END2,
+        input  J2END_AB_END3,
+        input  J2END_CD_END0,
+        input  J2END_CD_END1,
+        input  J2END_CD_END2,
+        input  J2END_CD_END3,
+        input  J2END_EF_END0,
+        input  J2END_EF_END1,
+        input  J2END_EF_END2,
+        input  J2END_EF_END3,
+        input  J2END_GH_END0,
+        input  J2END_GH_END1,
+        input  J2END_GH_END2,
+        input  J2END_GH_END3,
+        input  JN2END0,
+        input  JN2END1,
+        input  JN2END2,
+        input  JN2END3,
+        input  JN2END4,
+        input  JN2END5,
+        input  JN2END6,
+        input  JN2END7,
+        input  JE2END0,
+        input  JE2END1,
+        input  JE2END2,
+        input  JE2END3,
+        input  JE2END4,
+        input  JE2END5,
+        input  JE2END6,
+        input  JE2END7,
+        input  JS2END0,
+        input  JS2END1,
+        input  JS2END2,
+        input  JS2END3,
+        input  JS2END4,
+        input  JS2END5,
+        input  JS2END6,
+        input  JS2END7,
+        input  JW2END0,
+        input  JW2END1,
+        input  JW2END2,
+        input  JW2END3,
+        input  JW2END4,
+        input  JW2END5,
+        input  JW2END6,
+        input  JW2END7,
+        input  J_l_AB_END0,
+        input  J_l_AB_END1,
+        input  J_l_AB_END2,
+        input  J_l_AB_END3,
+        input  J_l_CD_END0,
+        input  J_l_CD_END1,
+        input  J_l_CD_END2,
+        input  J_l_CD_END3,
+        input  J_l_EF_END0,
+        input  J_l_EF_END1,
+        input  J_l_EF_END2,
+        input  J_l_EF_END3,
+        input  J_l_GH_END0,
+        input  J_l_GH_END1,
+        input  J_l_GH_END2,
+        input  J_l_GH_END3,
+        output  N1BEG0,
+        output  N1BEG1,
+        output  N1BEG2,
+        output  N1BEG3,
+        output  N2BEG0,
+        output  N2BEG1,
+        output  N2BEG2,
+        output  N2BEG3,
+        output  N2BEG4,
+        output  N2BEG5,
+        output  N2BEG6,
+        output  N2BEG7,
+        output  N2BEGb0,
+        output  N2BEGb1,
+        output  N2BEGb2,
+        output  N2BEGb3,
+        output  N2BEGb4,
+        output  N2BEGb5,
+        output  N2BEGb6,
+        output  N2BEGb7,
+        output  N4BEG0,
+        output  N4BEG1,
+        output  N4BEG2,
+        output  N4BEG3,
+        output  NN4BEG0,
+        output  NN4BEG1,
+        output  NN4BEG2,
+        output  NN4BEG3,
+        output  bot2top0,
+        output  bot2top1,
+        output  bot2top2,
+        output  bot2top3,
+        output  bot2top4,
+        output  bot2top5,
+        output  bot2top6,
+        output  bot2top7,
+        output  bot2top8,
+        output  bot2top9,
+        output  E1BEG0,
+        output  E1BEG1,
+        output  E1BEG2,
+        output  E1BEG3,
+        output  E2BEG0,
+        output  E2BEG1,
+        output  E2BEG2,
+        output  E2BEG3,
+        output  E2BEG4,
+        output  E2BEG5,
+        output  E2BEG6,
+        output  E2BEG7,
+        output  E2BEGb0,
+        output  E2BEGb1,
+        output  E2BEGb2,
+        output  E2BEGb3,
+        output  E2BEGb4,
+        output  E2BEGb5,
+        output  E2BEGb6,
+        output  E2BEGb7,
+        output  EE4BEG0,
+        output  EE4BEG1,
+        output  EE4BEG2,
+        output  EE4BEG3,
+        output  E6BEG0,
+        output  E6BEG1,
+        output  S1BEG0,
+        output  S1BEG1,
+        output  S1BEG2,
+        output  S1BEG3,
+        output  S2BEG0,
+        output  S2BEG1,
+        output  S2BEG2,
+        output  S2BEG3,
+        output  S2BEG4,
+        output  S2BEG5,
+        output  S2BEG6,
+        output  S2BEG7,
+        output  S2BEGb0,
+        output  S2BEGb1,
+        output  S2BEGb2,
+        output  S2BEGb3,
+        output  S2BEGb4,
+        output  S2BEGb5,
+        output  S2BEGb6,
+        output  S2BEGb7,
+        output  S4BEG0,
+        output  S4BEG1,
+        output  S4BEG2,
+        output  S4BEG3,
+        output  SS4BEG0,
+        output  SS4BEG1,
+        output  SS4BEG2,
+        output  SS4BEG3,
+        output  W1BEG0,
+        output  W1BEG1,
+        output  W1BEG2,
+        output  W1BEG3,
+        output  W2BEG0,
+        output  W2BEG1,
+        output  W2BEG2,
+        output  W2BEG3,
+        output  W2BEG4,
+        output  W2BEG5,
+        output  W2BEG6,
+        output  W2BEG7,
+        output  W2BEGb0,
+        output  W2BEGb1,
+        output  W2BEGb2,
+        output  W2BEGb3,
+        output  W2BEGb4,
+        output  W2BEGb5,
+        output  W2BEGb6,
+        output  W2BEGb7,
+        output  WW4BEG0,
+        output  WW4BEG1,
+        output  WW4BEG2,
+        output  WW4BEG3,
+        output  W6BEG0,
+        output  W6BEG1,
+        output  A7,
+        output  A6,
+        output  A5,
+        output  A4,
+        output  A3,
+        output  A2,
+        output  A1,
+        output  A0,
+        output  B7,
+        output  B6,
+        output  B5,
+        output  B4,
+        output  B3,
+        output  B2,
+        output  B1,
+        output  B0,
+        output  C19,
+        output  C18,
+        output  C17,
+        output  C16,
+        output  C15,
+        output  C14,
+        output  C13,
+        output  C12,
+        output  C11,
+        output  C10,
+        output  C9,
+        output  C8,
+        output  C7,
+        output  C6,
+        output  C5,
+        output  C4,
+        output  C3,
+        output  C2,
+        output  C1,
+        output  C0,
+        output  clr,
+        output  J2MID_ABa_BEG0,
+        output  J2MID_ABa_BEG1,
+        output  J2MID_ABa_BEG2,
+        output  J2MID_ABa_BEG3,
+        output  J2MID_CDa_BEG0,
+        output  J2MID_CDa_BEG1,
+        output  J2MID_CDa_BEG2,
+        output  J2MID_CDa_BEG3,
+        output  J2MID_EFa_BEG0,
+        output  J2MID_EFa_BEG1,
+        output  J2MID_EFa_BEG2,
+        output  J2MID_EFa_BEG3,
+        output  J2MID_GHa_BEG0,
+        output  J2MID_GHa_BEG1,
+        output  J2MID_GHa_BEG2,
+        output  J2MID_GHa_BEG3,
+        output  J2MID_ABb_BEG0,
+        output  J2MID_ABb_BEG1,
+        output  J2MID_ABb_BEG2,
+        output  J2MID_ABb_BEG3,
+        output  J2MID_CDb_BEG0,
+        output  J2MID_CDb_BEG1,
+        output  J2MID_CDb_BEG2,
+        output  J2MID_CDb_BEG3,
+        output  J2MID_EFb_BEG0,
+        output  J2MID_EFb_BEG1,
+        output  J2MID_EFb_BEG2,
+        output  J2MID_EFb_BEG3,
+        output  J2MID_GHb_BEG0,
+        output  J2MID_GHb_BEG1,
+        output  J2MID_GHb_BEG2,
+        output  J2MID_GHb_BEG3,
+        output  J2END_AB_BEG0,
+        output  J2END_AB_BEG1,
+        output  J2END_AB_BEG2,
+        output  J2END_AB_BEG3,
+        output  J2END_CD_BEG0,
+        output  J2END_CD_BEG1,
+        output  J2END_CD_BEG2,
+        output  J2END_CD_BEG3,
+        output  J2END_EF_BEG0,
+        output  J2END_EF_BEG1,
+        output  J2END_EF_BEG2,
+        output  J2END_EF_BEG3,
+        output  J2END_GH_BEG0,
+        output  J2END_GH_BEG1,
+        output  J2END_GH_BEG2,
+        output  J2END_GH_BEG3,
+        output  JN2BEG0,
+        output  JN2BEG1,
+        output  JN2BEG2,
+        output  JN2BEG3,
+        output  JN2BEG4,
+        output  JN2BEG5,
+        output  JN2BEG6,
+        output  JN2BEG7,
+        output  JE2BEG0,
+        output  JE2BEG1,
+        output  JE2BEG2,
+        output  JE2BEG3,
+        output  JE2BEG4,
+        output  JE2BEG5,
+        output  JE2BEG6,
+        output  JE2BEG7,
+        output  JS2BEG0,
+        output  JS2BEG1,
+        output  JS2BEG2,
+        output  JS2BEG3,
+        output  JS2BEG4,
+        output  JS2BEG5,
+        output  JS2BEG6,
+        output  JS2BEG7,
+        output  JW2BEG0,
+        output  JW2BEG1,
+        output  JW2BEG2,
+        output  JW2BEG3,
+        output  JW2BEG4,
+        output  JW2BEG5,
+        output  JW2BEG6,
+        output  JW2BEG7,
+        output  J_l_AB_BEG0,
+        output  J_l_AB_BEG1,
+        output  J_l_AB_BEG2,
+        output  J_l_AB_BEG3,
+        output  J_l_CD_BEG0,
+        output  J_l_CD_BEG1,
+        output  J_l_CD_BEG2,
+        output  J_l_CD_BEG3,
+        output  J_l_EF_BEG0,
+        output  J_l_EF_BEG1,
+        output  J_l_EF_BEG2,
+        output  J_l_EF_BEG3,
+        output  J_l_GH_BEG0,
+        output  J_l_GH_BEG1,
+        output  J_l_GH_BEG2,
+        output  J_l_GH_BEG3,
  //global
-        input [NoConfigBits-1:0] ConfigBits,
-        input [NoConfigBits-1:0] ConfigBits_N
+        input  [NoConfigBits-1:0] ConfigBits,
+        input  [NoConfigBits-1:0] ConfigBits_N
 );
 parameter GND0 = 1'b0;
 parameter GND = 1'b0;
@@ -512,22 +512,6 @@ wire[4-1:0] N1BEG0_input;
 wire[4-1:0] N1BEG1_input;
 wire[4-1:0] N1BEG2_input;
 wire[4-1:0] N1BEG3_input;
-wire[1-1:0] N2BEG0_input;
-wire[1-1:0] N2BEG1_input;
-wire[1-1:0] N2BEG2_input;
-wire[1-1:0] N2BEG3_input;
-wire[1-1:0] N2BEG4_input;
-wire[1-1:0] N2BEG5_input;
-wire[1-1:0] N2BEG6_input;
-wire[1-1:0] N2BEG7_input;
-wire[1-1:0] N2BEGb0_input;
-wire[1-1:0] N2BEGb1_input;
-wire[1-1:0] N2BEGb2_input;
-wire[1-1:0] N2BEGb3_input;
-wire[1-1:0] N2BEGb4_input;
-wire[1-1:0] N2BEGb5_input;
-wire[1-1:0] N2BEGb6_input;
-wire[1-1:0] N2BEGb7_input;
 wire[4-1:0] N4BEG0_input;
 wire[4-1:0] N4BEG1_input;
 wire[4-1:0] N4BEG2_input;
@@ -536,36 +520,10 @@ wire[8-1:0] NN4BEG0_input;
 wire[8-1:0] NN4BEG1_input;
 wire[8-1:0] NN4BEG2_input;
 wire[8-1:0] NN4BEG3_input;
-wire[1-1:0] bot2top0_input;
-wire[1-1:0] bot2top1_input;
-wire[1-1:0] bot2top2_input;
-wire[1-1:0] bot2top3_input;
-wire[1-1:0] bot2top4_input;
-wire[1-1:0] bot2top5_input;
-wire[1-1:0] bot2top6_input;
-wire[1-1:0] bot2top7_input;
-wire[1-1:0] bot2top8_input;
-wire[1-1:0] bot2top9_input;
 wire[4-1:0] E1BEG0_input;
 wire[4-1:0] E1BEG1_input;
 wire[4-1:0] E1BEG2_input;
 wire[4-1:0] E1BEG3_input;
-wire[1-1:0] E2BEG0_input;
-wire[1-1:0] E2BEG1_input;
-wire[1-1:0] E2BEG2_input;
-wire[1-1:0] E2BEG3_input;
-wire[1-1:0] E2BEG4_input;
-wire[1-1:0] E2BEG5_input;
-wire[1-1:0] E2BEG6_input;
-wire[1-1:0] E2BEG7_input;
-wire[1-1:0] E2BEGb0_input;
-wire[1-1:0] E2BEGb1_input;
-wire[1-1:0] E2BEGb2_input;
-wire[1-1:0] E2BEGb3_input;
-wire[1-1:0] E2BEGb4_input;
-wire[1-1:0] E2BEGb5_input;
-wire[1-1:0] E2BEGb6_input;
-wire[1-1:0] E2BEGb7_input;
 wire[8-1:0] EE4BEG0_input;
 wire[8-1:0] EE4BEG1_input;
 wire[8-1:0] EE4BEG2_input;
@@ -576,22 +534,6 @@ wire[4-1:0] S1BEG0_input;
 wire[4-1:0] S1BEG1_input;
 wire[4-1:0] S1BEG2_input;
 wire[4-1:0] S1BEG3_input;
-wire[1-1:0] S2BEG0_input;
-wire[1-1:0] S2BEG1_input;
-wire[1-1:0] S2BEG2_input;
-wire[1-1:0] S2BEG3_input;
-wire[1-1:0] S2BEG4_input;
-wire[1-1:0] S2BEG5_input;
-wire[1-1:0] S2BEG6_input;
-wire[1-1:0] S2BEG7_input;
-wire[1-1:0] S2BEGb0_input;
-wire[1-1:0] S2BEGb1_input;
-wire[1-1:0] S2BEGb2_input;
-wire[1-1:0] S2BEGb3_input;
-wire[1-1:0] S2BEGb4_input;
-wire[1-1:0] S2BEGb5_input;
-wire[1-1:0] S2BEGb6_input;
-wire[1-1:0] S2BEGb7_input;
 wire[4-1:0] S4BEG0_input;
 wire[4-1:0] S4BEG1_input;
 wire[4-1:0] S4BEG2_input;
@@ -604,54 +546,20 @@ wire[4-1:0] W1BEG0_input;
 wire[4-1:0] W1BEG1_input;
 wire[4-1:0] W1BEG2_input;
 wire[4-1:0] W1BEG3_input;
-wire[1-1:0] W2BEG0_input;
-wire[1-1:0] W2BEG1_input;
-wire[1-1:0] W2BEG2_input;
-wire[1-1:0] W2BEG3_input;
-wire[1-1:0] W2BEG4_input;
-wire[1-1:0] W2BEG5_input;
-wire[1-1:0] W2BEG6_input;
-wire[1-1:0] W2BEG7_input;
-wire[1-1:0] W2BEGb0_input;
-wire[1-1:0] W2BEGb1_input;
-wire[1-1:0] W2BEGb2_input;
-wire[1-1:0] W2BEGb3_input;
-wire[1-1:0] W2BEGb4_input;
-wire[1-1:0] W2BEGb5_input;
-wire[1-1:0] W2BEGb6_input;
-wire[1-1:0] W2BEGb7_input;
 wire[8-1:0] WW4BEG0_input;
 wire[8-1:0] WW4BEG1_input;
 wire[8-1:0] WW4BEG2_input;
 wire[8-1:0] WW4BEG3_input;
 wire[16-1:0] W6BEG0_input;
 wire[16-1:0] W6BEG1_input;
-wire[1-1:0] A7_input;
-wire[1-1:0] A6_input;
-wire[1-1:0] A5_input;
-wire[1-1:0] A4_input;
 wire[4-1:0] A3_input;
 wire[4-1:0] A2_input;
 wire[4-1:0] A1_input;
 wire[4-1:0] A0_input;
-wire[1-1:0] B7_input;
-wire[1-1:0] B6_input;
-wire[1-1:0] B5_input;
-wire[1-1:0] B4_input;
 wire[4-1:0] B3_input;
 wire[4-1:0] B2_input;
 wire[4-1:0] B1_input;
 wire[4-1:0] B0_input;
-wire[1-1:0] C19_input;
-wire[1-1:0] C18_input;
-wire[1-1:0] C17_input;
-wire[1-1:0] C16_input;
-wire[1-1:0] C15_input;
-wire[1-1:0] C14_input;
-wire[1-1:0] C13_input;
-wire[1-1:0] C12_input;
-wire[1-1:0] C11_input;
-wire[1-1:0] C10_input;
 wire[8-1:0] C9_input;
 wire[8-1:0] C8_input;
 wire[4-1:0] C7_input;
@@ -759,166 +667,6 @@ wire[4-1:0] J_l_GH_BEG0_input;
 wire[4-1:0] J_l_GH_BEG1_input;
 wire[4-1:0] J_l_GH_BEG2_input;
 wire[4-1:0] J_l_GH_BEG3_input;
-
-wire[2-1:0] DEBUG_select_N1BEG0;
-wire[2-1:0] DEBUG_select_N1BEG1;
-wire[2-1:0] DEBUG_select_N1BEG2;
-wire[2-1:0] DEBUG_select_N1BEG3;
-wire[2-1:0] DEBUG_select_N4BEG0;
-wire[2-1:0] DEBUG_select_N4BEG1;
-wire[2-1:0] DEBUG_select_N4BEG2;
-wire[2-1:0] DEBUG_select_N4BEG3;
-wire[3-1:0] DEBUG_select_NN4BEG0;
-wire[3-1:0] DEBUG_select_NN4BEG1;
-wire[3-1:0] DEBUG_select_NN4BEG2;
-wire[3-1:0] DEBUG_select_NN4BEG3;
-wire[2-1:0] DEBUG_select_E1BEG0;
-wire[2-1:0] DEBUG_select_E1BEG1;
-wire[2-1:0] DEBUG_select_E1BEG2;
-wire[2-1:0] DEBUG_select_E1BEG3;
-wire[3-1:0] DEBUG_select_EE4BEG0;
-wire[3-1:0] DEBUG_select_EE4BEG1;
-wire[3-1:0] DEBUG_select_EE4BEG2;
-wire[3-1:0] DEBUG_select_EE4BEG3;
-wire[4-1:0] DEBUG_select_E6BEG0;
-wire[4-1:0] DEBUG_select_E6BEG1;
-wire[2-1:0] DEBUG_select_S1BEG0;
-wire[2-1:0] DEBUG_select_S1BEG1;
-wire[2-1:0] DEBUG_select_S1BEG2;
-wire[2-1:0] DEBUG_select_S1BEG3;
-wire[2-1:0] DEBUG_select_S4BEG0;
-wire[2-1:0] DEBUG_select_S4BEG1;
-wire[2-1:0] DEBUG_select_S4BEG2;
-wire[2-1:0] DEBUG_select_S4BEG3;
-wire[3-1:0] DEBUG_select_SS4BEG0;
-wire[3-1:0] DEBUG_select_SS4BEG1;
-wire[3-1:0] DEBUG_select_SS4BEG2;
-wire[3-1:0] DEBUG_select_SS4BEG3;
-wire[2-1:0] DEBUG_select_W1BEG0;
-wire[2-1:0] DEBUG_select_W1BEG1;
-wire[2-1:0] DEBUG_select_W1BEG2;
-wire[2-1:0] DEBUG_select_W1BEG3;
-wire[3-1:0] DEBUG_select_WW4BEG0;
-wire[3-1:0] DEBUG_select_WW4BEG1;
-wire[3-1:0] DEBUG_select_WW4BEG2;
-wire[3-1:0] DEBUG_select_WW4BEG3;
-wire[4-1:0] DEBUG_select_W6BEG0;
-wire[4-1:0] DEBUG_select_W6BEG1;
-wire[2-1:0] DEBUG_select_A3;
-wire[2-1:0] DEBUG_select_A2;
-wire[2-1:0] DEBUG_select_A1;
-wire[2-1:0] DEBUG_select_A0;
-wire[2-1:0] DEBUG_select_B3;
-wire[2-1:0] DEBUG_select_B2;
-wire[2-1:0] DEBUG_select_B1;
-wire[2-1:0] DEBUG_select_B0;
-wire[3-1:0] DEBUG_select_C9;
-wire[3-1:0] DEBUG_select_C8;
-wire[2-1:0] DEBUG_select_C7;
-wire[2-1:0] DEBUG_select_C6;
-wire[2-1:0] DEBUG_select_C5;
-wire[2-1:0] DEBUG_select_C4;
-wire[2-1:0] DEBUG_select_C3;
-wire[2-1:0] DEBUG_select_C2;
-wire[2-1:0] DEBUG_select_C1;
-wire[2-1:0] DEBUG_select_C0;
-wire[4-1:0] DEBUG_select_clr;
-wire[2-1:0] DEBUG_select_J2MID_ABa_BEG0;
-wire[2-1:0] DEBUG_select_J2MID_ABa_BEG1;
-wire[2-1:0] DEBUG_select_J2MID_ABa_BEG2;
-wire[2-1:0] DEBUG_select_J2MID_ABa_BEG3;
-wire[2-1:0] DEBUG_select_J2MID_CDa_BEG0;
-wire[2-1:0] DEBUG_select_J2MID_CDa_BEG1;
-wire[2-1:0] DEBUG_select_J2MID_CDa_BEG2;
-wire[2-1:0] DEBUG_select_J2MID_CDa_BEG3;
-wire[2-1:0] DEBUG_select_J2MID_EFa_BEG0;
-wire[2-1:0] DEBUG_select_J2MID_EFa_BEG1;
-wire[2-1:0] DEBUG_select_J2MID_EFa_BEG2;
-wire[2-1:0] DEBUG_select_J2MID_EFa_BEG3;
-wire[2-1:0] DEBUG_select_J2MID_GHa_BEG0;
-wire[2-1:0] DEBUG_select_J2MID_GHa_BEG1;
-wire[2-1:0] DEBUG_select_J2MID_GHa_BEG2;
-wire[2-1:0] DEBUG_select_J2MID_GHa_BEG3;
-wire[2-1:0] DEBUG_select_J2MID_ABb_BEG0;
-wire[2-1:0] DEBUG_select_J2MID_ABb_BEG1;
-wire[2-1:0] DEBUG_select_J2MID_ABb_BEG2;
-wire[2-1:0] DEBUG_select_J2MID_ABb_BEG3;
-wire[2-1:0] DEBUG_select_J2MID_CDb_BEG0;
-wire[2-1:0] DEBUG_select_J2MID_CDb_BEG1;
-wire[2-1:0] DEBUG_select_J2MID_CDb_BEG2;
-wire[2-1:0] DEBUG_select_J2MID_CDb_BEG3;
-wire[2-1:0] DEBUG_select_J2MID_EFb_BEG0;
-wire[2-1:0] DEBUG_select_J2MID_EFb_BEG1;
-wire[2-1:0] DEBUG_select_J2MID_EFb_BEG2;
-wire[2-1:0] DEBUG_select_J2MID_EFb_BEG3;
-wire[2-1:0] DEBUG_select_J2MID_GHb_BEG0;
-wire[2-1:0] DEBUG_select_J2MID_GHb_BEG1;
-wire[2-1:0] DEBUG_select_J2MID_GHb_BEG2;
-wire[2-1:0] DEBUG_select_J2MID_GHb_BEG3;
-wire[2-1:0] DEBUG_select_J2END_AB_BEG0;
-wire[2-1:0] DEBUG_select_J2END_AB_BEG1;
-wire[2-1:0] DEBUG_select_J2END_AB_BEG2;
-wire[2-1:0] DEBUG_select_J2END_AB_BEG3;
-wire[2-1:0] DEBUG_select_J2END_CD_BEG0;
-wire[2-1:0] DEBUG_select_J2END_CD_BEG1;
-wire[2-1:0] DEBUG_select_J2END_CD_BEG2;
-wire[2-1:0] DEBUG_select_J2END_CD_BEG3;
-wire[2-1:0] DEBUG_select_J2END_EF_BEG0;
-wire[2-1:0] DEBUG_select_J2END_EF_BEG1;
-wire[2-1:0] DEBUG_select_J2END_EF_BEG2;
-wire[2-1:0] DEBUG_select_J2END_EF_BEG3;
-wire[2-1:0] DEBUG_select_J2END_GH_BEG0;
-wire[2-1:0] DEBUG_select_J2END_GH_BEG1;
-wire[2-1:0] DEBUG_select_J2END_GH_BEG2;
-wire[2-1:0] DEBUG_select_J2END_GH_BEG3;
-wire[4-1:0] DEBUG_select_JN2BEG0;
-wire[4-1:0] DEBUG_select_JN2BEG1;
-wire[4-1:0] DEBUG_select_JN2BEG2;
-wire[4-1:0] DEBUG_select_JN2BEG3;
-wire[4-1:0] DEBUG_select_JN2BEG4;
-wire[4-1:0] DEBUG_select_JN2BEG5;
-wire[4-1:0] DEBUG_select_JN2BEG6;
-wire[4-1:0] DEBUG_select_JN2BEG7;
-wire[4-1:0] DEBUG_select_JE2BEG0;
-wire[4-1:0] DEBUG_select_JE2BEG1;
-wire[4-1:0] DEBUG_select_JE2BEG2;
-wire[4-1:0] DEBUG_select_JE2BEG3;
-wire[4-1:0] DEBUG_select_JE2BEG4;
-wire[4-1:0] DEBUG_select_JE2BEG5;
-wire[4-1:0] DEBUG_select_JE2BEG6;
-wire[4-1:0] DEBUG_select_JE2BEG7;
-wire[4-1:0] DEBUG_select_JS2BEG0;
-wire[4-1:0] DEBUG_select_JS2BEG1;
-wire[4-1:0] DEBUG_select_JS2BEG2;
-wire[4-1:0] DEBUG_select_JS2BEG3;
-wire[4-1:0] DEBUG_select_JS2BEG4;
-wire[4-1:0] DEBUG_select_JS2BEG5;
-wire[4-1:0] DEBUG_select_JS2BEG6;
-wire[4-1:0] DEBUG_select_JS2BEG7;
-wire[4-1:0] DEBUG_select_JW2BEG0;
-wire[4-1:0] DEBUG_select_JW2BEG1;
-wire[4-1:0] DEBUG_select_JW2BEG2;
-wire[4-1:0] DEBUG_select_JW2BEG3;
-wire[4-1:0] DEBUG_select_JW2BEG4;
-wire[4-1:0] DEBUG_select_JW2BEG5;
-wire[4-1:0] DEBUG_select_JW2BEG6;
-wire[4-1:0] DEBUG_select_JW2BEG7;
-wire[2-1:0] DEBUG_select_J_l_AB_BEG0;
-wire[2-1:0] DEBUG_select_J_l_AB_BEG1;
-wire[2-1:0] DEBUG_select_J_l_AB_BEG2;
-wire[2-1:0] DEBUG_select_J_l_AB_BEG3;
-wire[2-1:0] DEBUG_select_J_l_CD_BEG0;
-wire[2-1:0] DEBUG_select_J_l_CD_BEG1;
-wire[2-1:0] DEBUG_select_J_l_CD_BEG2;
-wire[2-1:0] DEBUG_select_J_l_CD_BEG3;
-wire[2-1:0] DEBUG_select_J_l_EF_BEG0;
-wire[2-1:0] DEBUG_select_J_l_EF_BEG1;
-wire[2-1:0] DEBUG_select_J_l_EF_BEG2;
-wire[2-1:0] DEBUG_select_J_l_EF_BEG3;
-wire[2-1:0] DEBUG_select_J_l_GH_BEG0;
-wire[2-1:0] DEBUG_select_J_l_GH_BEG1;
-wire[2-1:0] DEBUG_select_J_l_GH_BEG2;
-wire[2-1:0] DEBUG_select_J_l_GH_BEG3;
  //The configuration bits (if any) are just a long shift register
  //This shift register is padded to an even number of flops/latches
  //switch matrix multiplexer N1BEG0 MUX-4
@@ -4123,164 +3871,4 @@ cus_mux41_buf inst_cus_mux41_buf_J_l_GH_BEG3 (
     .X(J_l_GH_BEG3)
 );
 
-
-assign DEBUG_select_N1BEG0          = ConfigBits[1:0];
-assign DEBUG_select_N1BEG1          = ConfigBits[3:2];
-assign DEBUG_select_N1BEG2          = ConfigBits[5:4];
-assign DEBUG_select_N1BEG3          = ConfigBits[7:6];
-assign DEBUG_select_N4BEG0          = ConfigBits[9:8];
-assign DEBUG_select_N4BEG1          = ConfigBits[11:10];
-assign DEBUG_select_N4BEG2          = ConfigBits[13:12];
-assign DEBUG_select_N4BEG3          = ConfigBits[15:14];
-assign DEBUG_select_NN4BEG0         = ConfigBits[18:16];
-assign DEBUG_select_NN4BEG1         = ConfigBits[21:19];
-assign DEBUG_select_NN4BEG2         = ConfigBits[24:22];
-assign DEBUG_select_NN4BEG3         = ConfigBits[27:25];
-assign DEBUG_select_E1BEG0          = ConfigBits[29:28];
-assign DEBUG_select_E1BEG1          = ConfigBits[31:30];
-assign DEBUG_select_E1BEG2          = ConfigBits[33:32];
-assign DEBUG_select_E1BEG3          = ConfigBits[35:34];
-assign DEBUG_select_EE4BEG0         = ConfigBits[38:36];
-assign DEBUG_select_EE4BEG1         = ConfigBits[41:39];
-assign DEBUG_select_EE4BEG2         = ConfigBits[44:42];
-assign DEBUG_select_EE4BEG3         = ConfigBits[47:45];
-assign DEBUG_select_E6BEG0          = ConfigBits[51:48];
-assign DEBUG_select_E6BEG1          = ConfigBits[55:52];
-assign DEBUG_select_S1BEG0          = ConfigBits[57:56];
-assign DEBUG_select_S1BEG1          = ConfigBits[59:58];
-assign DEBUG_select_S1BEG2          = ConfigBits[61:60];
-assign DEBUG_select_S1BEG3          = ConfigBits[63:62];
-assign DEBUG_select_S4BEG0          = ConfigBits[65:64];
-assign DEBUG_select_S4BEG1          = ConfigBits[67:66];
-assign DEBUG_select_S4BEG2          = ConfigBits[69:68];
-assign DEBUG_select_S4BEG3          = ConfigBits[71:70];
-assign DEBUG_select_SS4BEG0         = ConfigBits[74:72];
-assign DEBUG_select_SS4BEG1         = ConfigBits[77:75];
-assign DEBUG_select_SS4BEG2         = ConfigBits[80:78];
-assign DEBUG_select_SS4BEG3         = ConfigBits[83:81];
-assign DEBUG_select_W1BEG0          = ConfigBits[85:84];
-assign DEBUG_select_W1BEG1          = ConfigBits[87:86];
-assign DEBUG_select_W1BEG2          = ConfigBits[89:88];
-assign DEBUG_select_W1BEG3          = ConfigBits[91:90];
-assign DEBUG_select_WW4BEG0         = ConfigBits[94:92];
-assign DEBUG_select_WW4BEG1         = ConfigBits[97:95];
-assign DEBUG_select_WW4BEG2         = ConfigBits[100:98];
-assign DEBUG_select_WW4BEG3         = ConfigBits[103:101];
-assign DEBUG_select_W6BEG0          = ConfigBits[107:104];
-assign DEBUG_select_W6BEG1          = ConfigBits[111:108];
-assign DEBUG_select_A3              = ConfigBits[113:112];
-assign DEBUG_select_A2              = ConfigBits[115:114];
-assign DEBUG_select_A1              = ConfigBits[117:116];
-assign DEBUG_select_A0              = ConfigBits[119:118];
-assign DEBUG_select_B3              = ConfigBits[121:120];
-assign DEBUG_select_B2              = ConfigBits[123:122];
-assign DEBUG_select_B1              = ConfigBits[125:124];
-assign DEBUG_select_B0              = ConfigBits[127:126];
-assign DEBUG_select_C9              = ConfigBits[130:128];
-assign DEBUG_select_C8              = ConfigBits[133:131];
-assign DEBUG_select_C7              = ConfigBits[135:134];
-assign DEBUG_select_C6              = ConfigBits[137:136];
-assign DEBUG_select_C5              = ConfigBits[139:138];
-assign DEBUG_select_C4              = ConfigBits[141:140];
-assign DEBUG_select_C3              = ConfigBits[143:142];
-assign DEBUG_select_C2              = ConfigBits[145:144];
-assign DEBUG_select_C1              = ConfigBits[147:146];
-assign DEBUG_select_C0              = ConfigBits[149:148];
-assign DEBUG_select_clr             = ConfigBits[153:150];
-assign DEBUG_select_J2MID_ABa_BEG0  = ConfigBits[155:154];
-assign DEBUG_select_J2MID_ABa_BEG1  = ConfigBits[157:156];
-assign DEBUG_select_J2MID_ABa_BEG2  = ConfigBits[159:158];
-assign DEBUG_select_J2MID_ABa_BEG3  = ConfigBits[161:160];
-assign DEBUG_select_J2MID_CDa_BEG0  = ConfigBits[163:162];
-assign DEBUG_select_J2MID_CDa_BEG1  = ConfigBits[165:164];
-assign DEBUG_select_J2MID_CDa_BEG2  = ConfigBits[167:166];
-assign DEBUG_select_J2MID_CDa_BEG3  = ConfigBits[169:168];
-assign DEBUG_select_J2MID_EFa_BEG0  = ConfigBits[171:170];
-assign DEBUG_select_J2MID_EFa_BEG1  = ConfigBits[173:172];
-assign DEBUG_select_J2MID_EFa_BEG2  = ConfigBits[175:174];
-assign DEBUG_select_J2MID_EFa_BEG3  = ConfigBits[177:176];
-assign DEBUG_select_J2MID_GHa_BEG0  = ConfigBits[179:178];
-assign DEBUG_select_J2MID_GHa_BEG1  = ConfigBits[181:180];
-assign DEBUG_select_J2MID_GHa_BEG2  = ConfigBits[183:182];
-assign DEBUG_select_J2MID_GHa_BEG3  = ConfigBits[185:184];
-assign DEBUG_select_J2MID_ABb_BEG0  = ConfigBits[187:186];
-assign DEBUG_select_J2MID_ABb_BEG1  = ConfigBits[189:188];
-assign DEBUG_select_J2MID_ABb_BEG2  = ConfigBits[191:190];
-assign DEBUG_select_J2MID_ABb_BEG3  = ConfigBits[193:192];
-assign DEBUG_select_J2MID_CDb_BEG0  = ConfigBits[195:194];
-assign DEBUG_select_J2MID_CDb_BEG1  = ConfigBits[197:196];
-assign DEBUG_select_J2MID_CDb_BEG2  = ConfigBits[199:198];
-assign DEBUG_select_J2MID_CDb_BEG3  = ConfigBits[201:200];
-assign DEBUG_select_J2MID_EFb_BEG0  = ConfigBits[203:202];
-assign DEBUG_select_J2MID_EFb_BEG1  = ConfigBits[205:204];
-assign DEBUG_select_J2MID_EFb_BEG2  = ConfigBits[207:206];
-assign DEBUG_select_J2MID_EFb_BEG3  = ConfigBits[209:208];
-assign DEBUG_select_J2MID_GHb_BEG0  = ConfigBits[211:210];
-assign DEBUG_select_J2MID_GHb_BEG1  = ConfigBits[213:212];
-assign DEBUG_select_J2MID_GHb_BEG2  = ConfigBits[215:214];
-assign DEBUG_select_J2MID_GHb_BEG3  = ConfigBits[217:216];
-assign DEBUG_select_J2END_AB_BEG0   = ConfigBits[219:218];
-assign DEBUG_select_J2END_AB_BEG1   = ConfigBits[221:220];
-assign DEBUG_select_J2END_AB_BEG2   = ConfigBits[223:222];
-assign DEBUG_select_J2END_AB_BEG3   = ConfigBits[225:224];
-assign DEBUG_select_J2END_CD_BEG0   = ConfigBits[227:226];
-assign DEBUG_select_J2END_CD_BEG1   = ConfigBits[229:228];
-assign DEBUG_select_J2END_CD_BEG2   = ConfigBits[231:230];
-assign DEBUG_select_J2END_CD_BEG3   = ConfigBits[233:232];
-assign DEBUG_select_J2END_EF_BEG0   = ConfigBits[235:234];
-assign DEBUG_select_J2END_EF_BEG1   = ConfigBits[237:236];
-assign DEBUG_select_J2END_EF_BEG2   = ConfigBits[239:238];
-assign DEBUG_select_J2END_EF_BEG3   = ConfigBits[241:240];
-assign DEBUG_select_J2END_GH_BEG0   = ConfigBits[243:242];
-assign DEBUG_select_J2END_GH_BEG1   = ConfigBits[245:244];
-assign DEBUG_select_J2END_GH_BEG2   = ConfigBits[247:246];
-assign DEBUG_select_J2END_GH_BEG3   = ConfigBits[249:248];
-assign DEBUG_select_JN2BEG0         = ConfigBits[253:250];
-assign DEBUG_select_JN2BEG1         = ConfigBits[257:254];
-assign DEBUG_select_JN2BEG2         = ConfigBits[261:258];
-assign DEBUG_select_JN2BEG3         = ConfigBits[265:262];
-assign DEBUG_select_JN2BEG4         = ConfigBits[269:266];
-assign DEBUG_select_JN2BEG5         = ConfigBits[273:270];
-assign DEBUG_select_JN2BEG6         = ConfigBits[277:274];
-assign DEBUG_select_JN2BEG7         = ConfigBits[281:278];
-assign DEBUG_select_JE2BEG0         = ConfigBits[285:282];
-assign DEBUG_select_JE2BEG1         = ConfigBits[289:286];
-assign DEBUG_select_JE2BEG2         = ConfigBits[293:290];
-assign DEBUG_select_JE2BEG3         = ConfigBits[297:294];
-assign DEBUG_select_JE2BEG4         = ConfigBits[301:298];
-assign DEBUG_select_JE2BEG5         = ConfigBits[305:302];
-assign DEBUG_select_JE2BEG6         = ConfigBits[309:306];
-assign DEBUG_select_JE2BEG7         = ConfigBits[313:310];
-assign DEBUG_select_JS2BEG0         = ConfigBits[317:314];
-assign DEBUG_select_JS2BEG1         = ConfigBits[321:318];
-assign DEBUG_select_JS2BEG2         = ConfigBits[325:322];
-assign DEBUG_select_JS2BEG3         = ConfigBits[329:326];
-assign DEBUG_select_JS2BEG4         = ConfigBits[333:330];
-assign DEBUG_select_JS2BEG5         = ConfigBits[337:334];
-assign DEBUG_select_JS2BEG6         = ConfigBits[341:338];
-assign DEBUG_select_JS2BEG7         = ConfigBits[345:342];
-assign DEBUG_select_JW2BEG0         = ConfigBits[349:346];
-assign DEBUG_select_JW2BEG1         = ConfigBits[353:350];
-assign DEBUG_select_JW2BEG2         = ConfigBits[357:354];
-assign DEBUG_select_JW2BEG3         = ConfigBits[361:358];
-assign DEBUG_select_JW2BEG4         = ConfigBits[365:362];
-assign DEBUG_select_JW2BEG5         = ConfigBits[369:366];
-assign DEBUG_select_JW2BEG6         = ConfigBits[373:370];
-assign DEBUG_select_JW2BEG7         = ConfigBits[377:374];
-assign DEBUG_select_J_l_AB_BEG0     = ConfigBits[379:378];
-assign DEBUG_select_J_l_AB_BEG1     = ConfigBits[381:380];
-assign DEBUG_select_J_l_AB_BEG2     = ConfigBits[383:382];
-assign DEBUG_select_J_l_AB_BEG3     = ConfigBits[385:384];
-assign DEBUG_select_J_l_CD_BEG0     = ConfigBits[387:386];
-assign DEBUG_select_J_l_CD_BEG1     = ConfigBits[389:388];
-assign DEBUG_select_J_l_CD_BEG2     = ConfigBits[391:390];
-assign DEBUG_select_J_l_CD_BEG3     = ConfigBits[393:392];
-assign DEBUG_select_J_l_EF_BEG0     = ConfigBits[395:394];
-assign DEBUG_select_J_l_EF_BEG1     = ConfigBits[397:396];
-assign DEBUG_select_J_l_EF_BEG2     = ConfigBits[399:398];
-assign DEBUG_select_J_l_EF_BEG3     = ConfigBits[401:400];
-assign DEBUG_select_J_l_GH_BEG0     = ConfigBits[403:402];
-assign DEBUG_select_J_l_GH_BEG1     = ConfigBits[405:404];
-assign DEBUG_select_J_l_GH_BEG2     = ConfigBits[407:406];
-assign DEBUG_select_J_l_GH_BEG3     = ConfigBits[409:408];
 endmodule

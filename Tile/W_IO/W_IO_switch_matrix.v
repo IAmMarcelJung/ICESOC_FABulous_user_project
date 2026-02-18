@@ -4,113 +4,113 @@ module W_IO_switch_matrix
         parameter NoConfigBits=106
     )
     (
-        input W1END0,
-        input W1END1,
-        input W1END2,
-        input W1END3,
-        input W2MID0,
-        input W2MID1,
-        input W2MID2,
-        input W2MID3,
-        input W2MID4,
-        input W2MID5,
-        input W2MID6,
-        input W2MID7,
-        input W2END0,
-        input W2END1,
-        input W2END2,
-        input W2END3,
-        input W2END4,
-        input W2END5,
-        input W2END6,
-        input W2END7,
-        input WW4END0,
-        input WW4END1,
-        input WW4END2,
-        input WW4END3,
-        input WW4END4,
-        input WW4END5,
-        input WW4END6,
-        input WW4END7,
-        input WW4END8,
-        input WW4END9,
-        input WW4END10,
-        input WW4END11,
-        input WW4END12,
-        input WW4END13,
-        input WW4END14,
-        input WW4END15,
-        input W6END0,
-        input W6END1,
-        input W6END2,
-        input W6END3,
-        input W6END4,
-        input W6END5,
-        input W6END6,
-        input W6END7,
-        input W6END8,
-        input W6END9,
-        input W6END10,
-        input W6END11,
-        input A_O,
-        input A_Q,
-        input B_O,
-        input B_Q,
-        output E1BEG0,
-        output E1BEG1,
-        output E1BEG2,
-        output E1BEG3,
-        output E2BEG0,
-        output E2BEG1,
-        output E2BEG2,
-        output E2BEG3,
-        output E2BEG4,
-        output E2BEG5,
-        output E2BEG6,
-        output E2BEG7,
-        output E2BEGb0,
-        output E2BEGb1,
-        output E2BEGb2,
-        output E2BEGb3,
-        output E2BEGb4,
-        output E2BEGb5,
-        output E2BEGb6,
-        output E2BEGb7,
-        output EE4BEG0,
-        output EE4BEG1,
-        output EE4BEG2,
-        output EE4BEG3,
-        output EE4BEG4,
-        output EE4BEG5,
-        output EE4BEG6,
-        output EE4BEG7,
-        output EE4BEG8,
-        output EE4BEG9,
-        output EE4BEG10,
-        output EE4BEG11,
-        output EE4BEG12,
-        output EE4BEG13,
-        output EE4BEG14,
-        output EE4BEG15,
-        output E6BEG0,
-        output E6BEG1,
-        output E6BEG2,
-        output E6BEG3,
-        output E6BEG4,
-        output E6BEG5,
-        output E6BEG6,
-        output E6BEG7,
-        output E6BEG8,
-        output E6BEG9,
-        output E6BEG10,
-        output E6BEG11,
-        output A_I,
-        output A_T,
-        output B_I,
-        output B_T,
+        input  W1END0,
+        input  W1END1,
+        input  W1END2,
+        input  W1END3,
+        input  W2MID0,
+        input  W2MID1,
+        input  W2MID2,
+        input  W2MID3,
+        input  W2MID4,
+        input  W2MID5,
+        input  W2MID6,
+        input  W2MID7,
+        input  W2END0,
+        input  W2END1,
+        input  W2END2,
+        input  W2END3,
+        input  W2END4,
+        input  W2END5,
+        input  W2END6,
+        input  W2END7,
+        input  WW4END0,
+        input  WW4END1,
+        input  WW4END2,
+        input  WW4END3,
+        input  WW4END4,
+        input  WW4END5,
+        input  WW4END6,
+        input  WW4END7,
+        input  WW4END8,
+        input  WW4END9,
+        input  WW4END10,
+        input  WW4END11,
+        input  WW4END12,
+        input  WW4END13,
+        input  WW4END14,
+        input  WW4END15,
+        input  W6END0,
+        input  W6END1,
+        input  W6END2,
+        input  W6END3,
+        input  W6END4,
+        input  W6END5,
+        input  W6END6,
+        input  W6END7,
+        input  W6END8,
+        input  W6END9,
+        input  W6END10,
+        input  W6END11,
+        input  A_O,
+        input  A_Q,
+        input  B_O,
+        input  B_Q,
+        output  E1BEG0,
+        output  E1BEG1,
+        output  E1BEG2,
+        output  E1BEG3,
+        output  E2BEG0,
+        output  E2BEG1,
+        output  E2BEG2,
+        output  E2BEG3,
+        output  E2BEG4,
+        output  E2BEG5,
+        output  E2BEG6,
+        output  E2BEG7,
+        output  E2BEGb0,
+        output  E2BEGb1,
+        output  E2BEGb2,
+        output  E2BEGb3,
+        output  E2BEGb4,
+        output  E2BEGb5,
+        output  E2BEGb6,
+        output  E2BEGb7,
+        output  EE4BEG0,
+        output  EE4BEG1,
+        output  EE4BEG2,
+        output  EE4BEG3,
+        output  EE4BEG4,
+        output  EE4BEG5,
+        output  EE4BEG6,
+        output  EE4BEG7,
+        output  EE4BEG8,
+        output  EE4BEG9,
+        output  EE4BEG10,
+        output  EE4BEG11,
+        output  EE4BEG12,
+        output  EE4BEG13,
+        output  EE4BEG14,
+        output  EE4BEG15,
+        output  E6BEG0,
+        output  E6BEG1,
+        output  E6BEG2,
+        output  E6BEG3,
+        output  E6BEG4,
+        output  E6BEG5,
+        output  E6BEG6,
+        output  E6BEG7,
+        output  E6BEG8,
+        output  E6BEG9,
+        output  E6BEG10,
+        output  E6BEG11,
+        output  A_I,
+        output  A_T,
+        output  B_I,
+        output  B_T,
  //global
-        input [NoConfigBits-1:0] ConfigBits,
-        input [NoConfigBits-1:0] ConfigBits_N
+        input  [NoConfigBits-1:0] ConfigBits,
+        input  [NoConfigBits-1:0] ConfigBits_N
 );
 parameter GND0 = 1'b0;
 parameter GND = 1'b0;
@@ -171,64 +171,11 @@ wire[16-1:0] A_I_input;
 wire[8-1:0] A_T_input;
 wire[16-1:0] B_I_input;
 wire[8-1:0] B_T_input;
-
-wire[1-1:0] DEBUG_select_E1BEG0;
-wire[1-1:0] DEBUG_select_E1BEG1;
-wire[1-1:0] DEBUG_select_E1BEG2;
-wire[1-1:0] DEBUG_select_E1BEG3;
-wire[2-1:0] DEBUG_select_E2BEG0;
-wire[2-1:0] DEBUG_select_E2BEG1;
-wire[2-1:0] DEBUG_select_E2BEG2;
-wire[2-1:0] DEBUG_select_E2BEG3;
-wire[2-1:0] DEBUG_select_E2BEG4;
-wire[2-1:0] DEBUG_select_E2BEG5;
-wire[2-1:0] DEBUG_select_E2BEG6;
-wire[2-1:0] DEBUG_select_E2BEG7;
-wire[2-1:0] DEBUG_select_E2BEGb0;
-wire[2-1:0] DEBUG_select_E2BEGb1;
-wire[2-1:0] DEBUG_select_E2BEGb2;
-wire[2-1:0] DEBUG_select_E2BEGb3;
-wire[2-1:0] DEBUG_select_E2BEGb4;
-wire[2-1:0] DEBUG_select_E2BEGb5;
-wire[2-1:0] DEBUG_select_E2BEGb6;
-wire[2-1:0] DEBUG_select_E2BEGb7;
-wire[2-1:0] DEBUG_select_EE4BEG0;
-wire[2-1:0] DEBUG_select_EE4BEG1;
-wire[2-1:0] DEBUG_select_EE4BEG2;
-wire[2-1:0] DEBUG_select_EE4BEG3;
-wire[2-1:0] DEBUG_select_EE4BEG4;
-wire[2-1:0] DEBUG_select_EE4BEG5;
-wire[2-1:0] DEBUG_select_EE4BEG6;
-wire[2-1:0] DEBUG_select_EE4BEG7;
-wire[2-1:0] DEBUG_select_EE4BEG8;
-wire[2-1:0] DEBUG_select_EE4BEG9;
-wire[2-1:0] DEBUG_select_EE4BEG10;
-wire[2-1:0] DEBUG_select_EE4BEG11;
-wire[2-1:0] DEBUG_select_EE4BEG12;
-wire[2-1:0] DEBUG_select_EE4BEG13;
-wire[2-1:0] DEBUG_select_EE4BEG14;
-wire[2-1:0] DEBUG_select_EE4BEG15;
-wire[2-1:0] DEBUG_select_E6BEG0;
-wire[2-1:0] DEBUG_select_E6BEG1;
-wire[2-1:0] DEBUG_select_E6BEG2;
-wire[2-1:0] DEBUG_select_E6BEG3;
-wire[2-1:0] DEBUG_select_E6BEG4;
-wire[2-1:0] DEBUG_select_E6BEG5;
-wire[2-1:0] DEBUG_select_E6BEG6;
-wire[2-1:0] DEBUG_select_E6BEG7;
-wire[2-1:0] DEBUG_select_E6BEG8;
-wire[2-1:0] DEBUG_select_E6BEG9;
-wire[2-1:0] DEBUG_select_E6BEG10;
-wire[2-1:0] DEBUG_select_E6BEG11;
-wire[4-1:0] DEBUG_select_A_I;
-wire[3-1:0] DEBUG_select_A_T;
-wire[4-1:0] DEBUG_select_B_I;
-wire[3-1:0] DEBUG_select_B_T;
  //The configuration bits (if any) are just a long shift register
  //This shift register is padded to an even number of flops/latches
  //switch matrix multiplexer E1BEG0 MUX-2
 assign E1BEG0_input = {A_O,W1END3};
-my_mux2 inst_my_mux2_E1BEG0 (
+cus_mux21 inst_cus_mux21_E1BEG0 (
     .A0(E1BEG0_input[0]),
     .A1(E1BEG0_input[1]),
     .S(ConfigBits[0+0]),
@@ -237,7 +184,7 @@ my_mux2 inst_my_mux2_E1BEG0 (
 
  //switch matrix multiplexer E1BEG1 MUX-2
 assign E1BEG1_input = {A_Q,W1END2};
-my_mux2 inst_my_mux2_E1BEG1 (
+cus_mux21 inst_cus_mux21_E1BEG1 (
     .A0(E1BEG1_input[0]),
     .A1(E1BEG1_input[1]),
     .S(ConfigBits[1+0]),
@@ -246,7 +193,7 @@ my_mux2 inst_my_mux2_E1BEG1 (
 
  //switch matrix multiplexer E1BEG2 MUX-2
 assign E1BEG2_input = {B_O,W1END1};
-my_mux2 inst_my_mux2_E1BEG2 (
+cus_mux21 inst_cus_mux21_E1BEG2 (
     .A0(E1BEG2_input[0]),
     .A1(E1BEG2_input[1]),
     .S(ConfigBits[2+0]),
@@ -255,7 +202,7 @@ my_mux2 inst_my_mux2_E1BEG2 (
 
  //switch matrix multiplexer E1BEG3 MUX-2
 assign E1BEG3_input = {B_Q,W1END0};
-my_mux2 inst_my_mux2_E1BEG3 (
+cus_mux21 inst_cus_mux21_E1BEG3 (
     .A0(E1BEG3_input[0]),
     .A1(E1BEG3_input[1]),
     .S(ConfigBits[3+0]),
@@ -978,57 +925,4 @@ cus_mux81_buf inst_cus_mux81_buf_B_T (
     .X(B_T)
 );
 
-
-assign DEBUG_select_E1BEG0          = ConfigBits[0:0];
-assign DEBUG_select_E1BEG1          = ConfigBits[1:1];
-assign DEBUG_select_E1BEG2          = ConfigBits[2:2];
-assign DEBUG_select_E1BEG3          = ConfigBits[3:3];
-assign DEBUG_select_E2BEG0          = ConfigBits[5:4];
-assign DEBUG_select_E2BEG1          = ConfigBits[7:6];
-assign DEBUG_select_E2BEG2          = ConfigBits[9:8];
-assign DEBUG_select_E2BEG3          = ConfigBits[11:10];
-assign DEBUG_select_E2BEG4          = ConfigBits[13:12];
-assign DEBUG_select_E2BEG5          = ConfigBits[15:14];
-assign DEBUG_select_E2BEG6          = ConfigBits[17:16];
-assign DEBUG_select_E2BEG7          = ConfigBits[19:18];
-assign DEBUG_select_E2BEGb0         = ConfigBits[21:20];
-assign DEBUG_select_E2BEGb1         = ConfigBits[23:22];
-assign DEBUG_select_E2BEGb2         = ConfigBits[25:24];
-assign DEBUG_select_E2BEGb3         = ConfigBits[27:26];
-assign DEBUG_select_E2BEGb4         = ConfigBits[29:28];
-assign DEBUG_select_E2BEGb5         = ConfigBits[31:30];
-assign DEBUG_select_E2BEGb6         = ConfigBits[33:32];
-assign DEBUG_select_E2BEGb7         = ConfigBits[35:34];
-assign DEBUG_select_EE4BEG0         = ConfigBits[37:36];
-assign DEBUG_select_EE4BEG1         = ConfigBits[39:38];
-assign DEBUG_select_EE4BEG2         = ConfigBits[41:40];
-assign DEBUG_select_EE4BEG3         = ConfigBits[43:42];
-assign DEBUG_select_EE4BEG4         = ConfigBits[45:44];
-assign DEBUG_select_EE4BEG5         = ConfigBits[47:46];
-assign DEBUG_select_EE4BEG6         = ConfigBits[49:48];
-assign DEBUG_select_EE4BEG7         = ConfigBits[51:50];
-assign DEBUG_select_EE4BEG8         = ConfigBits[53:52];
-assign DEBUG_select_EE4BEG9         = ConfigBits[55:54];
-assign DEBUG_select_EE4BEG10        = ConfigBits[57:56];
-assign DEBUG_select_EE4BEG11        = ConfigBits[59:58];
-assign DEBUG_select_EE4BEG12        = ConfigBits[61:60];
-assign DEBUG_select_EE4BEG13        = ConfigBits[63:62];
-assign DEBUG_select_EE4BEG14        = ConfigBits[65:64];
-assign DEBUG_select_EE4BEG15        = ConfigBits[67:66];
-assign DEBUG_select_E6BEG0          = ConfigBits[69:68];
-assign DEBUG_select_E6BEG1          = ConfigBits[71:70];
-assign DEBUG_select_E6BEG2          = ConfigBits[73:72];
-assign DEBUG_select_E6BEG3          = ConfigBits[75:74];
-assign DEBUG_select_E6BEG4          = ConfigBits[77:76];
-assign DEBUG_select_E6BEG5          = ConfigBits[79:78];
-assign DEBUG_select_E6BEG6          = ConfigBits[81:80];
-assign DEBUG_select_E6BEG7          = ConfigBits[83:82];
-assign DEBUG_select_E6BEG8          = ConfigBits[85:84];
-assign DEBUG_select_E6BEG9          = ConfigBits[87:86];
-assign DEBUG_select_E6BEG10         = ConfigBits[89:88];
-assign DEBUG_select_E6BEG11         = ConfigBits[91:90];
-assign DEBUG_select_A_I             = ConfigBits[95:92];
-assign DEBUG_select_A_T             = ConfigBits[98:96];
-assign DEBUG_select_B_I             = ConfigBits[102:99];
-assign DEBUG_select_B_T             = ConfigBits[105:103];
 endmodule

@@ -8,44 +8,44 @@ module W_CPU_IO
         parameter NoConfigBits=20
     )
     (
- //Side.EAST
-        output [3:0] E1BEG,        //Port(Name=E1BEG, IO=OUTPUT, XOffset=1, YOffset=0, WireCount=4, Side=EAST)
-        output [7:0] E2BEG,        //Port(Name=E2BEG, IO=OUTPUT, XOffset=1, YOffset=0, WireCount=8, Side=EAST)
-        output [7:0] E2BEGb,        //Port(Name=E2BEGb, IO=OUTPUT, XOffset=1, YOffset=0, WireCount=8, Side=EAST)
-        output [15:0] EE4BEG,        //Port(Name=EE4BEG, IO=OUTPUT, XOffset=4, YOffset=0, WireCount=4, Side=EAST)
-        output [11:0] E6BEG,        //Port(Name=E6BEG, IO=OUTPUT, XOffset=6, YOffset=0, WireCount=2, Side=EAST)
-        input [3:0] W1END,        //Port(Name=W1END, IO=INPUT, XOffset=-1, YOffset=0, WireCount=4, Side=EAST)
-        input [7:0] W2MID,        //Port(Name=W2MID, IO=INPUT, XOffset=-1, YOffset=0, WireCount=8, Side=EAST)
-        input [7:0] W2END,        //Port(Name=W2END, IO=INPUT, XOffset=-1, YOffset=0, WireCount=8, Side=EAST)
-        input [15:0] WW4END,        //Port(Name=WW4END, IO=INPUT, XOffset=-4, YOffset=0, WireCount=4, Side=EAST)
-        input [11:0] W6END,        //Port(Name=W6END, IO=INPUT, XOffset=-6, YOffset=0, WireCount=2, Side=EAST)
-        input OPA_I0,
-        input OPA_I1,
-        input OPA_I2,
-        input OPA_I3,
-        input OPB_I0,
-        input OPB_I1,
-        input OPB_I2,
-        input OPB_I3,
-        output RES0_O0,
-        output RES0_O1,
-        output RES0_O2,
-        output RES0_O3,
-        output RES1_O0,
-        output RES1_O1,
-        output RES1_O2,
-        output RES1_O3,
-        output RES2_O0,
-        output RES2_O1,
-        output RES2_O2,
-        output RES2_O3,
+ //E
+        output  [3:0] E1BEG,        //Port(Name=E1BEG,IO=OUTPUT,XOffset=1,YOffset=0,WireCount=4,Side=E)
+        output  [7:0] E2BEG,        //Port(Name=E2BEG,IO=OUTPUT,XOffset=1,YOffset=0,WireCount=8,Side=E)
+        output  [7:0] E2BEGb,        //Port(Name=E2BEGb,IO=OUTPUT,XOffset=1,YOffset=0,WireCount=8,Side=E)
+        output  [15:0] EE4BEG,        //Port(Name=EE4BEG,IO=OUTPUT,XOffset=4,YOffset=0,WireCount=4,Side=E)
+        output  [11:0] E6BEG,        //Port(Name=E6BEG,IO=OUTPUT,XOffset=6,YOffset=0,WireCount=2,Side=E)
+        input  [3:0] W1END,        //Port(Name=W1END,IO=INPUT,XOffset=-1,YOffset=0,WireCount=4,Side=E)
+        input  [7:0] W2MID,        //Port(Name=W2MID,IO=INPUT,XOffset=-1,YOffset=0,WireCount=8,Side=E)
+        input  [7:0] W2END,        //Port(Name=W2END,IO=INPUT,XOffset=-1,YOffset=0,WireCount=8,Side=E)
+        input  [15:0] WW4END,        //Port(Name=WW4END,IO=INPUT,XOffset=-4,YOffset=0,WireCount=4,Side=E)
+        input  [11:0] W6END,        //Port(Name=W6END,IO=INPUT,XOffset=-6,YOffset=0,WireCount=2,Side=E)
+        input  OPA_I0,
+        input  OPA_I1,
+        input  OPA_I2,
+        input  OPA_I3,
+        input  OPB_I0,
+        input  OPB_I1,
+        input  OPB_I2,
+        input  OPB_I3,
+        output  RES0_O0,
+        output  RES0_O1,
+        output  RES0_O2,
+        output  RES0_O3,
+        output  RES1_O0,
+        output  RES1_O1,
+        output  RES1_O2,
+        output  RES1_O3,
+        output  RES2_O0,
+        output  RES2_O1,
+        output  RES2_O2,
+        output  RES2_O3,
     //Tile IO ports from BELs
-        input UserCLK,
-        output UserCLKo,
-        input [FrameBitsPerRow -1:0] FrameData, //CONFIG_PORT
-        output [FrameBitsPerRow -1:0] FrameData_O,
-        input [MaxFramesPerCol -1:0] FrameStrobe, //CONFIG_PORT
-        output [MaxFramesPerCol -1:0] FrameStrobe_O
+        input  UserCLK,
+        output  UserCLKo,
+        input  [FrameBitsPerRow-1:0] FrameData, //CONFIG_PORT
+        output  [FrameBitsPerRow-1:0] FrameData_O,
+        input  [MaxFramesPerCol-1:0] FrameStrobe, //CONFIG_PORT
+        output  [MaxFramesPerCol-1:0] FrameStrobe_O
     //global
 );
  //signal declarations
@@ -626,6 +626,7 @@ W_CPU_IO_ConfigMem
     .ConfigBits_N(ConfigBits_N)
 );
 
+
  //BEL component instantiations
 InPass4_frame_config Inst_OPA_InPass4_frame_config (
     .O0(OPA_O0),
@@ -808,7 +809,9 @@ W_CPU_IO_switch_matrix Inst_W_CPU_IO_switch_matrix (
     .RES2_I0(RES2_I0),
     .RES2_I1(RES2_I1),
     .RES2_I2(RES2_I2),
-    .RES2_I3(RES2_I3)
+    .RES2_I3(RES2_I3),
+    .ConfigBits(ConfigBits[20-1:20]),
+    .ConfigBits_N(ConfigBits_N[20-1:20])
 );
 
 endmodule
