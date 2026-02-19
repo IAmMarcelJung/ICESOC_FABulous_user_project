@@ -8,13 +8,12 @@ module W_CPU_IO_ConfigMem
         parameter NoConfigBits=20
     )
     (
-        input [FrameBitsPerRow - 1:0] FrameData,
-        input [MaxFramesPerCol - 1:0] FrameStrobe,
-        output [NoConfigBits - 1:0] ConfigBits,
-        output [NoConfigBits - 1:0] ConfigBits_N
+        input  [FrameBitsPerRow - 1:0] FrameData,
+        input  [MaxFramesPerCol - 1:0] FrameStrobe,
+        output  [NoConfigBits - 1:0] ConfigBits,
+        output  [NoConfigBits - 1:0] ConfigBits_N
     );
 
-wire[20-1:0] frame0;
 `ifdef EMULATION
 assign ConfigBits[19] = Emulate_Bitstream[31];
 assign ConfigBits[18] = Emulate_Bitstream[30];

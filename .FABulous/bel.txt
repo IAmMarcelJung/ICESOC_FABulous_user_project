@@ -6,9 +6,6 @@
 #Tile_X8Y0
 #Tile_X9Y0
 #Tile_X10Y0
-#Tile_X12Y0
-#Tile_X13Y0
-#Tile_X14Y0
 #Tile_X3Y1
 X3Y1,X3,Y1,A,InPass4_frame_config,OPA_O0,OPA_O1,OPA_O2,OPA_O3
 X3Y1,X3,Y1,B,InPass4_frame_config,OPB_O0,OPB_O1,OPB_O2,OPB_O3

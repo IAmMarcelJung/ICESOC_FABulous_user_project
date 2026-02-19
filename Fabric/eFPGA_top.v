@@ -11,27 +11,27 @@ module eFPGA_top
     )
     (
         //External IO port
-        output [19:0] A_config_C,
-        output [19:0] B_config_C,
-        output [19:0] Config_accessC,
-        output [9:0] I_top,
-        input [71:0] OPA_I,
-        input [71:0] OPB_I,
-        input [9:0] O_top,
-        output [71:0] RES0_O,
-        output [71:0] RES1_O,
-        output [71:0] RES2_O,
-        output [9:0] T_top,
+        output  [19:0] A_config_C,
+        output  [19:0] B_config_C,
+        output  [19:0] Config_accessC,
+        output  [9:0] I_top,
+        input  [71:0] OPA_I,
+        input  [71:0] OPB_I,
+        input  [9:0] O_top,
+        output  [71:0] RES0_O,
+        output  [71:0] RES1_O,
+        output  [71:0] RES2_O,
+        output  [9:0] T_top,
         //Config related ports
-        input CLK,
-        input resetn,
-        input SelfWriteStrobe,
-        input [31:0] SelfWriteData,
-        input Rx,
-        output ComActive,
-        output ReceiveLED,
-        input s_clk,
-        input s_data
+        input  CLK,
+        input  resetn,
+        input  SelfWriteStrobe,
+        input  [31:0] SelfWriteData,
+        input  Rx,
+        output  ComActive,
+        output  ReceiveLED,
+        input  s_clk,
+        input  s_data
 );
  //BlockRAM ports
 
@@ -49,7 +49,6 @@ wire LongFrameStrobe;
 wire[31:0] LocalWriteData;
 wire LocalWriteStrobe;
 wire[RowSelectWidth-1:0] RowSelect;
-wire resten;
 `ifndef EMULATION
 
 eFPGA_Config

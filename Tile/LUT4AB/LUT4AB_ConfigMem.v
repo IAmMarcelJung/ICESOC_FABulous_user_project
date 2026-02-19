@@ -8,32 +8,12 @@ module LUT4AB_ConfigMem
         parameter NoConfigBits=616
     )
     (
-        input [FrameBitsPerRow - 1:0] FrameData,
-        input [MaxFramesPerCol - 1:0] FrameStrobe,
-        output [NoConfigBits - 1:0] ConfigBits,
-        output [NoConfigBits - 1:0] ConfigBits_N
+        input  [FrameBitsPerRow - 1:0] FrameData,
+        input  [MaxFramesPerCol - 1:0] FrameStrobe,
+        output  [NoConfigBits - 1:0] ConfigBits,
+        output  [NoConfigBits - 1:0] ConfigBits_N
     );
 
-wire[24-1:0] Frame0;
-wire[29-1:0] Frame1;
-wire[28-1:0] Frame2;
-wire[31-1:0] Frame3;
-wire[32-1:0] Frame4;
-wire[32-1:0] Frame5;
-wire[32-1:0] Frame6;
-wire[32-1:0] Frame7;
-wire[32-1:0] Frame8;
-wire[32-1:0] Frame9;
-wire[32-1:0] Frame10;
-wire[32-1:0] Frame11;
-wire[32-1:0] Frame12;
-wire[32-1:0] Frame13;
-wire[32-1:0] Frame14;
-wire[32-1:0] Frame15;
-wire[32-1:0] Frame16;
-wire[32-1:0] Frame17;
-wire[32-1:0] Frame18;
-wire[24-1:0] Frame19;
 `ifdef EMULATION
 assign ConfigBits[242] = Emulate_Bitstream[24];
 assign ConfigBits[243] = Emulate_Bitstream[23];

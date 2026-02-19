@@ -213,6 +213,19 @@ module my_mux2 (A0, A1, S, X);
 	assign X = S ? AIN[1] : AIN[0];
 endmodule 
 
+module cus_mux21 (A0, A1, S, X);
+	input A0;
+	input A1;
+	input S;
+	output X;
+	wire [1:0] AIN;
+
+	break_comb_loop break_comb_loop_inst0(.A (A0), .X (AIN[0]));
+	break_comb_loop break_comb_loop_inst1(.A (A1), .X (AIN[1]));
+
+	assign X = S ? AIN[1] : AIN[0];
+endmodule
+
 module cus_mux81 (A0, A1, A2, A3, A4, A5, A6, A7, S0, S0N, S1, S1N, S2, S2N, X);
 	input A0;
 	input A1;

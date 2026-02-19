@@ -8,23 +8,12 @@ module RAM_IO_ConfigMem
         parameter NoConfigBits=328
     )
     (
-        input [FrameBitsPerRow - 1:0] FrameData,
-        input [MaxFramesPerCol - 1:0] FrameStrobe,
-        output [NoConfigBits - 1:0] ConfigBits,
-        output [NoConfigBits - 1:0] ConfigBits_N
+        input  [FrameBitsPerRow - 1:0] FrameData,
+        input  [MaxFramesPerCol - 1:0] FrameStrobe,
+        output  [NoConfigBits - 1:0] ConfigBits,
+        output  [NoConfigBits - 1:0] ConfigBits_N
     );
 
-wire[32-1:0] frame0;
-wire[32-1:0] frame1;
-wire[32-1:0] frame2;
-wire[32-1:0] frame3;
-wire[32-1:0] frame4;
-wire[32-1:0] frame5;
-wire[32-1:0] frame6;
-wire[32-1:0] frame7;
-wire[32-1:0] frame8;
-wire[32-1:0] frame9;
-wire[8-1:0] frame10;
 `ifdef EMULATION
 assign ConfigBits[327] = Emulate_Bitstream[31];
 assign ConfigBits[326] = Emulate_Bitstream[30];

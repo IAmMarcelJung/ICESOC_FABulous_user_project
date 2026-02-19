@@ -8,25 +8,12 @@ module DSP_top_ConfigMem
         parameter NoConfigBits=406
     )
     (
-        input [FrameBitsPerRow - 1:0] FrameData,
-        input [MaxFramesPerCol - 1:0] FrameStrobe,
-        output [NoConfigBits - 1:0] ConfigBits,
-        output [NoConfigBits - 1:0] ConfigBits_N
+        input  [FrameBitsPerRow - 1:0] FrameData,
+        input  [MaxFramesPerCol - 1:0] FrameStrobe,
+        output  [NoConfigBits - 1:0] ConfigBits,
+        output  [NoConfigBits - 1:0] ConfigBits_N
     );
 
-wire[32-1:0] frame0;
-wire[32-1:0] frame1;
-wire[32-1:0] frame2;
-wire[32-1:0] frame3;
-wire[32-1:0] frame4;
-wire[32-1:0] frame5;
-wire[32-1:0] frame6;
-wire[32-1:0] frame7;
-wire[32-1:0] frame8;
-wire[32-1:0] frame9;
-wire[32-1:0] frame10;
-wire[32-1:0] frame11;
-wire[22-1:0] frame12;
 `ifdef EMULATION
 assign ConfigBits[405] = Emulate_Bitstream[31];
 assign ConfigBits[404] = Emulate_Bitstream[30];

@@ -8,59 +8,59 @@ module LUT4AB
         parameter NoConfigBits=616
     )
     (
- //Side.NORTH
-        output [3:0] N1BEG,        //Port(Name=N1BEG, IO=OUTPUT, XOffset=0, YOffset=-1, WireCount=4, Side=NORTH)
-        output [7:0] N2BEG,        //Port(Name=N2BEG, IO=OUTPUT, XOffset=0, YOffset=-1, WireCount=8, Side=NORTH)
-        output [7:0] N2BEGb,        //Port(Name=N2BEGb, IO=OUTPUT, XOffset=0, YOffset=-1, WireCount=8, Side=NORTH)
-        output [15:0] N4BEG,        //Port(Name=N4BEG, IO=OUTPUT, XOffset=0, YOffset=-4, WireCount=4, Side=NORTH)
-        output [15:0] NN4BEG,        //Port(Name=NN4BEG, IO=OUTPUT, XOffset=0, YOffset=-4, WireCount=4, Side=NORTH)
-        output [0:0] Co,        //Port(Name=Co, IO=OUTPUT, XOffset=0, YOffset=-1, WireCount=1, Side=NORTH)
-        input [3:0] S1END,        //Port(Name=S1END, IO=INPUT, XOffset=0, YOffset=1, WireCount=4, Side=NORTH)
-        input [7:0] S2MID,        //Port(Name=S2MID, IO=INPUT, XOffset=0, YOffset=1, WireCount=8, Side=NORTH)
-        input [7:0] S2END,        //Port(Name=S2END, IO=INPUT, XOffset=0, YOffset=1, WireCount=8, Side=NORTH)
-        input [15:0] S4END,        //Port(Name=S4END, IO=INPUT, XOffset=0, YOffset=4, WireCount=4, Side=NORTH)
-        input [15:0] SS4END,        //Port(Name=SS4END, IO=INPUT, XOffset=0, YOffset=4, WireCount=4, Side=NORTH)
- //Side.EAST
-        output [3:0] E1BEG,        //Port(Name=E1BEG, IO=OUTPUT, XOffset=1, YOffset=0, WireCount=4, Side=EAST)
-        output [7:0] E2BEG,        //Port(Name=E2BEG, IO=OUTPUT, XOffset=1, YOffset=0, WireCount=8, Side=EAST)
-        output [7:0] E2BEGb,        //Port(Name=E2BEGb, IO=OUTPUT, XOffset=1, YOffset=0, WireCount=8, Side=EAST)
-        output [15:0] EE4BEG,        //Port(Name=EE4BEG, IO=OUTPUT, XOffset=4, YOffset=0, WireCount=4, Side=EAST)
-        output [11:0] E6BEG,        //Port(Name=E6BEG, IO=OUTPUT, XOffset=6, YOffset=0, WireCount=2, Side=EAST)
-        input [3:0] W1END,        //Port(Name=W1END, IO=INPUT, XOffset=-1, YOffset=0, WireCount=4, Side=EAST)
-        input [7:0] W2MID,        //Port(Name=W2MID, IO=INPUT, XOffset=-1, YOffset=0, WireCount=8, Side=EAST)
-        input [7:0] W2END,        //Port(Name=W2END, IO=INPUT, XOffset=-1, YOffset=0, WireCount=8, Side=EAST)
-        input [15:0] WW4END,        //Port(Name=WW4END, IO=INPUT, XOffset=-4, YOffset=0, WireCount=4, Side=EAST)
-        input [11:0] W6END,        //Port(Name=W6END, IO=INPUT, XOffset=-6, YOffset=0, WireCount=2, Side=EAST)
- //Side.WEST
-        input [3:0] E1END,        //Port(Name=E1END, IO=INPUT, XOffset=1, YOffset=0, WireCount=4, Side=WEST)
-        input [7:0] E2MID,        //Port(Name=E2MID, IO=INPUT, XOffset=1, YOffset=0, WireCount=8, Side=WEST)
-        input [7:0] E2END,        //Port(Name=E2END, IO=INPUT, XOffset=1, YOffset=0, WireCount=8, Side=WEST)
-        input [15:0] EE4END,        //Port(Name=EE4END, IO=INPUT, XOffset=4, YOffset=0, WireCount=4, Side=WEST)
-        input [11:0] E6END,        //Port(Name=E6END, IO=INPUT, XOffset=6, YOffset=0, WireCount=2, Side=WEST)
-        output [3:0] W1BEG,        //Port(Name=W1BEG, IO=OUTPUT, XOffset=-1, YOffset=0, WireCount=4, Side=WEST)
-        output [7:0] W2BEG,        //Port(Name=W2BEG, IO=OUTPUT, XOffset=-1, YOffset=0, WireCount=8, Side=WEST)
-        output [7:0] W2BEGb,        //Port(Name=W2BEGb, IO=OUTPUT, XOffset=-1, YOffset=0, WireCount=8, Side=WEST)
-        output [15:0] WW4BEG,        //Port(Name=WW4BEG, IO=OUTPUT, XOffset=-4, YOffset=0, WireCount=4, Side=WEST)
-        output [11:0] W6BEG,        //Port(Name=W6BEG, IO=OUTPUT, XOffset=-6, YOffset=0, WireCount=2, Side=WEST)
- //Side.SOUTH
-        input [3:0] N1END,        //Port(Name=N1END, IO=INPUT, XOffset=0, YOffset=-1, WireCount=4, Side=SOUTH)
-        input [7:0] N2MID,        //Port(Name=N2MID, IO=INPUT, XOffset=0, YOffset=-1, WireCount=8, Side=SOUTH)
-        input [7:0] N2END,        //Port(Name=N2END, IO=INPUT, XOffset=0, YOffset=-1, WireCount=8, Side=SOUTH)
-        input [15:0] N4END,        //Port(Name=N4END, IO=INPUT, XOffset=0, YOffset=-4, WireCount=4, Side=SOUTH)
-        input [15:0] NN4END,        //Port(Name=NN4END, IO=INPUT, XOffset=0, YOffset=-4, WireCount=4, Side=SOUTH)
-        input [0:0] Ci,        //Port(Name=Ci, IO=INPUT, XOffset=0, YOffset=-1, WireCount=1, Side=SOUTH)
-        output [3:0] S1BEG,        //Port(Name=S1BEG, IO=OUTPUT, XOffset=0, YOffset=1, WireCount=4, Side=SOUTH)
-        output [7:0] S2BEG,        //Port(Name=S2BEG, IO=OUTPUT, XOffset=0, YOffset=1, WireCount=8, Side=SOUTH)
-        output [7:0] S2BEGb,        //Port(Name=S2BEGb, IO=OUTPUT, XOffset=0, YOffset=1, WireCount=8, Side=SOUTH)
-        output [15:0] S4BEG,        //Port(Name=S4BEG, IO=OUTPUT, XOffset=0, YOffset=4, WireCount=4, Side=SOUTH)
-        output [15:0] SS4BEG,        //Port(Name=SS4BEG, IO=OUTPUT, XOffset=0, YOffset=4, WireCount=4, Side=SOUTH)
+ //N
+        output  [3:0] N1BEG,        //Port(Name=N1BEG,IO=OUTPUT,XOffset=0,YOffset=-1,WireCount=4,Side=N)
+        output  [7:0] N2BEG,        //Port(Name=N2BEG,IO=OUTPUT,XOffset=0,YOffset=-1,WireCount=8,Side=N)
+        output  [7:0] N2BEGb,        //Port(Name=N2BEGb,IO=OUTPUT,XOffset=0,YOffset=-1,WireCount=8,Side=N)
+        output  [15:0] N4BEG,        //Port(Name=N4BEG,IO=OUTPUT,XOffset=0,YOffset=-4,WireCount=4,Side=N)
+        output  [15:0] NN4BEG,        //Port(Name=NN4BEG,IO=OUTPUT,XOffset=0,YOffset=-4,WireCount=4,Side=N)
+        output  [0:0] Co,        //Port(Name=Co,IO=OUTPUT,XOffset=0,YOffset=-1,WireCount=1,Side=N)
+        input  [3:0] S1END,        //Port(Name=S1END,IO=INPUT,XOffset=0,YOffset=1,WireCount=4,Side=N)
+        input  [7:0] S2MID,        //Port(Name=S2MID,IO=INPUT,XOffset=0,YOffset=1,WireCount=8,Side=N)
+        input  [7:0] S2END,        //Port(Name=S2END,IO=INPUT,XOffset=0,YOffset=1,WireCount=8,Side=N)
+        input  [15:0] S4END,        //Port(Name=S4END,IO=INPUT,XOffset=0,YOffset=4,WireCount=4,Side=N)
+        input  [15:0] SS4END,        //Port(Name=SS4END,IO=INPUT,XOffset=0,YOffset=4,WireCount=4,Side=N)
+ //E
+        output  [3:0] E1BEG,        //Port(Name=E1BEG,IO=OUTPUT,XOffset=1,YOffset=0,WireCount=4,Side=E)
+        output  [7:0] E2BEG,        //Port(Name=E2BEG,IO=OUTPUT,XOffset=1,YOffset=0,WireCount=8,Side=E)
+        output  [7:0] E2BEGb,        //Port(Name=E2BEGb,IO=OUTPUT,XOffset=1,YOffset=0,WireCount=8,Side=E)
+        output  [15:0] EE4BEG,        //Port(Name=EE4BEG,IO=OUTPUT,XOffset=4,YOffset=0,WireCount=4,Side=E)
+        output  [11:0] E6BEG,        //Port(Name=E6BEG,IO=OUTPUT,XOffset=6,YOffset=0,WireCount=2,Side=E)
+        input  [3:0] W1END,        //Port(Name=W1END,IO=INPUT,XOffset=-1,YOffset=0,WireCount=4,Side=E)
+        input  [7:0] W2MID,        //Port(Name=W2MID,IO=INPUT,XOffset=-1,YOffset=0,WireCount=8,Side=E)
+        input  [7:0] W2END,        //Port(Name=W2END,IO=INPUT,XOffset=-1,YOffset=0,WireCount=8,Side=E)
+        input  [15:0] WW4END,        //Port(Name=WW4END,IO=INPUT,XOffset=-4,YOffset=0,WireCount=4,Side=E)
+        input  [11:0] W6END,        //Port(Name=W6END,IO=INPUT,XOffset=-6,YOffset=0,WireCount=2,Side=E)
+ //W
+        input  [3:0] E1END,        //Port(Name=E1END,IO=INPUT,XOffset=1,YOffset=0,WireCount=4,Side=W)
+        input  [7:0] E2MID,        //Port(Name=E2MID,IO=INPUT,XOffset=1,YOffset=0,WireCount=8,Side=W)
+        input  [7:0] E2END,        //Port(Name=E2END,IO=INPUT,XOffset=1,YOffset=0,WireCount=8,Side=W)
+        input  [15:0] EE4END,        //Port(Name=EE4END,IO=INPUT,XOffset=4,YOffset=0,WireCount=4,Side=W)
+        input  [11:0] E6END,        //Port(Name=E6END,IO=INPUT,XOffset=6,YOffset=0,WireCount=2,Side=W)
+        output  [3:0] W1BEG,        //Port(Name=W1BEG,IO=OUTPUT,XOffset=-1,YOffset=0,WireCount=4,Side=W)
+        output  [7:0] W2BEG,        //Port(Name=W2BEG,IO=OUTPUT,XOffset=-1,YOffset=0,WireCount=8,Side=W)
+        output  [7:0] W2BEGb,        //Port(Name=W2BEGb,IO=OUTPUT,XOffset=-1,YOffset=0,WireCount=8,Side=W)
+        output  [15:0] WW4BEG,        //Port(Name=WW4BEG,IO=OUTPUT,XOffset=-4,YOffset=0,WireCount=4,Side=W)
+        output  [11:0] W6BEG,        //Port(Name=W6BEG,IO=OUTPUT,XOffset=-6,YOffset=0,WireCount=2,Side=W)
+ //S
+        input  [3:0] N1END,        //Port(Name=N1END,IO=INPUT,XOffset=0,YOffset=-1,WireCount=4,Side=S)
+        input  [7:0] N2MID,        //Port(Name=N2MID,IO=INPUT,XOffset=0,YOffset=-1,WireCount=8,Side=S)
+        input  [7:0] N2END,        //Port(Name=N2END,IO=INPUT,XOffset=0,YOffset=-1,WireCount=8,Side=S)
+        input  [15:0] N4END,        //Port(Name=N4END,IO=INPUT,XOffset=0,YOffset=-4,WireCount=4,Side=S)
+        input  [15:0] NN4END,        //Port(Name=NN4END,IO=INPUT,XOffset=0,YOffset=-4,WireCount=4,Side=S)
+        input  [0:0] Ci,        //Port(Name=Ci,IO=INPUT,XOffset=0,YOffset=-1,WireCount=1,Side=S)
+        output  [3:0] S1BEG,        //Port(Name=S1BEG,IO=OUTPUT,XOffset=0,YOffset=1,WireCount=4,Side=S)
+        output  [7:0] S2BEG,        //Port(Name=S2BEG,IO=OUTPUT,XOffset=0,YOffset=1,WireCount=8,Side=S)
+        output  [7:0] S2BEGb,        //Port(Name=S2BEGb,IO=OUTPUT,XOffset=0,YOffset=1,WireCount=8,Side=S)
+        output  [15:0] S4BEG,        //Port(Name=S4BEG,IO=OUTPUT,XOffset=0,YOffset=4,WireCount=4,Side=S)
+        output  [15:0] SS4BEG,        //Port(Name=SS4BEG,IO=OUTPUT,XOffset=0,YOffset=4,WireCount=4,Side=S)
     //Tile IO ports from BELs
-        input UserCLK,
-        output UserCLKo,
-        input [FrameBitsPerRow -1:0] FrameData, //CONFIG_PORT
-        output [FrameBitsPerRow -1:0] FrameData_O,
-        input [MaxFramesPerCol -1:0] FrameStrobe, //CONFIG_PORT
-        output [MaxFramesPerCol -1:0] FrameStrobe_O
+        input  UserCLK,
+        output  UserCLKo,
+        input  [FrameBitsPerRow-1:0] FrameData, //CONFIG_PORT
+        output  [FrameBitsPerRow-1:0] FrameData_O,
+        input  [MaxFramesPerCol-1:0] FrameStrobe, //CONFIG_PORT
+        output  [MaxFramesPerCol-1:0] FrameStrobe_O
     //global
 );
  //signal declarations
@@ -1683,17 +1683,18 @@ LUT4AB_ConfigMem
     .ConfigBits_N(ConfigBits_N)
 );
 
+
  //BEL component instantiations
 LUT4c_frame_config_dffesr Inst_LA_LUT4c_frame_config_dffesr (
     .I0(LA_I0),
     .I1(LA_I1),
     .I2(LA_I2),
     .I3(LA_I3),
+    .O(LA_O),
     .Ci(LA_Ci),
+    .Co(LA_Co),
     .SR(LA_SR),
     .EN(LA_EN),
-    .O(LA_O),
-    .Co(LA_Co),
     .UserCLK(UserCLK),
     .ConfigBits(ConfigBits[19-1:0])
 );
@@ -1703,11 +1704,11 @@ LUT4c_frame_config_dffesr Inst_LB_LUT4c_frame_config_dffesr (
     .I1(LB_I1),
     .I2(LB_I2),
     .I3(LB_I3),
+    .O(LB_O),
     .Ci(LB_Ci),
+    .Co(LB_Co),
     .SR(LB_SR),
     .EN(LB_EN),
-    .O(LB_O),
-    .Co(LB_Co),
     .UserCLK(UserCLK),
     .ConfigBits(ConfigBits[38-1:19])
 );
@@ -1717,11 +1718,11 @@ LUT4c_frame_config_dffesr Inst_LC_LUT4c_frame_config_dffesr (
     .I1(LC_I1),
     .I2(LC_I2),
     .I3(LC_I3),
+    .O(LC_O),
     .Ci(LC_Ci),
+    .Co(LC_Co),
     .SR(LC_SR),
     .EN(LC_EN),
-    .O(LC_O),
-    .Co(LC_Co),
     .UserCLK(UserCLK),
     .ConfigBits(ConfigBits[57-1:38])
 );
@@ -1731,11 +1732,11 @@ LUT4c_frame_config_dffesr Inst_LD_LUT4c_frame_config_dffesr (
     .I1(LD_I1),
     .I2(LD_I2),
     .I3(LD_I3),
+    .O(LD_O),
     .Ci(LD_Ci),
+    .Co(LD_Co),
     .SR(LD_SR),
     .EN(LD_EN),
-    .O(LD_O),
-    .Co(LD_Co),
     .UserCLK(UserCLK),
     .ConfigBits(ConfigBits[76-1:57])
 );
@@ -1745,11 +1746,11 @@ LUT4c_frame_config_dffesr Inst_LE_LUT4c_frame_config_dffesr (
     .I1(LE_I1),
     .I2(LE_I2),
     .I3(LE_I3),
+    .O(LE_O),
     .Ci(LE_Ci),
+    .Co(LE_Co),
     .SR(LE_SR),
     .EN(LE_EN),
-    .O(LE_O),
-    .Co(LE_Co),
     .UserCLK(UserCLK),
     .ConfigBits(ConfigBits[95-1:76])
 );
@@ -1759,11 +1760,11 @@ LUT4c_frame_config_dffesr Inst_LF_LUT4c_frame_config_dffesr (
     .I1(LF_I1),
     .I2(LF_I2),
     .I3(LF_I3),
+    .O(LF_O),
     .Ci(LF_Ci),
+    .Co(LF_Co),
     .SR(LF_SR),
     .EN(LF_EN),
-    .O(LF_O),
-    .Co(LF_Co),
     .UserCLK(UserCLK),
     .ConfigBits(ConfigBits[114-1:95])
 );
@@ -1773,11 +1774,11 @@ LUT4c_frame_config_dffesr Inst_LG_LUT4c_frame_config_dffesr (
     .I1(LG_I1),
     .I2(LG_I2),
     .I3(LG_I3),
+    .O(LG_O),
     .Ci(LG_Ci),
+    .Co(LG_Co),
     .SR(LG_SR),
     .EN(LG_EN),
-    .O(LG_O),
-    .Co(LG_Co),
     .UserCLK(UserCLK),
     .ConfigBits(ConfigBits[133-1:114])
 );
@@ -1787,11 +1788,11 @@ LUT4c_frame_config_dffesr Inst_LH_LUT4c_frame_config_dffesr (
     .I1(LH_I1),
     .I2(LH_I2),
     .I3(LH_I3),
+    .O(LH_O),
     .Ci(LH_Ci),
+    .Co(LH_Co),
     .SR(LH_SR),
     .EN(LH_EN),
-    .O(LH_O),
-    .Co(LH_Co),
     .UserCLK(UserCLK),
     .ConfigBits(ConfigBits[152-1:133])
 );

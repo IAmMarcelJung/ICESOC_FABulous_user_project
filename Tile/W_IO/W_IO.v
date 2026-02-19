@@ -8,38 +8,38 @@ module W_IO
         parameter NoConfigBits=114
     )
     (
- //Side.EAST
-        output [3:0] E1BEG,        //Port(Name=E1BEG, IO=OUTPUT, XOffset=1, YOffset=0, WireCount=4, Side=EAST)
-        output [7:0] E2BEG,        //Port(Name=E2BEG, IO=OUTPUT, XOffset=1, YOffset=0, WireCount=8, Side=EAST)
-        output [7:0] E2BEGb,        //Port(Name=E2BEGb, IO=OUTPUT, XOffset=1, YOffset=0, WireCount=8, Side=EAST)
-        output [15:0] EE4BEG,        //Port(Name=EE4BEG, IO=OUTPUT, XOffset=4, YOffset=0, WireCount=4, Side=EAST)
-        output [11:0] E6BEG,        //Port(Name=E6BEG, IO=OUTPUT, XOffset=6, YOffset=0, WireCount=2, Side=EAST)
-        input [3:0] W1END,        //Port(Name=W1END, IO=INPUT, XOffset=-1, YOffset=0, WireCount=4, Side=EAST)
-        input [7:0] W2MID,        //Port(Name=W2MID, IO=INPUT, XOffset=-1, YOffset=0, WireCount=8, Side=EAST)
-        input [7:0] W2END,        //Port(Name=W2END, IO=INPUT, XOffset=-1, YOffset=0, WireCount=8, Side=EAST)
-        input [15:0] WW4END,        //Port(Name=WW4END, IO=INPUT, XOffset=-4, YOffset=0, WireCount=4, Side=EAST)
-        input [11:0] W6END,        //Port(Name=W6END, IO=INPUT, XOffset=-6, YOffset=0, WireCount=2, Side=EAST)
-        input A_O_top,
-        output A_I_top,
-        output A_T_top,
-        input B_O_top,
-        output B_I_top,
-        output B_T_top,
-        output A_config_C_bit0,
-        output A_config_C_bit1,
-        output A_config_C_bit2,
-        output A_config_C_bit3,
-        output B_config_C_bit0,
-        output B_config_C_bit1,
-        output B_config_C_bit2,
-        output B_config_C_bit3,
+ //E
+        output  [3:0] E1BEG,        //Port(Name=E1BEG,IO=OUTPUT,XOffset=1,YOffset=0,WireCount=4,Side=E)
+        output  [7:0] E2BEG,        //Port(Name=E2BEG,IO=OUTPUT,XOffset=1,YOffset=0,WireCount=8,Side=E)
+        output  [7:0] E2BEGb,        //Port(Name=E2BEGb,IO=OUTPUT,XOffset=1,YOffset=0,WireCount=8,Side=E)
+        output  [15:0] EE4BEG,        //Port(Name=EE4BEG,IO=OUTPUT,XOffset=4,YOffset=0,WireCount=4,Side=E)
+        output  [11:0] E6BEG,        //Port(Name=E6BEG,IO=OUTPUT,XOffset=6,YOffset=0,WireCount=2,Side=E)
+        input  [3:0] W1END,        //Port(Name=W1END,IO=INPUT,XOffset=-1,YOffset=0,WireCount=4,Side=E)
+        input  [7:0] W2MID,        //Port(Name=W2MID,IO=INPUT,XOffset=-1,YOffset=0,WireCount=8,Side=E)
+        input  [7:0] W2END,        //Port(Name=W2END,IO=INPUT,XOffset=-1,YOffset=0,WireCount=8,Side=E)
+        input  [15:0] WW4END,        //Port(Name=WW4END,IO=INPUT,XOffset=-4,YOffset=0,WireCount=4,Side=E)
+        input  [11:0] W6END,        //Port(Name=W6END,IO=INPUT,XOffset=-6,YOffset=0,WireCount=2,Side=E)
+        input  A_O_top,
+        output  A_I_top,
+        output  A_T_top,
+        input  B_O_top,
+        output  B_I_top,
+        output  B_T_top,
+        output  A_config_C_bit0,
+        output  A_config_C_bit1,
+        output  A_config_C_bit2,
+        output  A_config_C_bit3,
+        output  B_config_C_bit0,
+        output  B_config_C_bit1,
+        output  B_config_C_bit2,
+        output  B_config_C_bit3,
     //Tile IO ports from BELs
-        input UserCLK,
-        output UserCLKo,
-        input [FrameBitsPerRow -1:0] FrameData, //CONFIG_PORT
-        output [FrameBitsPerRow -1:0] FrameData_O,
-        input [MaxFramesPerCol -1:0] FrameStrobe, //CONFIG_PORT
-        output [MaxFramesPerCol -1:0] FrameStrobe_O
+        input  UserCLK,
+        output  UserCLKo,
+        input  [FrameBitsPerRow-1:0] FrameData, //CONFIG_PORT
+        output  [FrameBitsPerRow-1:0] FrameData_O,
+        input  [MaxFramesPerCol-1:0] FrameStrobe, //CONFIG_PORT
+        output  [MaxFramesPerCol-1:0] FrameStrobe_O
     //global
 );
  //signal declarations
@@ -608,15 +608,16 @@ W_IO_ConfigMem
     .ConfigBits_N(ConfigBits_N)
 );
 
+
  //BEL component instantiations
 IO_1_bidirectional_frame_config_pass Inst_A_IO_1_bidirectional_frame_config_pass (
     .I(A_I),
     .T(A_T),
     .O(A_O),
     .Q(A_Q),
-    .O_top(A_O_top),
     .I_top(A_I_top),
     .T_top(A_T_top),
+    .O_top(A_O_top),
     .UserCLK(UserCLK)
 );
 
@@ -625,9 +626,9 @@ IO_1_bidirectional_frame_config_pass Inst_B_IO_1_bidirectional_frame_config_pass
     .T(B_T),
     .O(B_O),
     .Q(B_Q),
-    .O_top(B_O_top),
     .I_top(B_I_top),
     .T_top(B_T_top),
+    .O_top(B_O_top),
     .UserCLK(UserCLK)
 );
 

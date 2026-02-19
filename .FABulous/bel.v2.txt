@@ -6,9 +6,6 @@
 #Tile_X8Y0
 #Tile_X9Y0
 #Tile_X10Y0
-#Tile_X12Y0
-#Tile_X13Y0
-#Tile_X14Y0
 #Tile_X3Y1
 BelBegin,X3Y1,A,InPass4_frame_config,OPA_
 O,O0,X3Y1.OPA_O0

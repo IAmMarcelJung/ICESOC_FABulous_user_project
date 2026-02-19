@@ -8,10 +8,10 @@ module N_term_RAM_IO_ConfigMem
         parameter NoConfigBits=0
     )
     (
-        input [FrameBitsPerRow - 1:0] FrameData,
-        input [MaxFramesPerCol - 1:0] FrameStrobe,
-        output [NoConfigBits - 1:0] ConfigBits,
-        output [NoConfigBits - 1:0] ConfigBits_N
+        input  [FrameBitsPerRow - 1:0] FrameData,
+        input  [MaxFramesPerCol - 1:0] FrameStrobe,
+        output  [NoConfigBits - 1:0] ConfigBits,
+        output  [NoConfigBits - 1:0] ConfigBits_N
     );
 
 `ifdef EMULATION
