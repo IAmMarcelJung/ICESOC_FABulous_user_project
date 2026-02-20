@@ -49,17 +49,9 @@ module top_tb;
     );
 
 
-    //wire [9:0] I_top_gold, oeb_gold, T_top_gold;
+    wire [9:0] I_top_gold, oeb_gold, T_top_gold;
     wire [71:0] RES0_gold, RES1_gold, RES2_gold;
 
-    /*
-    top dut_i (
-        .clk(CLK),
-        .io_out(I_top_gold),
-        .io_oeb(oeb_gold),
-        .io_in(O_top)
-    );
-    */
 
     //maybe the order of w and e is different, try if it works
     top dut_i (
@@ -73,10 +65,13 @@ module top_tb;
         .W_RES2(RES2_gold[35:0]),
         .E_RES0(RES0_gold[71:36]),
         .E_RES1(RES1_gold[71:36]),
-        .E_RES2(RES2_gold[71:36])
+        .E_RES2(RES2_gold[71:36]),
+        .io_out(I_top_gold),
+        .io_oeb(oeb_gold),
+        .io_in(O_top)
     );
 
-    //assign T_top_gold = ~oeb_gold;
+    assign T_top_gold = ~oeb_gold;
 
     localparam MAX_BITBYTES = 20000;
     reg [7:0] bitstream[0:MAX_BITBYTES-1];
@@ -134,28 +129,45 @@ module top_tb;
 `endif
         repeat (100) @(posedge CLK);
         // Enable and reset the counter
-        //O_top = 28'b0000_0000_0000_0000_0000_0000_0011;
+        O_top = 10'b00_0000_0011;
         OPA = 72'h000000001FFFFFFFFF;
         OPB = 72'hAAAAAAAAA555555555;
         repeat (5) @(posedge CLK);
         // Deassert reset while keeping the counter enabled
-        //O_top = 28'b0000_0000_0000_0000_0000_0000_0010;
+        O_top = 10'b00_0000_0010;
         for (i = 0; i < 100; i = i + 1) begin
             @(negedge CLK);
-            $display("fabric(W_OPA) = 0x%X, fabric(W_OPB) = 0x%X", OPA[35:0], OPB[35:0]);
-            $display("fabric(W_RES0) = 0x%X gold = 0x%X, fabric(W_RES1) = 0x%X gold = 0x%X, fabric(W_RES2) = 0x%X gold = 0x%X", RES0[35:0], RES0_gold[35:0], RES1[35:0], RES1_gold[35:0], RES2[35:0], RES2_gold[35:0]);
-            $display("-------------------------------------------------------------");
-            $display("fabric(E_OPA) = 0x%X, fabric(E_OPB) = 0x%X", OPA[71:36], OPB[71:36]);
-            $display("fabric(E_RES0) = 0x%X gold = 0x%X, fabric(E_RES1) = 0x%X gold = 0x%X, fabric(E_RES2) = 0x%X gold = 0x%X", RES0[71:36], RES0_gold[71:36], RES1[71:36], RES1_gold[71:36], RES2[71:36], RES2_gold[71:36]);
-            $display("-------------------------------------------------------------");
-            $display("-------------------------------------------------------------");
-            if (RES0 !== RES0_gold)
+            $display("Clock Cycle %d", i );
+
+
+            $display("W_IOs:");
+            $display("  fabric(I_top) = 0x%X gold = 0x%X, fabric(T_top) = 0x%X gold = 0x%X\n", I_top, I_top_gold, T_top, T_top_gold);
+            if (I_top !== I_top_gold)
                 have_errors = 1'b1;
-            if (RES1 !== RES1_gold)
+            if (T_top !== T_top_gold)
                 have_errors = 1'b1;
-            if (RES2 !== RES2_gold)
-                have_errors = 1'b1;
+
+            $display("\n-------------------------------------------------------------\n");
         end
+
+        $display("W_CPU_IOs:");
+        $display("  Inputs:");
+        $display("  fabric(W_OPA) = 0x%X, fabric(W_OPB) = 0x%X", OPA[35:0], OPB[35:0]);
+        $display("  Outputs:");
+        $display("  fabric(W_RES0) = 0x%X gold = 0x%X, fabric(W_RES1) = 0x%X gold = 0x%X, fabric(W_RES2) = 0x%X gold = 0x%X\n", RES0[35:0], RES0_gold[35:0], RES1[35:0], RES1_gold[35:0], RES2[35:0], RES2_gold[35:0]);
+
+        $display("E_CPU_IOs:");
+        $display("  Inputs:");
+        $display("  fabric(E_OPA) = 0x%X, fabric(E_OPB) = 0x%X", OPA[71:36], OPB[71:36]);
+        $display("  Outputs:");
+        $display("  fabric(E_RES0) = 0x%X gold = 0x%X, fabric(E_RES1) = 0x%X gold = 0x%X, fabric(E_RES2) = 0x%X gold = 0x%X\n", RES0[71:36], RES0_gold[71:36], RES1[71:36], RES1_gold[71:36], RES2[71:36], RES2_gold[71:36]);
+
+        if (RES0 !== RES0_gold)
+            have_errors = 1'b1;
+        if (RES1 !== RES1_gold)
+            have_errors = 1'b1;
+        if (RES2 !== RES2_gold)
+            have_errors = 1'b1;
 
         if (have_errors)
             $fatal;
