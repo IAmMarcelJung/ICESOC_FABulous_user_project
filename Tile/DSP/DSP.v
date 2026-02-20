@@ -1,222 +1,260 @@
-module DSP
-    #(
-`ifdef EMULATION
-        parameter [639:0] Tile_X0Y0_Emulate_Bitstream=640'b0,
-        parameter [639:0] Tile_X0Y1_Emulate_Bitstream=640'b0,
-`endif
-        parameter MaxFramesPerCol=20,
-        parameter FrameBitsPerRow=32
-    )
-    (
-    //Tile_X0Y0_Direction.NORTH
-        output  [3:0] Tile_X0Y0_N1BEG, //Port(Name=N1BEG,IO=OUTPUT,XOffset=0,YOffset=-1,WireCount=4,Side=N)
-        output  [7:0] Tile_X0Y0_N2BEG, //Port(Name=N2BEG,IO=OUTPUT,XOffset=0,YOffset=-1,WireCount=8,Side=N)
-        output  [7:0] Tile_X0Y0_N2BEGb, //Port(Name=N2BEGb,IO=OUTPUT,XOffset=0,YOffset=-1,WireCount=8,Side=N)
-        output  [15:0] Tile_X0Y0_N4BEG, //Port(Name=N4BEG,IO=OUTPUT,XOffset=0,YOffset=-4,WireCount=4,Side=N)
-        output  [15:0] Tile_X0Y0_NN4BEG, //Port(Name=NN4BEG,IO=OUTPUT,XOffset=0,YOffset=-4,WireCount=4,Side=N)
-        input  [3:0] Tile_X0Y0_S1END, //Port(Name=S1END,IO=INPUT,XOffset=0,YOffset=1,WireCount=4,Side=N)
-        input  [7:0] Tile_X0Y0_S2MID, //Port(Name=S2MID,IO=INPUT,XOffset=0,YOffset=1,WireCount=8,Side=N)
-        input  [7:0] Tile_X0Y0_S2END, //Port(Name=S2END,IO=INPUT,XOffset=0,YOffset=1,WireCount=8,Side=N)
-        input  [15:0] Tile_X0Y0_S4END, //Port(Name=S4END,IO=INPUT,XOffset=0,YOffset=4,WireCount=4,Side=N)
-        input  [15:0] Tile_X0Y0_SS4END, //Port(Name=SS4END,IO=INPUT,XOffset=0,YOffset=4,WireCount=4,Side=N)
-    //Tile_X0Y0_Direction.EAST
-        output  [3:0] Tile_X0Y0_E1BEG, //Port(Name=E1BEG,IO=OUTPUT,XOffset=1,YOffset=0,WireCount=4,Side=E)
-        output  [7:0] Tile_X0Y0_E2BEG, //Port(Name=E2BEG,IO=OUTPUT,XOffset=1,YOffset=0,WireCount=8,Side=E)
-        output  [7:0] Tile_X0Y0_E2BEGb, //Port(Name=E2BEGb,IO=OUTPUT,XOffset=1,YOffset=0,WireCount=8,Side=E)
-        output  [15:0] Tile_X0Y0_EE4BEG, //Port(Name=EE4BEG,IO=OUTPUT,XOffset=4,YOffset=0,WireCount=4,Side=E)
-        output  [11:0] Tile_X0Y0_E6BEG, //Port(Name=E6BEG,IO=OUTPUT,XOffset=6,YOffset=0,WireCount=2,Side=E)
-        input  [3:0] Tile_X0Y0_W1END, //Port(Name=W1END,IO=INPUT,XOffset=-1,YOffset=0,WireCount=4,Side=E)
-        input  [7:0] Tile_X0Y0_W2MID, //Port(Name=W2MID,IO=INPUT,XOffset=-1,YOffset=0,WireCount=8,Side=E)
-        input  [7:0] Tile_X0Y0_W2END, //Port(Name=W2END,IO=INPUT,XOffset=-1,YOffset=0,WireCount=8,Side=E)
-        input  [15:0] Tile_X0Y0_WW4END, //Port(Name=WW4END,IO=INPUT,XOffset=-4,YOffset=0,WireCount=4,Side=E)
-        input  [11:0] Tile_X0Y0_W6END, //Port(Name=W6END,IO=INPUT,XOffset=-6,YOffset=0,WireCount=2,Side=E)
-    //Tile_X0Y0_Direction.EAST
-        input  [3:0] Tile_X0Y0_E1END, //Port(Name=E1END,IO=INPUT,XOffset=1,YOffset=0,WireCount=4,Side=W)
-        input  [7:0] Tile_X0Y0_E2MID, //Port(Name=E2MID,IO=INPUT,XOffset=1,YOffset=0,WireCount=8,Side=W)
-        input  [7:0] Tile_X0Y0_E2END, //Port(Name=E2END,IO=INPUT,XOffset=1,YOffset=0,WireCount=8,Side=W)
-        input  [15:0] Tile_X0Y0_EE4END, //Port(Name=EE4END,IO=INPUT,XOffset=4,YOffset=0,WireCount=4,Side=W)
-        input  [11:0] Tile_X0Y0_E6END, //Port(Name=E6END,IO=INPUT,XOffset=6,YOffset=0,WireCount=2,Side=W)
-        output  [3:0] Tile_X0Y0_W1BEG, //Port(Name=W1BEG,IO=OUTPUT,XOffset=-1,YOffset=0,WireCount=4,Side=W)
-        output  [7:0] Tile_X0Y0_W2BEG, //Port(Name=W2BEG,IO=OUTPUT,XOffset=-1,YOffset=0,WireCount=8,Side=W)
-        output  [7:0] Tile_X0Y0_W2BEGb, //Port(Name=W2BEGb,IO=OUTPUT,XOffset=-1,YOffset=0,WireCount=8,Side=W)
-        output  [15:0] Tile_X0Y0_WW4BEG, //Port(Name=WW4BEG,IO=OUTPUT,XOffset=-4,YOffset=0,WireCount=4,Side=W)
-        output  [11:0] Tile_X0Y0_W6BEG, //Port(Name=W6BEG,IO=OUTPUT,XOffset=-6,YOffset=0,WireCount=2,Side=W)
-    //Tile_X0Y1_Direction.EAST
-        output  [3:0] Tile_X0Y1_E1BEG, //Port(Name=E1BEG,IO=OUTPUT,XOffset=1,YOffset=0,WireCount=4,Side=E)
-        output  [7:0] Tile_X0Y1_E2BEG, //Port(Name=E2BEG,IO=OUTPUT,XOffset=1,YOffset=0,WireCount=8,Side=E)
-        output  [7:0] Tile_X0Y1_E2BEGb, //Port(Name=E2BEGb,IO=OUTPUT,XOffset=1,YOffset=0,WireCount=8,Side=E)
-        output  [15:0] Tile_X0Y1_EE4BEG, //Port(Name=EE4BEG,IO=OUTPUT,XOffset=4,YOffset=0,WireCount=4,Side=E)
-        output  [11:0] Tile_X0Y1_E6BEG, //Port(Name=E6BEG,IO=OUTPUT,XOffset=6,YOffset=0,WireCount=2,Side=E)
-        input  [3:0] Tile_X0Y1_W1END, //Port(Name=W1END,IO=INPUT,XOffset=-1,YOffset=0,WireCount=4,Side=E)
-        input  [7:0] Tile_X0Y1_W2MID, //Port(Name=W2MID,IO=INPUT,XOffset=-1,YOffset=0,WireCount=8,Side=E)
-        input  [7:0] Tile_X0Y1_W2END, //Port(Name=W2END,IO=INPUT,XOffset=-1,YOffset=0,WireCount=8,Side=E)
-        input  [15:0] Tile_X0Y1_WW4END, //Port(Name=WW4END,IO=INPUT,XOffset=-4,YOffset=0,WireCount=4,Side=E)
-        input  [11:0] Tile_X0Y1_W6END, //Port(Name=W6END,IO=INPUT,XOffset=-6,YOffset=0,WireCount=2,Side=E)
-    //Tile_X0Y1_Direction.NORTH
-        input  [3:0] Tile_X0Y1_N1END, //Port(Name=N1END,IO=INPUT,XOffset=0,YOffset=-1,WireCount=4,Side=S)
-        input  [7:0] Tile_X0Y1_N2MID, //Port(Name=N2MID,IO=INPUT,XOffset=0,YOffset=-1,WireCount=8,Side=S)
-        input  [7:0] Tile_X0Y1_N2END, //Port(Name=N2END,IO=INPUT,XOffset=0,YOffset=-1,WireCount=8,Side=S)
-        input  [15:0] Tile_X0Y1_N4END, //Port(Name=N4END,IO=INPUT,XOffset=0,YOffset=-4,WireCount=4,Side=S)
-        input  [15:0] Tile_X0Y1_NN4END, //Port(Name=NN4END,IO=INPUT,XOffset=0,YOffset=-4,WireCount=4,Side=S)
-        output  [3:0] Tile_X0Y1_S1BEG, //Port(Name=S1BEG,IO=OUTPUT,XOffset=0,YOffset=1,WireCount=4,Side=S)
-        output  [7:0] Tile_X0Y1_S2BEG, //Port(Name=S2BEG,IO=OUTPUT,XOffset=0,YOffset=1,WireCount=8,Side=S)
-        output  [7:0] Tile_X0Y1_S2BEGb, //Port(Name=S2BEGb,IO=OUTPUT,XOffset=0,YOffset=1,WireCount=8,Side=S)
-        output  [15:0] Tile_X0Y1_S4BEG, //Port(Name=S4BEG,IO=OUTPUT,XOffset=0,YOffset=4,WireCount=4,Side=S)
-        output  [15:0] Tile_X0Y1_SS4BEG, //Port(Name=SS4BEG,IO=OUTPUT,XOffset=0,YOffset=4,WireCount=4,Side=S)
-    //Tile_X0Y1_Direction.EAST
-        input  [3:0] Tile_X0Y1_E1END, //Port(Name=E1END,IO=INPUT,XOffset=1,YOffset=0,WireCount=4,Side=W)
-        input  [7:0] Tile_X0Y1_E2MID, //Port(Name=E2MID,IO=INPUT,XOffset=1,YOffset=0,WireCount=8,Side=W)
-        input  [7:0] Tile_X0Y1_E2END, //Port(Name=E2END,IO=INPUT,XOffset=1,YOffset=0,WireCount=8,Side=W)
-        input  [15:0] Tile_X0Y1_EE4END, //Port(Name=EE4END,IO=INPUT,XOffset=4,YOffset=0,WireCount=4,Side=W)
-        input  [11:0] Tile_X0Y1_E6END, //Port(Name=E6END,IO=INPUT,XOffset=6,YOffset=0,WireCount=2,Side=W)
-        output  [3:0] Tile_X0Y1_W1BEG, //Port(Name=W1BEG,IO=OUTPUT,XOffset=-1,YOffset=0,WireCount=4,Side=W)
-        output  [7:0] Tile_X0Y1_W2BEG, //Port(Name=W2BEG,IO=OUTPUT,XOffset=-1,YOffset=0,WireCount=8,Side=W)
-        output  [7:0] Tile_X0Y1_W2BEGb, //Port(Name=W2BEGb,IO=OUTPUT,XOffset=-1,YOffset=0,WireCount=8,Side=W)
-        output  [15:0] Tile_X0Y1_WW4BEG, //Port(Name=WW4BEG,IO=OUTPUT,XOffset=-4,YOffset=0,WireCount=4,Side=W)
-        output  [11:0] Tile_X0Y1_W6BEG, //Port(Name=W6BEG,IO=OUTPUT,XOffset=-6,YOffset=0,WireCount=2,Side=W)
-    //Tile IO ports from BELs
-        output  [MaxFramesPerCol-1:0] Tile_X0Y0_FrameStrobe_O, //CONFIG_PORT
-        input  [FrameBitsPerRow-1:0] Tile_X0Y0_FrameData, //CONFIG_PORT
-        output  [FrameBitsPerRow-1:0] Tile_X0Y0_FrameData_O, //CONFIG_PORT
-        input  [FrameBitsPerRow-1:0] Tile_X0Y1_FrameData, //CONFIG_PORT
-        input  [MaxFramesPerCol-1:0] Tile_X0Y1_FrameStrobe, //CONFIG_PORT
-        output  [FrameBitsPerRow-1:0] Tile_X0Y1_FrameData_O, //CONFIG_PORT
-        output  Tile_X0Y0_UserCLKo,
-        input  Tile_X0Y1_UserCLK
-);
+// SPDX-FileCopyrightText: 
+// 2021 Nguyen Dao
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//      http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+//
+// SPDX-License-Identifier: Apache-2.0
+module DSP (top_N1BEG, top_N2BEG, top_N2BEGb, top_N4BEG, top_NN4BEG, top_S1END, top_S2MID, top_S2END, top_S4END, top_SS4END, top_E1BEG, top_E2BEG, top_E2BEGb, top_EE4BEG, top_E6BEG, top_E1END, top_E2MID, top_E2END, top_EE4END, top_E6END, top_W1BEG, top_W2BEG, top_W2BEGb, top_WW4BEG, top_W6BEG, top_W1END, top_W2MID, top_W2END, top_WW4END, top_W6END, bot_E1BEG, bot_E2BEG, bot_E2BEGb, bot_EE4BEG, bot_E6BEG, bot_E1END, bot_E2MID, bot_E2END, bot_EE4END, bot_E6END, bot_W1BEG, bot_W2BEG, bot_W2BEGb, bot_WW4BEG, bot_W6BEG, bot_W1END, bot_W2MID, bot_W2END, bot_WW4END, bot_W6END, bot_S1BEG, bot_S2BEG, bot_S2BEGb, bot_S4BEG, bot_SS4BEG, bot_N1END, bot_N2MID, bot_N2END, bot_N4END, bot_NN4END, UserCLK, UserCLKo, top_FrameData, top_FrameData_O, bot_FrameData, bot_FrameData_O, FrameStrobe, FrameStrobe_O);
 
- //signal declarations
- //Tile_X0Y0_Direction.NORTH
-    wire[3:0] Tile_X0Y0_S1BEG; //Port(Name=S1BEG,IO=OUTPUT,XOffset=0,YOffset=1,WireCount=4,Side=S)
-    wire[7:0] Tile_X0Y0_S2BEG; //Port(Name=S2BEG,IO=OUTPUT,XOffset=0,YOffset=1,WireCount=8,Side=S)
-    wire[7:0] Tile_X0Y0_S2BEGb; //Port(Name=S2BEGb,IO=OUTPUT,XOffset=0,YOffset=1,WireCount=8,Side=S)
-    wire[15:0] Tile_X0Y0_S4BEG; //Port(Name=S4BEG,IO=OUTPUT,XOffset=0,YOffset=4,WireCount=4,Side=S)
-    wire[15:0] Tile_X0Y0_SS4BEG; //Port(Name=SS4BEG,IO=OUTPUT,XOffset=0,YOffset=4,WireCount=4,Side=S)
-    wire[17:0] Tile_X0Y0_top2bot; //Port(Name=top2bot,IO=OUTPUT,XOffset=0,YOffset=1,WireCount=18,Side=S)
- //Tile_X0Y1_Direction.NORTH
-    wire[3:0] Tile_X0Y1_N1BEG; //Port(Name=N1BEG,IO=OUTPUT,XOffset=0,YOffset=-1,WireCount=4,Side=N)
-    wire[7:0] Tile_X0Y1_N2BEG; //Port(Name=N2BEG,IO=OUTPUT,XOffset=0,YOffset=-1,WireCount=8,Side=N)
-    wire[7:0] Tile_X0Y1_N2BEGb; //Port(Name=N2BEGb,IO=OUTPUT,XOffset=0,YOffset=-1,WireCount=8,Side=N)
-    wire[15:0] Tile_X0Y1_N4BEG; //Port(Name=N4BEG,IO=OUTPUT,XOffset=0,YOffset=-4,WireCount=4,Side=N)
-    wire[15:0] Tile_X0Y1_NN4BEG; //Port(Name=NN4BEG,IO=OUTPUT,XOffset=0,YOffset=-4,WireCount=4,Side=N)
-    wire[9:0] Tile_X0Y1_bot2top; //Port(Name=bot2top,IO=OUTPUT,XOffset=0,YOffset=-1,WireCount=10,Side=N)
-    wire[MaxFramesPerCol-1:0] Tile_X0Y1_FrameStrobe_O;
-    wire Tile_X0Y1_UserCLKo;
+	parameter MaxFramesPerCol = 20;
+	parameter FrameBitsPerRow = 32;
+	parameter top_NoConfigBits = 406;  // NOT 100% SURE HOW THIS WILL WORK OUT
+	parameter bot_NoConfigBits = 416;  // NOT 100% SURE HOW THIS WILL WORK OUT
+	
+	//top_NORTH
+	output [3:0] top_N1BEG;	 // wires:4 X_offset:0 Y_offset:1  source_name:N1BEG destination_name:N1END  
+	output [7:0] top_N2BEG;	 // wires:8 X_offset:0 Y_offset:1  source_name:N2BEG destination_name:N2MID  
+	output [7:0] top_N2BEGb;	 // wires:8 X_offset:0 Y_offset:1  source_name:N2BEGb destination_name:N2END  
+	output [15:0] top_N4BEG;	 // wires:4 X_offset:0 Y_offset:4  source_name:N4BEG destination_name:N4END  
+	output [15:0] top_NN4BEG;	 // wires:4 X_offset:0 Y_offset:4  source_name:NN4BEG destination_name:NN4END  
+	// These do not exist in top wrapper		 top_bot2top[9:0];	 // wires:10 X_offset:0 Y_offset:1  source_name:bot2top destination_name:NULL  
+	// These do not exist in top wrapper	input [3:0] top_N1END;	 // wires:4 X_offset:0 Y_offset:1  source_name:N1BEG destination_name:N1END  
+	// These do not exist in top wrapper	input [7:0] top_N2MID;	 // wires:8 X_offset:0 Y_offset:1  source_name:N2BEG destination_name:N2MID  
+	// These do not exist in top wrapper	input [7:0] top_N2END;	 // wires:8 X_offset:0 Y_offset:1  source_name:N2BEGb destination_name:N2END  
+	// These do not exist in top wrapper	input [15:0] top_N4END;	 // wires:4 X_offset:0 Y_offset:4  source_name:N4BEG destination_name:N4END  
+	// These do not exist in top wrapper	input [15:0] top_NN4END;	 // wires:4 X_offset:0 Y_offset:4  source_name:NN4BEG destination_name:NN4END  
+	
+	//top_SOUTH
+	// These do not exist in top wrapper		 top_S1BEG[3:0];	 // wires:4 X_offset:0 Y_offset:-1  source_name:S1BEG destination_name:S1END  
+	// These do not exist in top wrapper		 top_S2BEG[7:0];	 // wires:8 X_offset:0 Y_offset:-1  source_name:S2BEG destination_name:S2MID  
+	// These do not exist in top wrapper		 top_S2BEGb[7:0];	 // wires:8 X_offset:0 Y_offset:-1  source_name:S2BEGb destination_name:S2END  
+	// These do not exist in top wrapper		 top_S4BEG[15:0];	 // wires:4 X_offset:0 Y_offset:-4  source_name:S4BEG destination_name:S4END  
+	// These do not exist in top wrapper		 top_SS4BEG[15:0];	 // wires:4 X_offset:0 Y_offset:-4  source_name:SS4BEG destination_name:SS4END  
+	input [3:0] top_S1END;	 // wires:4 X_offset:0 Y_offset:-1  source_name:S1BEG destination_name:S1END  
+	input [7:0] top_S2MID;	 // wires:8 X_offset:0 Y_offset:-1  source_name:S2BEG destination_name:S2MID  
+	input [7:0] top_S2END;	 // wires:8 X_offset:0 Y_offset:-1  source_name:S2BEGb destination_name:S2END  
+	input [15:0] top_S4END;	 // wires:4 X_offset:0 Y_offset:-4  source_name:S4BEG destination_name:S4END  
+	input [15:0] top_SS4END;	 // wires:4 X_offset:0 Y_offset:-4  source_name:SS4BEG destination_name:SS4END  
+	// These do not exist in top wrapper		 top_top2bot[17:0];	 // wires:18 X_offset:0 Y_offset:-1  source_name:NULL destination_name:top2bot  
+	
+	//top_EAST
+	output [3:0] top_E1BEG;	 // wires:4 X_offset:1 Y_offset:0  source_name:E1BEG destination_name:E1END  
+	output [7:0] top_E2BEG;	 // wires:8 X_offset:1 Y_offset:0  source_name:E2BEG destination_name:E2MID  
+	output [7:0] top_E2BEGb;	 // wires:8 X_offset:1 Y_offset:0  source_name:E2BEGb destination_name:E2END  
+	output [15:0] top_EE4BEG;	 // wires:4 X_offset:4 Y_offset:0  source_name:EE4BEG destination_name:EE4END  
+	output [11:0] top_E6BEG;	 // wires:2 X_offset:6 Y_offset:0  source_name:E6BEG destination_name:E6END  
+	input [3:0] top_E1END;	 // wires:4 X_offset:1 Y_offset:0  source_name:E1BEG destination_name:E1END  
+	input [7:0] top_E2MID;	 // wires:8 X_offset:1 Y_offset:0  source_name:E2BEG destination_name:E2MID  
+	input [7:0] top_E2END;	 // wires:8 X_offset:1 Y_offset:0  source_name:E2BEGb destination_name:E2END  
+	input [15:0] top_EE4END;	 // wires:4 X_offset:4 Y_offset:0  source_name:EE4BEG destination_name:EE4END  
+	input [11:0] top_E6END;	 // wires:2 X_offset:6 Y_offset:0  source_name:E6BEG destination_name:E6END  
+	
+	//top_WEST
+	output [3:0] top_W1BEG;	 // wires:4 X_offset:-1 Y_offset:0  source_name:W1BEG destination_name:W1END  
+	output [7:0] top_W2BEG;	 // wires:8 X_offset:-1 Y_offset:0  source_name:W2BEG destination_name:W2MID  
+	output [7:0] top_W2BEGb;	 // wires:8 X_offset:-1 Y_offset:0  source_name:W2BEGb destination_name:W2END  
+	output [15:0] top_WW4BEG;	 // wires:4 X_offset:-4 Y_offset:0  source_name:WW4BEG destination_name:WW4END  
+	output [11:0] top_W6BEG;	 // wires:2 X_offset:-6 Y_offset:0  source_name:W6BEG destination_name:W6END  
+	input [3:0] top_W1END;	 // wires:4 X_offset:-1 Y_offset:0  source_name:W1BEG destination_name:W1END  
+	input [7:0] top_W2MID;	 // wires:8 X_offset:-1 Y_offset:0  source_name:W2BEG destination_name:W2MID  
+	input [7:0] top_W2END;	 // wires:8 X_offset:-1 Y_offset:0  source_name:W2BEGb destination_name:W2END  
+	input [15:0] top_WW4END;	 // wires:4 X_offset:-4 Y_offset:0  source_name:WW4BEG destination_name:WW4END  
+	input [11:0] top_W6END;	 // wires:2 X_offset:-6 Y_offset:0  source_name:W6BEG destination_name:W6END  
+	
+	//bot_NORTH
+	// These do not exist in top wrapper	output [3:0] bot_N1BEG;	 // wires:4 X_offset:0 Y_offset:1  source_name:N1BEG destination_name:N1END  
+	// These do not exist in top wrapper	output [7:0] bot_N2BEG;	 // wires:8 X_offset:0 Y_offset:1  source_name:N2BEG destination_name:N2MID  
+	// These do not exist in top wrapper	output [7:0] bot_N2BEGb;	 // wires:8 X_offset:0 Y_offset:1  source_name:N2BEGb destination_name:N2END  
+	// These do not exist in top wrapper	output [15:0] bot_N4BEG;	 // wires:4 X_offset:0 Y_offset:4  source_name:N4BEG destination_name:N4END  
+	// These do not exist in top wrapper	output [15:0] bot_NN4BEG;	 // wires:4 X_offset:0 Y_offset:4  source_name:NN4BEG destination_name:NN4END  
+	// These do not exist in top wrapper	// These do not exist in top wrapper		 bot_bot2top[9:0];	 // wires:10 X_offset:0 Y_offset:1  source_name:bot2top destination_name:NULL  
+	input [3:0] bot_N1END;	 // wires:4 X_offset:0 Y_offset:1  source_name:N1BEG destination_name:N1END  
+	input [7:0] bot_N2MID;	 // wires:8 X_offset:0 Y_offset:1  source_name:N2BEG destination_name:N2MID  
+	input [7:0] bot_N2END;	 // wires:8 X_offset:0 Y_offset:1  source_name:N2BEGb destination_name:N2END  
+	input [15:0] bot_N4END;	 // wires:4 X_offset:0 Y_offset:4  source_name:N4BEG destination_name:N4END  
+	input [15:0] bot_NN4END;	 // wires:4 X_offset:0 Y_offset:4  source_name:NN4BEG destination_name:NN4END  
+	
+	//bot_SOUTH
+	output [3:0] bot_S1BEG;	 // wires:4 X_offset:0 Y_offset:-1  source_name:S1BEG destination_name:S1END  
+	output [7:0] bot_S2BEG;	 // wires:8 X_offset:0 Y_offset:-1  source_name:S2BEG destination_name:S2MID  
+	output [7:0] bot_S2BEGb;	 // wires:8 X_offset:0 Y_offset:-1  source_name:S2BEGb destination_name:S2END  
+	output [15:0] bot_S4BEG;	 // wires:4 X_offset:0 Y_offset:-4  source_name:S4BEG destination_name:S4END  
+	output [15:0] bot_SS4BEG;	 // wires:4 X_offset:0 Y_offset:-4  source_name:SS4BEG destination_name:SS4END  
+	// These do not exist in top wrapper	input [3:0] bot_S1END;	 // wires:4 X_offset:0 Y_offset:-1  source_name:S1BEG destination_name:S1END  
+	// These do not exist in top wrapper	input [7:0] bot_S2MID;	 // wires:8 X_offset:0 Y_offset:-1  source_name:S2BEG destination_name:S2MID  
+	// These do not exist in top wrapper	input [7:0] bot_S2END;	 // wires:8 X_offset:0 Y_offset:-1  source_name:S2BEGb destination_name:S2END  
+	// These do not exist in top wrapper	input [15:0] bot_S4END;	 // wires:4 X_offset:0 Y_offset:-4  source_name:S4BEG destination_name:S4END  
+	// These do not exist in top wrapper	input [15:0] bot_SS4END;	 // wires:4 X_offset:0 Y_offset:-4  source_name:SS4BEG destination_name:SS4END  
+	// These do not exist in top wrapper		 bot_top2bot[17:0];	 // wires:18 X_offset:0 Y_offset:-1  source_name:NULL destination_name:top2bot  
 
-DSP_top
-`ifdef EMULATION
-    #(
-    .Emulate_Bitstream(Tile_X0Y0_Emulate_Bitstream)
-    )
-`endif
-    Tile_X0Y0_DSP_top
-    (
-    .N1END(Tile_X0Y1_N1BEG),
-    .N2MID(Tile_X0Y1_N2BEG),
-    .N2END(Tile_X0Y1_N2BEGb),
-    .N4END(Tile_X0Y1_N4BEG),
-    .NN4END(Tile_X0Y1_NN4BEG),
-    .bot2top(Tile_X0Y1_bot2top),
-    .E1END(Tile_X0Y0_E1END),
-    .E2MID(Tile_X0Y0_E2MID),
-    .E2END(Tile_X0Y0_E2END),
-    .EE4END(Tile_X0Y0_EE4END),
-    .E6END(Tile_X0Y0_E6END),
-    .S1END(Tile_X0Y0_S1END),
-    .S2MID(Tile_X0Y0_S2MID),
-    .S2END(Tile_X0Y0_S2END),
-    .S4END(Tile_X0Y0_S4END),
-    .SS4END(Tile_X0Y0_SS4END),
-    .W1END(Tile_X0Y0_W1END),
-    .W2MID(Tile_X0Y0_W2MID),
-    .W2END(Tile_X0Y0_W2END),
-    .WW4END(Tile_X0Y0_WW4END),
-    .W6END(Tile_X0Y0_W6END),
-    .N1BEG(Tile_X0Y0_N1BEG),
-    .N2BEG(Tile_X0Y0_N2BEG),
-    .N2BEGb(Tile_X0Y0_N2BEGb),
-    .N4BEG(Tile_X0Y0_N4BEG),
-    .NN4BEG(Tile_X0Y0_NN4BEG),
-    .E1BEG(Tile_X0Y0_E1BEG),
-    .E2BEG(Tile_X0Y0_E2BEG),
-    .E2BEGb(Tile_X0Y0_E2BEGb),
-    .EE4BEG(Tile_X0Y0_EE4BEG),
-    .E6BEG(Tile_X0Y0_E6BEG),
-    .S1BEG(Tile_X0Y0_S1BEG),
-    .S2BEG(Tile_X0Y0_S2BEG),
-    .S2BEGb(Tile_X0Y0_S2BEGb),
-    .S4BEG(Tile_X0Y0_S4BEG),
-    .SS4BEG(Tile_X0Y0_SS4BEG),
-    .top2bot(Tile_X0Y0_top2bot),
-    .W1BEG(Tile_X0Y0_W1BEG),
-    .W2BEG(Tile_X0Y0_W2BEG),
-    .W2BEGb(Tile_X0Y0_W2BEGb),
-    .WW4BEG(Tile_X0Y0_WW4BEG),
-    .W6BEG(Tile_X0Y0_W6BEG),
-    .UserCLK(Tile_X0Y1_UserCLKo),
-    .UserCLKo(Tile_X0Y0_UserCLKo),
-    .FrameData(Tile_X0Y0_FrameData),
-    .FrameData_O(Tile_X0Y0_FrameData_O),
-    .FrameStrobe(Tile_X0Y1_FrameStrobe_O),
-    .FrameStrobe_O(Tile_X0Y0_FrameStrobe_O)
-);
+	//   bot_EAST
+	output [3:0] bot_E1BEG;	 // wires:4 X_offset:1 Y_offset:0  source_name:E1BEG destination_name:E1END  
+	output [7:0] bot_E2BEG;	 // wires:8 X_offset:1 Y_offset:0  source_name:E2BEG destination_name:E2MID  
+	output [7:0] bot_E2BEGb;	 // wires:8 X_offset:1 Y_offset:0  source_name:E2BEGb destination_name:E2END  
+	output [15:0] bot_EE4BEG;	 // wires:4 X_offset:4 Y_offset:0  source_name:EE4BEG destination_name:EE4END  
+	output [11:0] bot_E6BEG;	 // wires:2 X_offset:6 Y_offset:0  source_name:E6BEG destination_name:E6END  
+	input [3:0] bot_E1END;	 // wires:4 X_offset:1 Y_offset:0  source_name:E1BEG destination_name:E1END  
+	input [7:0] bot_E2MID;	 // wires:8 X_offset:1 Y_offset:0  source_name:E2BEG destination_name:E2MID  
+	input [7:0] bot_E2END;	 // wires:8 X_offset:1 Y_offset:0  source_name:E2BEGb destination_name:E2END  
+	input [15:0] bot_EE4END;	 // wires:4 X_offset:4 Y_offset:0  source_name:EE4BEG destination_name:EE4END  
+	input [11:0] bot_E6END;	 // wires:2 X_offset:6 Y_offset:0  source_name:E6BEG destination_name:E6END  
+	
+	//bot_WEST
+	output [3:0] bot_W1BEG;	 // wires:4 X_offset:-1 Y_offset:0  source_name:W1BEG destination_name:W1END  
+	output [7:0] bot_W2BEG;	 // wires:8 X_offset:-1 Y_offset:0  source_name:W2BEG destination_name:W2MID  
+	output [7:0] bot_W2BEGb;	 // wires:8 X_offset:-1 Y_offset:0  source_name:W2BEGb destination_name:W2END  
+	output [15:0] bot_WW4BEG;	 // wires:4 X_offset:-4 Y_offset:0  source_name:WW4BEG destination_name:WW4END  
+	output [11:0] bot_W6BEG;	 // wires:2 X_offset:-6 Y_offset:0  source_name:W6BEG destination_name:W6END  
+	input [3:0] bot_W1END;	 // wires:4 X_offset:-1 Y_offset:0  source_name:W1BEG destination_name:W1END  
+	input [7:0] bot_W2MID;	 // wires:8 X_offset:-1 Y_offset:0  source_name:W2BEG destination_name:W2MID  
+	input [7:0] bot_W2END;	 // wires:8 X_offset:-1 Y_offset:0  source_name:W2BEGb destination_name:W2END  
+	input [15:0] bot_WW4END;	 // wires:4 X_offset:-4 Y_offset:0  source_name:WW4BEG destination_name:WW4END  
+	input [11:0] bot_W6END;	 // wires:2 X_offset:-6 Y_offset:0  source_name:W6BEG destination_name:W6END  
+	
+	// Tile IO ports from BELs
+	input UserCLK; // EXTERNAL // SHARED_PORT // ## the EXTERNAL keyword will send this sisgnal all the way to top and the //SHARED Allows multiple BELs using the same port (e.g. for exporting a clock to the top)
+	output UserCLKo; // EXTERNAL // SHARED_PORT // ## the EXTERNAL keyword will send this sisgnal all the way to top and the //SHARED Allows multiple BELs using the same port (e.g. for exporting a clock to the top)
 
-DSP_bot
-`ifdef EMULATION
-    #(
-    .Emulate_Bitstream(Tile_X0Y1_Emulate_Bitstream)
-    )
-`endif
-    Tile_X0Y1_DSP_bot
-    (
-    .N1END(Tile_X0Y1_N1END),
-    .N2MID(Tile_X0Y1_N2MID),
-    .N2END(Tile_X0Y1_N2END),
-    .N4END(Tile_X0Y1_N4END),
-    .NN4END(Tile_X0Y1_NN4END),
-    .E1END(Tile_X0Y1_E1END),
-    .E2MID(Tile_X0Y1_E2MID),
-    .E2END(Tile_X0Y1_E2END),
-    .EE4END(Tile_X0Y1_EE4END),
-    .E6END(Tile_X0Y1_E6END),
-    .S1END(Tile_X0Y0_S1BEG),
-    .S2MID(Tile_X0Y0_S2BEG),
-    .S2END(Tile_X0Y0_S2BEGb),
-    .S4END(Tile_X0Y0_S4BEG),
-    .SS4END(Tile_X0Y0_SS4BEG),
-    .top2bot(Tile_X0Y0_top2bot),
-    .W1END(Tile_X0Y1_W1END),
-    .W2MID(Tile_X0Y1_W2MID),
-    .W2END(Tile_X0Y1_W2END),
-    .WW4END(Tile_X0Y1_WW4END),
-    .W6END(Tile_X0Y1_W6END),
-    .N1BEG(Tile_X0Y1_N1BEG),
-    .N2BEG(Tile_X0Y1_N2BEG),
-    .N2BEGb(Tile_X0Y1_N2BEGb),
-    .N4BEG(Tile_X0Y1_N4BEG),
-    .NN4BEG(Tile_X0Y1_NN4BEG),
-    .bot2top(Tile_X0Y1_bot2top),
-    .E1BEG(Tile_X0Y1_E1BEG),
-    .E2BEG(Tile_X0Y1_E2BEG),
-    .E2BEGb(Tile_X0Y1_E2BEGb),
-    .EE4BEG(Tile_X0Y1_EE4BEG),
-    .E6BEG(Tile_X0Y1_E6BEG),
-    .S1BEG(Tile_X0Y1_S1BEG),
-    .S2BEG(Tile_X0Y1_S2BEG),
-    .S2BEGb(Tile_X0Y1_S2BEGb),
-    .S4BEG(Tile_X0Y1_S4BEG),
-    .SS4BEG(Tile_X0Y1_SS4BEG),
-    .W1BEG(Tile_X0Y1_W1BEG),
-    .W2BEG(Tile_X0Y1_W2BEG),
-    .W2BEGb(Tile_X0Y1_W2BEGb),
-    .WW4BEG(Tile_X0Y1_WW4BEG),
-    .W6BEG(Tile_X0Y1_W6BEG),
-    .UserCLK(Tile_X0Y1_UserCLK),
-    .UserCLKo(Tile_X0Y1_UserCLKo),
-    .FrameData(Tile_X0Y1_FrameData),
-    .FrameData_O(Tile_X0Y1_FrameData_O),
-    .FrameStrobe(Tile_X0Y1_FrameStrobe),
-    .FrameStrobe_O(Tile_X0Y1_FrameStrobe_O)
-);
+	input [FrameBitsPerRow-1:0] top_FrameData;   // CONFIG_PORT this is a keyword needed to connect the tile to the bitstream frame register
+	output [FrameBitsPerRow-1:0] top_FrameData_O;
+	input [FrameBitsPerRow-1:0] bot_FrameData;   // CONFIG_PORT this is a keyword needed to connect the tile to the bitstream frame register
+	output [FrameBitsPerRow-1:0] bot_FrameData_O;
+	input [MaxFramesPerCol-1:0] FrameStrobe;    // CONFIG_PORT this is a keyword needed to connect the tile to the bitstream frame register 
+	output [MaxFramesPerCol-1:0] FrameStrobe_O;
+	
+	// global
 
+	// signal declarations
+	
+	wire [3:0] N1BEG;
+	wire [7:0] N2BEG;
+	wire [7:0] N2BEGb;
+	wire [15:0] N4BEG;
+	wire [15:0] NN4BEG;
+	wire [9:0] bot2top;
+	
+	wire [3:0] S1BEG;
+	wire [7:0] S2BEG;
+	wire [7:0] S2BEGb;
+	wire [15:0] S4BEG;
+	wire [15:0] SS4BEG;
+	wire [17:0] top2bot;
+	
+	wire bot_UserCLKo;
+	
+	wire [MaxFramesPerCol-1:0] bot2top_FrameStrobe;
+	
+	DSP_top Inst_DSP_top(
+	.N1END(N1BEG),		// internal
+	.N2MID(N2BEG),		// internal
+	.N2END(N2BEGb),		// internal
+	.N4END(N4BEG),		// internal
+	.NN4END(NN4BEG),	// internal
+	.bot2top(bot2top),	// internal
+	.E1END(top_E1END),
+	.E2MID(top_E2MID),
+	.E2END(top_E2END),
+	.EE4END(top_EE4END),
+	.E6END(top_E6END),
+	.S1END(top_S1END),
+	.S2MID(top_S2MID),
+	.S2END(top_S2END),
+	.S4END(top_S4END),
+	.SS4END(top_SS4END),
+	.W1END(top_W1END),
+	.W2MID(top_W2MID),
+	.W2END(top_W2END),
+	.WW4END(top_WW4END),
+	.W6END(top_W6END),
+	.N1BEG(top_N1BEG),
+	.N2BEG(top_N2BEG),
+	.N2BEGb(top_N2BEGb),
+	.N4BEG(top_N4BEG),
+	.NN4BEG(top_NN4BEG),
+	.E1BEG(top_E1BEG),
+	.E2BEG(top_E2BEG),
+	.E2BEGb(top_E2BEGb),
+	.EE4BEG(top_EE4BEG),
+	.E6BEG(top_E6BEG),
+	.S1BEG(S1BEG),		// internal
+	.S2BEG(S2BEG),		// internal
+	.S2BEGb(S2BEGb),	// internal
+	.S4BEG(S4BEG),		// internal
+	.SS4BEG(SS4BEG),	// internal
+	.top2bot(top2bot),	// internal
+	.W1BEG(top_W1BEG),
+	.W2BEG(top_W2BEG),
+	.W2BEGb(top_W2BEGb),
+	.WW4BEG(top_WW4BEG),
+	.W6BEG(top_W6BEG),
+	.UserCLK(bot_UserCLKo),
+	.UserCLKo(UserCLKo),
+	.FrameData(top_FrameData),
+	.FrameData_O(top_FrameData_O),
+	.FrameStrobe(bot2top_FrameStrobe),
+	.FrameStrobe_O(FrameStrobe_O)
+	); 
+
+	DSP_bot Inst_DSP_bot(
+	.N1END(bot_N1END),
+	.N2MID(bot_N2MID),
+	.N2END(bot_N2END),
+	.N4END(bot_N4END),
+	.NN4END(bot_NN4END),
+	.E1END(bot_E1END),
+	.E2MID(bot_E2MID),
+	.E2END(bot_E2END),
+	.EE4END(bot_EE4END),
+	.E6END(bot_E6END),
+	.S1END(S1BEG),		// internal
+	.S2MID(S2BEG),		// internal
+	.S2END(S2BEGb),		// internal
+	.S4END(S4BEG),		// internal
+	.SS4END(SS4BEG),	// internal
+	.top2bot(top2bot),	// internal
+	.W1END(bot_W1END),
+	.W2MID(bot_W2MID),
+	.W2END(bot_W2END),
+	.WW4END(bot_WW4END),
+	.W6END(bot_W6END),
+	.N1BEG(N1BEG),		// internal
+	.N2BEG(N2BEG),		// internal
+	.N2BEGb(N2BEGb),	// internal
+	.N4BEG(N4BEG),		// internal
+	.NN4BEG(NN4BEG),	// internal
+	.bot2top(bot2top),	// internal
+	.E1BEG(bot_E1BEG),
+	.E2BEG(bot_E2BEG),
+	.E2BEGb(bot_E2BEGb),
+	.EE4BEG(bot_EE4BEG),
+	.E6BEG(bot_E6BEG),
+	.S1BEG(bot_S1BEG),
+	.S2BEG(bot_S2BEG),
+	.S2BEGb(bot_S2BEGb),
+	.S4BEG(bot_S4BEG),
+	.SS4BEG(bot_SS4BEG),
+	.W1BEG(bot_W1BEG),
+	.W2BEG(bot_W2BEG),
+	.W2BEGb(bot_W2BEGb),
+	.WW4BEG(bot_WW4BEG),
+	.W6BEG(bot_W6BEG),
+	// tile IO port which gets directly connected to top-level tile entity
+	.UserCLK(UserCLK),
+	.UserCLKo(bot_UserCLKo),
+	.FrameData(bot_FrameData),
+	.FrameData_O(bot_FrameData_O),
+	.FrameStrobe(FrameStrobe),
+	.FrameStrobe_O(bot2top_FrameStrobe)
+	);
+	
 endmodule
